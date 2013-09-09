@@ -1,0 +1,31 @@
+// Compass Imports
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/general/min";
+@import "compass/css3";
+
+// Power Moves: Live Wires defaults
+@import "livewires/normalize";
+@import "livewires/variables";
+@import "livewires/mixins";
+@import "livewires/layout";
+@import "livewires/typography";
+@import "livewires/forms";
+@import "livewires/callouts";
+
+// Optional readymade templates to get going. Don't need it? Remove it.
+@import "livewires/components/header";
+@import "livewires/components/footer";
+@import "livewires/components/nav";
+@import "livewires/components/blog";
+
+
+//Customization example
+
+// Use content file to set placeholder text heights.
+@import "example/content";
+
+// Design your protoype in a separate project file.
+// Styles that only apply to the protoype should be separate.
+// Grouping styles you can use in production makes much of your work reusable.
+@import "example/header";
+@import "example/layout";

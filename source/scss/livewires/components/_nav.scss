@@ -1,0 +1,16 @@
+.primary-nav,
+.footer-nav {
+	@extend .group;
+
+	li {
+		float:left;
+	}
+    
+	a {
+		display:block;
+		padding-right:$line/2;
+	}
+}
+.search {
+	max-width: $line*10;
+}
