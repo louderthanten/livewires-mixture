@@ -1,0 +1,99 @@
+//* =============================================================================
+//   Default Colours
+//   ========================================================================== */
+
+$white: #ffffff;
+$dark-grey:#333333;
+$grey: #CCC;
+$red: red;
+$blue: blue;
+
+
+///* =============================================================================
+//   Borders
+//   ========================================================================== */
+
+$rule: 1px solid $dark-grey;
+$red-rule: 1px solid $red;
+$white-rule: 1px solid $white;
+
+$default-border-radius: 5px;
+
+///* =============================================================================
+//   Font Stacks
+//   ========================================================================== */
+
+
+$serif: Georgia, serif;
+$sans: "Helvetica Neue", sans-serif;
+$mono: monospace;
+
+
+// FONT WEIGHTS 
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+
+///* =============================================================================
+//   Base Sizes
+//   ========================================================================== */
+
+
+$line-n: 24; // Set the line height (in px) Also determines gutter width.
+$line: $line-n * 1px; //Convert to pixels for common use
+$base: 16; // Set the base font size (in px)
+
+// Set the page margins (14 is nice for 12 col grid…
+// It results in an even column unit for either margin. EG, I'd use 18 for a 16 column grid).
+$margin: 100% / 14;
+
+
+///* =============================================================================
+//   Grid
+//   ========================================================================== */
+
+// USAGE
+// width: $c6*3; // This is 3 units of a 6 unit grid wide
+// margin-left: $c4*2; // This pushes the element 2 units (of a 4 element grid) to the left
+
+// You should add @include wrap; to each column adjustment
+// It's recomended to change box sizing to border-box for easier styling and positining.
+// Read more here: http://goldengridsystem.com
+
+// Have fun. Make as many as you like. Simple.
+
+//Three Column Grid
+$c3: 100% / 3;
+//Four Column Grid
+$c4: 100% / 4;
+
+//Six Column Grid
+$c6: 100% / 6;
+//Eight Column Grid
+$c8: 100% / 8;
+
+//Twelve Column Grid
+$c12: 100% / 12;
+//Sixteen Column Grid
+$c16: 100% / 16;
+
+
+
+
+///* =============================================================================
+//   Breakpoints
+//   ========================================================================== */
+
+// Adjust according to content not device.
+
+$screenSmall: 49em !default;
+$screenMedium: 80em !default;
+$screenLarge: 112em !default;
+$screenXlarge: 150em !default;
