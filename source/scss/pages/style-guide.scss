@@ -1,12 +1,9 @@
 //Compass Imports
-@import "compass/utilities/general/clearfix";
-@import "compass/utilities/general/min";
-@import "compass/css3";
+@import "compass";
 
 //Power Moves: Sass Variables and mixins
 @import "settings/variables";
 @import "settings/mixins";
-
 
 //Decent defaults
 section {

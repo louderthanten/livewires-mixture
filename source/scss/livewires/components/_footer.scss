@@ -1,6 +1,5 @@
-#footer {
-	background:$dark-grey;
-	color:$white;
+.footer {
+	@extend .reverse;
 	padding:$line/2;
 
 	a:link,

@@ -1,6 +1,5 @@
-#header {
-	background:$dark-grey;
-	color:$white;
+.header {
+	@extend .reverse;
 	padding:$line/2;
 
 	a:link,
@@ -10,5 +9,5 @@
 	a:hover,
 	a:active {
 		color:$red;
-	}	
+	}
 }

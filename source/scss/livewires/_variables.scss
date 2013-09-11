@@ -24,7 +24,7 @@ $solid: 1px solid $grey;
 $serif: Georgia, serif;
 $sans: "Helvetica Neue", sans-serif;
 
-// FONT WEIGHTS 
+// FONT WEIGHTS
 
 $thin: 100;
 $light: 300;
@@ -52,6 +52,16 @@ $margin: 100% / 18;
 //   ========================================================================== */
 
 //Loosely based on the principles outined at http://goldengridsystem.com
+
+//Three Columns
+$c3: 100%/3;
+
+//Six Columns
+$c6: 100%/6;
+
+//Twelve Columns
+$c12: 100%/12;
+
 
 //Four Columns
 $c4: 100%/4;

@@ -36,13 +36,13 @@ ol {
 
 .content,
 li {
-	background: url('../img/livewires/text.png');
+	background: image_url('livewires/text.png');
 }
 
 nav ul {
 	list-style: none;
 	padding:0;
-	
+
 	li {
 		background:transparent;
 	}
@@ -64,6 +64,10 @@ a {
 	}
 }
 
+.reverse {
+    background:$dark-grey;
+    color:$white;
+}
 
 // Other
 hr {
