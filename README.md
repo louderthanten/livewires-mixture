@@ -1,7 +1,7 @@
 Live Wires Mixture
 =========
 
-A simple in-browser wireframing toolkit. This is the Mixture boilerplate for it.
+A simple in-browser wireframing toolkit. This is my Mixture boilerplate for it.
 
 This is my answer to all the crappy wireframing tools and over-complicated prototype libraries out there.
 
