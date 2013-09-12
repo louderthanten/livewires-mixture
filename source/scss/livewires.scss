@@ -12,7 +12,6 @@
 
 // Live Wires visual styles
 @import "livewires/typography";
-@import "livewires/callouts";
 @import "livewires/forms";
 
 
@@ -21,6 +20,7 @@
 @import "livewires/components/footer";
 @import "livewires/components/nav";
 @import "livewires/components/blog";
+@import "livewires/components/callouts";
 
 
 //  Use production css for layout when possible
