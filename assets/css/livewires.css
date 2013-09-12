@@ -636,6 +636,12 @@ hr {
 .callout {
   margin-bottom: 24px;
 }
+/* line 7, ../../source/scss/livewires/_callouts.scss */
+.callout > *:last-child,
+.callout > *:last-child > *:last-child,
+.callout > *:last-child > *:last-child > *:last-child {
+  margin: 0;
+}
 
 /* line 1, ../../source/scss/livewires/_forms.scss */
 label {
