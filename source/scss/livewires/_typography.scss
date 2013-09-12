@@ -39,6 +39,13 @@ li {
 	background: image_url('livewires/text.png');
 }
 
+//Setup line classes
+@for $i from 1 through 100 {
+	.l#{$i} { height:$line* $i; }
+}
+
+
+
 nav ul {
 	list-style: none;
 	padding:0;
