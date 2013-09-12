@@ -622,18 +622,18 @@ a:hover, a:active {
 
 /* line 67, ../../source/scss/livewires/_typography.scss */
 .reverse, .callout, .header, .footer {
+  padding: 24px;
   background: #3a3a3c;
   color: white;
 }
 
-/* line 73, ../../source/scss/livewires/_typography.scss */
+/* line 74, ../../source/scss/livewires/_typography.scss */
 hr {
   margin: 24px 0;
 }
 
 /* line 1, ../../source/scss/livewires/_callouts.scss */
 .callout {
-  padding: 24px;
   margin-bottom: 24px;
 }
 
@@ -692,31 +692,23 @@ select {
   margin-bottom: 12px;
 }
 
-/* line 1, ../../source/scss/livewires/components/_header.scss */
-.header {
-  padding: 12px;
-}
-/* line 6, ../../source/scss/livewires/components/_header.scss */
+/* line 5, ../../source/scss/livewires/components/_header.scss */
 .header a:link,
 .header a:visited {
   color: white;
 }
-/* line 10, ../../source/scss/livewires/components/_header.scss */
+/* line 9, ../../source/scss/livewires/components/_header.scss */
 .header a:hover,
 .header a:active {
   color: #d13731;
 }
 
-/* line 1, ../../source/scss/livewires/components/_footer.scss */
-.footer {
-  padding: 12px;
-}
-/* line 6, ../../source/scss/livewires/components/_footer.scss */
+/* line 5, ../../source/scss/livewires/components/_footer.scss */
 .footer a:link,
 .footer a:visited {
   color: white;
 }
-/* line 10, ../../source/scss/livewires/components/_footer.scss */
+/* line 9, ../../source/scss/livewires/components/_footer.scss */
 .footer a:hover,
 .footer a:active {
   color: #d13731;
