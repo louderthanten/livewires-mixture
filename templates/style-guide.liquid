@@ -1,5 +1,6 @@
-{% block content %}
+{% block styles %}{{ "pages/style-guide.css" | asset_url | stylesheet_tag }}{% endblock %}
 
+{% block content %}
 <header>
 	<div class="container">
 		<h2>Style Guide</h2>
