@@ -13,6 +13,43 @@ section {
 }
 
 /* line 18, ../../../source/scss/pages/style-guide.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 21, ../../../source/scss/pages/style-guide.scss */
+nav ul > li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav ul > li:first-child, nav ul > li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav ul > li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav ul > li.last {
+  padding-right: 0;
+}
+/* line 24, ../../../source/scss/pages/style-guide.scss */
+nav ul > li a {
+  display: block;
+  padding-right: 12px;
+}
+
+/* line 33, ../../../source/scss/pages/style-guide.scss */
 .type-sample p {
   font-size: 36px;
   font-size: 2.25rem;
@@ -21,11 +58,11 @@ section {
   letter-spacing: 0.1em;
 }
 
-/* line 26, ../../../source/scss/pages/style-guide.scss */
+/* line 41, ../../../source/scss/pages/style-guide.scss */
 .grids .container hr {
   clear: both;
 }
-/* line 29, ../../../source/scss/pages/style-guide.scss */
+/* line 44, ../../../source/scss/pages/style-guide.scss */
 .grids .container div {
   margin-bottom: 24px;
   height: 240px;
@@ -39,24 +76,24 @@ section {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 35, ../../../source/scss/pages/style-guide.scss */
+/* line 50, ../../../source/scss/pages/style-guide.scss */
 .grids .container div span {
   display: block;
   width: 100%;
   height: 240px;
 }
 
-/* line 50, ../../../source/scss/pages/style-guide.scss */
+/* line 65, ../../../source/scss/pages/style-guide.scss */
 .primary * {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-/* line 53, ../../../source/scss/pages/style-guide.scss */
+/* line 68, ../../../source/scss/pages/style-guide.scss */
 .secondary * {
   font-family: Georgia, serif;
 }
 
-/* line 58, ../../../source/scss/pages/style-guide.scss */
+/* line 73, ../../../source/scss/pages/style-guide.scss */
 .swatch {
   margin: 12px 12px 48px 12px;
   margin:  0.75rem 0.75rem 3rem 0.75rem;
@@ -81,7 +118,7 @@ section {
   width: 10px;
   height: 10px;
 }
-/* line 69, ../../../source/scss/pages/style-guide.scss */
+/* line 84, ../../../source/scss/pages/style-guide.scss */
 .swatch p {
   position: absolute;
   bottom: -2.75em;
@@ -89,79 +126,79 @@ section {
   width: 100%;
 }
 
-/* line 76, ../../../source/scss/pages/style-guide.scss */
+/* line 91, ../../../source/scss/pages/style-guide.scss */
 .color1 {
   background: #333333;
 }
 
-/* line 79, ../../../source/scss/pages/style-guide.scss */
+/* line 94, ../../../source/scss/pages/style-guide.scss */
 .color2 {
   background: blue;
 }
 
-/* line 82, ../../../source/scss/pages/style-guide.scss */
+/* line 97, ../../../source/scss/pages/style-guide.scss */
 .color3 {
   background: red;
 }
 
-/* line 87, ../../../source/scss/pages/style-guide.scss */
+/* line 102, ../../../source/scss/pages/style-guide.scss */
 .grids span {
   background: #cccccc;
 }
 
-/* line 90, ../../../source/scss/pages/style-guide.scss */
+/* line 105, ../../../source/scss/pages/style-guide.scss */
 .three {
   width: 33.33333%;
 }
 
-/* line 93, ../../../source/scss/pages/style-guide.scss */
+/* line 108, ../../../source/scss/pages/style-guide.scss */
 .four {
   width: 25%;
 }
 
-/* line 96, ../../../source/scss/pages/style-guide.scss */
+/* line 111, ../../../source/scss/pages/style-guide.scss */
 .six {
   width: 16.66667%;
 }
 
-/* line 99, ../../../source/scss/pages/style-guide.scss */
+/* line 114, ../../../source/scss/pages/style-guide.scss */
 .eight {
   width: 12.5%;
 }
 
-/* line 102, ../../../source/scss/pages/style-guide.scss */
+/* line 117, ../../../source/scss/pages/style-guide.scss */
 .twelve {
   width: 8.33333%;
 }
 
-/* line 105, ../../../source/scss/pages/style-guide.scss */
+/* line 120, ../../../source/scss/pages/style-guide.scss */
 .sixteen {
   width: 6.25%;
 }
 
-/* line 111, ../../../source/scss/pages/style-guide.scss */
+/* line 126, ../../../source/scss/pages/style-guide.scss */
 .folding.six, .folding.twelve {
   display: none;
 }
-/* line 114, ../../../source/scss/pages/style-guide.scss */
+/* line 129, ../../../source/scss/pages/style-guide.scss */
 .folding.three {
   display: block !important;
   width: 33.33333%;
 }
 
 @media only screen and (min-width: 49em) {
-  /* line 122, ../../../source/scss/pages/style-guide.scss */
+  /* line 137, ../../../source/scss/pages/style-guide.scss */
   .folding.twelve {
     display: none;
   }
-  /* line 125, ../../../source/scss/pages/style-guide.scss */
+  /* line 140, ../../../source/scss/pages/style-guide.scss */
   .folding.six {
     display: block;
     width: 16.66667%;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 133, ../../../source/scss/pages/style-guide.scss */
+  /* line 148, ../../../source/scss/pages/style-guide.scss */
   .folding.twelve {
     display: block;
     width: 8.33333%;

@@ -15,7 +15,6 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 		{{ "main.css" | asset_url | stylesheet_tag }}
-		{{ "livewires.css" | asset_url | stylesheet_tag }}
 
 		<!-- Style block allowing child pages to inject their own styles -->
 		{% block styles %}{% endblock %}
@@ -29,13 +28,20 @@
 	       <![endif]-->
 
 	       <!-- Include -->
-		{% include "header" %}
+		<header class="header">
+			<div class="container">
+				<a href="/" class="logo">{{ global.title }}</a>
+				<nav class="primary-nav">
+					<ul>
+						<li><a href="/ui/style-guide/">Style Guide</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
 		<!-- Content block, child page inject content -->
 		{% block content %}{% endblock %}
 
-
-		{% include "footer" %}
 
 		<!-- Script block allowing child pages to inject their own scripts -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

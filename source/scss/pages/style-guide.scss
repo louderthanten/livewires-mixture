@@ -14,6 +14,21 @@ section {
     color:$white;
     @include rem(padding, $line 0);
 }
+nav {
+    ul {
+        @include horizontal-list-container;
+
+        > li {
+            @include horizontal-list-item;
+
+            a {
+                display:block;
+                padding-right:$line/2;
+            }
+        }
+    }
+
+}
 .type-sample {
     p {
         @include font-size(36, 48);

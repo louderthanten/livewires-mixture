@@ -45,7 +45,7 @@ li {
 	}
 }
 
-//Setup line classes
+//Setup line classes eg) class="l5" would be 5 lines
 @for $i from 1 through 100 {
 	.l#{$i} { height:$line* $i; }
 }
