@@ -1,12 +1,14 @@
 // Compass Imports
 @import "compass";
 
+@import "settings/normalize";
+@import "settings/helpers";
+
 // Live Wires variables
 @import "livewires/variables";
 
-// Share production mixins and helpers
+// Share production mixins
 @import "settings/mixins";
-@import "settings/helpers";
 
 // Live Wires visual styles
 @import "livewires/typography";
@@ -19,3 +21,7 @@
 @import "livewires/components/nav";
 @import "livewires/components/blog";
 @import "livewires/components/callouts";
+
+//  Use production css for layout when possible
+@import "global/layout";
+@import "modules/media";

@@ -14,7 +14,11 @@
 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+		{% comment %}
+		<!-- Uncomment this stylesheet and hide livewires.css when ready to apply your main UI styles. -->
 		{{ "main.css" | asset_url | stylesheet_tag }}
+		{% endcomment %}
+
 		{{ "livewires.css" | asset_url | stylesheet_tag }}
 
 		<!-- Style block allowing child pages to inject their own styles -->
