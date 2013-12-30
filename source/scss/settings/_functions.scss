@@ -18,7 +18,7 @@
 
 
 @function convert-to-rem($value, $base-value: $root)  {
-  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  $value: strip($value) / strip($base-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }
