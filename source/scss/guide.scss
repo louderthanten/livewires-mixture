@@ -1,0 +1,332 @@
+// UI KIT STYLES
+
+// The is the style of the UI Kit/Style Guide/Brand guide/etc itself.
+// Base theme colors
+@import "settings/colors";
+
+// Bring in Sass tools for easier styling.
+@import "settings/variables";
+@import "settings/functions";
+@import "settings/mixins";
+@import "global/helpers";
+
+// UI Library Settings
+//
+// You'll definitely want to customize this section
+//
+// Fonts
+// Add more here and in the Typography liquid template if you need.
+.primary * {
+    font-family: $serif;
+}
+.secondary * {
+    font-family: $sans;
+}
+
+// Colors
+// Add more here and in the Color liquid template if you need.
+.color1 { background: $text; }
+.color2 { background: $mid-text; }
+.color3 { background: $accent; }
+
+//
+// End customizations
+//
+
+// UI Kit Styles
+//
+// Change this if you want to customize the look, feel, or stucture of the UI Library
+//
+
+//Overall layout
+section {
+
+}
+.header {
+
+}
+.logo {
+    @include rem(margin-bottom, $line);
+    max-width: 200px;
+}
+.tagline {
+
+}
+
+nav {
+    clear:both;
+
+    ul {
+        @extend %group;
+
+        > li {
+           display: inline-block;
+
+            a {
+                display:block;
+                padding-right:$line/2;
+            }
+        }
+    }
+}
+
+// Type Section
+.type-sample {
+
+    p {
+        @include font-size(24, 36);
+        margin-bottom: rem($line*1.5);
+        letter-spacing: 0.1em;
+    }
+}
+// Modular scale
+.scale {
+    max-width: 30em;
+
+    td {
+        padding:0;
+    }
+}
+.key {
+    font-weight: $bold;
+}
+
+
+//Colour swatches
+.colors {
+    background:#fff;
+}
+.swatch {
+    @include gutter;
+    position: relative;
+    display: inline-block;
+    margin:rem($line/2 $line/2 $line*3 $line/2);
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    text-align: center;
+
+    p {
+        position: absolute;
+        bottom:-75%;
+        left:0;
+        width:100%;
+    }
+}
+
+
+
+// Icon listing
+.iconset {
+    ul {
+        list-style: none;
+    }
+}
+
+
+
+
+
+
+
+// Grid section
+
+.grids {
+    .container {
+        hr {
+            clear:both;
+        }
+    }
+    .folding {
+        margin-bottom: $line;
+        height: $line*10;
+        float:left;
+        @include gutter;
+
+        span {
+            display: block;
+            width:100%;
+            height: $line*10;
+            background:$text;
+        }
+    }
+    h2 {
+        clear:both;
+    }
+}
+
+.grid {
+    @extend %group;
+    &.grid--3-6-12 {
+        .three {
+            width:$c3;
+            display: block !important;
+        }
+        .six,
+        .twelve {
+            display: none;
+        }
+    }
+    &.grid--2-4-8 {
+        .two {
+            width:$c4*2;
+            display: block !important;
+        }
+        .four,
+        .eight {
+            display: none;
+        }
+    }
+    &.grid--3-5-7 {
+        .three {
+            width:$c3;
+            display: block !important;
+        }
+        .five,
+        .seven {
+            display: none;
+        }
+    }
+    &.grid--4-8-16 {
+        .four {
+            width:$c4;
+            display: block !important;
+        }
+        .eight,
+        .sixteen {
+            display: none;
+        }
+    }
+}
+
+.combined-grid {
+    position:relative;
+    width:100%;
+    padding:0;
+
+    .grid {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        height:200px;
+        opacity:0.3;
+        padding:0 !important;
+    }
+}
+
+@media only screen and (min-width: $screenSmall) {
+
+    .paragraphs {
+        width:$c4*3;
+    }
+    .iconset {
+        @include gutter;
+        width:$c8*4;
+        float:left;
+    }
+    .grid {
+        padding:0 !important;
+
+        &.grid--2-4-8 {
+            .four {
+                width:$c4;
+                display: block !important;
+            }
+            .eight {
+                display: none;
+            }
+        }
+        &.grid--3-5-7 {
+            .five {
+                width:$c5;
+                display: block !important;
+            }
+            .seven {
+                display: none;
+            }
+        }
+        &.grid--3-6-12 {
+            .six {
+                width:$c6;
+                display: block !important;
+            }
+            .twelve {
+                display: none;
+            }
+        }
+        &.grid--4-8-16 {
+            .eight {
+                width:$c8;
+                display: block !important;
+            }
+            .sixteen {
+                display: none;
+            }
+        }
+    }
+    .callouts {
+        .callout {
+            @include gutter;
+            float:left;
+            width:$c4*2;
+
+            &:nth-child(odd) {
+                clear:both;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $screenLarge) {
+    .type-sample {
+        width:$c4*2;
+        float:left;
+    }
+    .paragraphs {
+        width:$c4*2;
+    }
+    .iconset {
+        width:$c6*2;
+    }
+}
+
+@media only screen and (min-width: $screenXlarge) {
+
+    .grid {
+
+        &.grid--2-4-8 {
+            .eight {
+                width:$c8;
+                display: block !important;
+            }
+        }
+        &.grid--3-5-7 {
+            .seven {
+                width:$c7;
+                display: block !important;
+            }
+        }
+        &.grid--3-6-12 {
+            .twelve {
+                width:$c12;
+                display: block !important;
+            }
+        }
+        &.grid--4-8-16 {
+            .sixteen {
+                width:$c16;
+                display: block !important;
+            }
+        }
+    }
+    .callouts {
+        .callout {
+            width:$c4;
+
+            &:nth-child(odd) {
+                clear:none;
+            }
+        }
+    }
+}

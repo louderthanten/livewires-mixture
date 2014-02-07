@@ -1,0 +1,16 @@
+{% block styles %}
+    {{ "guide.css" | asset_url | stylesheet_tag }}
+{% endblock %}
+
+{% block header %}
+    {% include "guide/header" %}
+{% endblock %}
+
+{% block content %}
+<header class="row">
+    <div class="container">
+        <h1>Layout modules</h1>
+        <p class="lead">The building blocks of our templates.</p>
+    </div>
+</header>
+{% endblock %}

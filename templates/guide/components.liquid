@@ -1,0 +1,179 @@
+{% block styles %}
+    {{ "guide.css" | asset_url | stylesheet_tag }}
+{% endblock %}
+
+{% block header %}
+    {% include "guide/header" %}
+{% endblock %}
+
+{% block content %}
+<header class="row">
+    <div class="container">
+        <h1>Components</h1>
+        <p class="lead">Components combine bits and peices into small reusable pieces that act as the building blocks to our modules and layouts.</p>
+    </div>
+</header>
+
+<section class="row">
+    <div class="container">
+        <h2>Navigation</h2>
+
+        <div class="split-content">
+            <h3>Breadcrumbs</h3>
+            {% include "modules/breadcrumbs" %}
+
+            <h3>More links</h3>
+            <p class="more"><a href="">Read more &gt;</a></p>
+        </div>
+        <div class="split-content">
+            <h3>Pagination</h3>
+
+            <h4>Standard</h4>
+            {% include "modules/pagination" %}
+
+            <h4>Mini</h4>
+            {% include "modules/pagination--mini" %}
+        </div>
+
+    </div>
+</section>
+<section class="row">
+    <div class="container">
+        <h2>Misc</h2>
+        <div class="split-content">
+            <h3>Time stamp</h3>
+            <time datetime="2011-01-12">January 12<sup>th</sup>, 2011</time>
+        </div>
+        <div class="split-content">
+            <h3>VCard</h3>
+            <div class="vcard">
+                <p class="org"><strong>Company name</strong></p>
+                <p class="adr">
+                    <span class="street-address">123 Chester street</span>
+                    <span class="locality">Vancouver</span>, <span class="region">BC</span> <span class="postal-code">V7B 0B4</span>
+                    <span class="country-name">Canada</span>
+                </p>
+                <p class="tel">
+                    <span class="type">Phone</span>
+                    <a href="tel:+18885555555" class="value" title="+18885555555">1 (888) 555-5555</a>
+                </p>
+                <p class="email">
+                    <span class="type">Email</span>
+                    <a href="mailto:name@example.com" class="value" title="name@example.com">name@example.com</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="row callouts">
+    <div class="container">
+        <h2>Callouts</h2>
+    </div>
+    <div class="container">
+        <aside class="callout">
+            <div class="content reverse">
+                <h2>Content Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            </div>
+        </aside>
+
+        <aside class="callout">
+            <figure>
+                {{ "1200x800" | placeholder | image_tag }}
+            </figure>
+            <div class="content">
+                <h2>Image Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            </div>
+        </aside>
+
+        <aside class="callout">
+            <figure class="video">
+                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </figure>
+            <div class="content">
+                <h2>Video Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            </div>
+        </aside>
+
+        <aside class="callout">
+            <div class="content reverse">
+                <h2>Form Callout</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+                <form action="">
+                    <div class="field">
+                        <input type="text" class="text-input" placeholder="Name" />
+                    </div>
+                    <div class="field">
+                        <input type="email" class="text-input" placeholder="Email" />
+                    </div>
+
+                    <button type="submit" class="button--red button--small">Submit</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="row">
+    <div class="container">
+        <h2>Hidden Content</h2>
+
+        <h3>Page-wide drawer</h3>
+        <p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
+    </div>
+</section>
+<section class="drawer reverse" id="drawer">
+    <div class="container">
+        <div class="content">
+            <h2>Hidden drawer</h2>
+            <p>A page wide drawer for hidden content. You can put anything you want to hide in here.<p>
+        </div>
+    </div>
+</section>
+<section class="callouts">
+    <div class="container">
+        <h2>Callout drawers</h2>
+    </div>
+    <div class="container">
+        <aside class="callout">
+            <div class="content reverse">
+                <h2>Callout Drawer</h2>
+                <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+                <p><a href="#callout-drawer-1" class="js-reveal button button--red">Open drawer</a></p>
+
+                <form action="" id="callout-drawer-1" class="drawer">
+                    <div class="field">
+                        <input type="text" class="text-input" placeholder="Name" />
+                    </div>
+                    <div class="field">
+                        <input type="email" class="text-input" placeholder="Email" />
+                    </div>
+                     <button type="submit" class="button--red button--small">Submit</button>
+                </form>
+            </div>
+        </aside>
+
+    </div>
+</section>
+<section class="row">
+    <div class="container">
+        <h2>Media</h2>
+        <div class="split-content">
+            <h3>Responsive image</h3>
+            <figure>
+                {{ "2500x1666" | placeholder | image_tag }}
+                <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
+            </figure>
+        </div>
+        <div class="split-content">
+            <h3>Responsive embedded video</h3>
+            <figure class="video">
+                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </figure>
+        </div>
+    </div>
+</section>
+{% endblock %}

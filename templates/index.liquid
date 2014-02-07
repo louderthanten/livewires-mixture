@@ -1,10 +1,12 @@
+{% block header %}
+    {% include "modules/header" %}
+{% endblock %}
+
 {% block content %}
-<div class="main" id="main">
-	<section class="primary-content">
-		<div class="container">
-			<p>{{ global.intro }}</p>
-			<!-- TODO: Create my project :-) -->
-		</div>
-	</section>
-</div>
+<section class="primary-content">
+	<div class="container">
+		<p>{{ global.intro }}</p>
+		<!-- TODO: Create my project :-) -->
+	</div>
+</section>
 {% endblock %}

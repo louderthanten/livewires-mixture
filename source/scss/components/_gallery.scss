@@ -1,0 +1,31 @@
+// GALLERY
+
+// I'm using Swipe for my galleries. It's lightweight, touch-friendly, and responsive. http://bradbirdsall.com/swipe-js-a-lightweight-mobile-web-slider
+//
+// To use, add the following line to your javascript:
+//
+// window.mySwipe = Swipe(document.getElementById('gallery'))
+//
+// And mark it up like this example:
+//<div id='gallery' class='gallery'>
+//  <div class='gallery-wrap'>
+//    <div></div>
+//    <div></div>
+//    <div></div>
+//  </div>
+//</div>
+
+.gallery {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.gallery-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.gallery-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}

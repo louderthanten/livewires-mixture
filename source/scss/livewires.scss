@@ -1,30 +1,32 @@
-// Compass Imports
-@import "compass";
+// Base theme colors
+@import "settings/colors";
 
-@import "settings/normalize";
-@import "settings/helpers";
+// Includes
+@import "settings/includes";
 
-// Live Wires variables
-@import "livewires/variables";
 
-// Functions
-@import "settings/functions";
 
-// Share production mixins
-@import "settings/mixins";
 
 // Live Wires visual styles
-@import "livewires/typography";
-@import "livewires/forms";
+.content{
+    p,
+    li,
+    dd {
+        @include font-size($line-n*1.4, $line-n);
+        word-spacing: -1em;
+        font-family: "BLOKKNeue-Regular";
+        color: #BABAAE;
+    }
+}
+
+// If you don't have content, shame on you.
+// Here's a little handy set of classes to help you anyway.
+// Just add a line class to your container and we'll fill it with the text placeholder image.
+//
+// eg) class="l5" would render 5 lines of text placeholder images
+@for $i from 1 through 100 {
+    .l#{$i} { height:$line* $i; background: url('../img/livewires/text.png'); }
+    .l#{$i} > p { visibility: hidden; }
+}
 
 
-// Optional readymade templates to get going. Don't need it? Remove it.
-@import "livewires/components/header";
-@import "livewires/components/footer";
-@import "livewires/components/nav";
-@import "livewires/components/blog";
-@import "livewires/components/callouts";
-
-//  Use production css for layout when possible
-@import "global/layout";
-@import "modules/media";

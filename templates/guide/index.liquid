@@ -1,0 +1,30 @@
+{% block styles %}
+    {{ "guide.css" | asset_url | stylesheet_tag }}
+{% endblock %}
+
+{% block header %}
+    {% include "guide/header" %}
+{% endblock %}
+
+{% block content %}
+<header class="row">
+    <div class="container">
+        <h1>Live Wires User Interface Guide</h1>
+        <p class="lead">Here you&rsquo;ll find the building block components of your site: everything from our typefaces, to content formatting, form elements, colour palettes, and iconography.</p>
+
+        <p>Use this library as a blueprint and a reference for building additional design templates or scaling the design.</p>
+    </div>
+</header>
+<section class="row">
+    <div class="container">
+        <h2>Sections</h2>
+
+    </div>
+</section>
+<section class="row">
+    <div class="container">
+        <h2>Helpers</h2>
+
+    </div>
+</section>
+{% endblock %}
