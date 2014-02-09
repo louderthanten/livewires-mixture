@@ -6,8 +6,7 @@ a.button {
     color:$background;
 
     &:hover {
-        background-color: $blue;
-        color:$background;
+
     }
 
     &:active,
@@ -26,6 +25,17 @@ a.button--red {
     &:active,
     &:focus {
         background-color: $blue;
+    }
+}
+
+.button--grey,
+a.button--grey {
+    background:$mid-text;
+    color: $background;
+
+    &:active,
+    &:focus {
+        background-color: $text;
     }
 }
 

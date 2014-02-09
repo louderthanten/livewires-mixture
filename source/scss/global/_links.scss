@@ -2,19 +2,19 @@
 
 a {
 
-    &:link,
-    &:visited {
-        color:$blue;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-        color:$red;
-    }
+  &:link,
+  &:visited {
+
+  }
+  &:hover,
+  &:active,
+  &:focus {
+
+  }
 }
 
 a.disabled {
-    cursor: default;
+  cursor: default;
 }
 
 h1,
@@ -23,33 +23,33 @@ h3,
 h4,
 h5,
 h6 {
-    a {
-        text-decoration: none;
+  a {
+    text-decoration: none;
 
-        &:link,
-        &:visited {
+    &:link,
+    &:visited {
 
-        }
-        &:hover,
-        &:active,
-        &:focus {
-
-        }
     }
+    &:hover,
+    &:active,
+    &:focus {
+
+    }
+  }
 }
 
 sup,
 sub {
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 }
 
 .more {
-    a {
+  a {
 
-        span {
+    span {
 
-        }
     }
+  }
 }

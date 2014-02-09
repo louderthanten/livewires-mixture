@@ -19,39 +19,53 @@
 
 .option-buttons,
 .pill-buttons {
-    label {
-        transition: all 0.1s linear;
-        position:relative;
-        display: block;
-        float:left;
-        padding:rem($line/4);
-        margin-right: 1px;
-        text-align: center;
-    }
-    input {
-        position:absolute;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        z-index: 3;
-        opacity:0;
-        width:100%;
-        height:100%;
-        cursor: pointer;
-        -moz-appearance: none;
-    }
-    span {
-        display:block;
-        margin-left: auto;
-        margin-right:auto;
-    }
+  label {
+    @extend .button;
+    transition: all 0.1s linear;
+    position:relative;
+    display: block;
+    float:left;
+    padding:rem($line/4);
+    margin-right: 1px;
+    text-align: center;
+  }
+  input {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 3;
+    opacity:0;
+    width:100%;
+    height:100%;
+    cursor: pointer;
+    -moz-appearance: none;
+  }
+  span {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+  }
 }
-
+.option-buttons {
+  label {
+    margin-right: rem($line/4);
+  }
+}
 .pill-buttons  {
-    @extend .button-group;
+  @extend .button-group;
 
-    label {
-        @extend .button;
+  label {
+    border-radius:0;
+
+    &:first-child {
+      border-bottom-left-radius: $radius;
+      border-top-left-radius: $radius;
     }
+    &:last-child {
+      border-bottom-right-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+  }
 }

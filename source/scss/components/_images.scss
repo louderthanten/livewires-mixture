@@ -12,51 +12,51 @@
 // </figure>
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 figure {
-    position:relative;
+  position:relative;
 
-    > img,
-    > iframe {
-        display: block;
-        margin:0;
-    }
+  > img,
+  > iframe {
+    display: block;
+    margin:0;
+  }
 }
 figcaption {
-    .source {
-        // Stack caption source on mobile sizes
-        display: block;
-    }
+  .source {
+    // Stack caption source on mobile sizes
+    display: block;
+  }
 }
 
 
 
 @media only screen and (min-width: $screenSmall) {
-    // Image poisiton helpers. Let's kick 'em in at larger screen widths
-    .img--right{
-        margin-bottom: rem($line/2);
-        margin-left: rem($line/2);
-        float: right;
-    }
-    .img--left{
-        margin-bottom: rem($line/2);
-        margin-right: rem($line/2);
-        float: left;
-    }
-    .img--center{
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: rem($line/2);
-    }
+  // Image position helpers. Let's kick 'em in at larger screen widths
+  .img--right{
+    margin-bottom: rem($line/2);
+    margin-left: rem($line/2);
+    float: right;
+  }
+  .img--left{
+    margin-bottom: rem($line/2);
+    margin-right: rem($line/2);
+    float: left;
+  }
+  .img--center{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: rem($line/2);
+  }
 
-    // Let's move those caption sources to the right at wider sizes
-    figcaption {
-        .source {
-            float:right;
-            text-align: right;
-        }
+  // Let's move those caption sources to the right at wider sizes
+  figcaption {
+    .source {
+      float:right;
+      text-align: right;
     }
+  }
 }

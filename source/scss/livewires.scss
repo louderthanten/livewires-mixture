@@ -12,10 +12,17 @@
     p,
     li,
     dd {
-        @include font-size($line-n*1.4, $line-n);
-        word-spacing: -1em;
+        line-height: 1.25;
+        letter-spacing:-0.1em;
+        word-spacing: -0.9em;
         font-family: "BLOKKNeue-Regular";
         color: #BABAAE;
+
+        > * {
+            word-spacing: 0;
+            letter-spacing: 0;
+        }
+
     }
 }
 

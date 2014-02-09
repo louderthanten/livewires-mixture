@@ -1,200 +1,146 @@
-.trigger {
-    span {
-        font-size: 0.75em;
-        margin-right: 0.25em;
-    }
-}
-.scroller {
-    overflow-y: scroll;
-}
-.scroller,
-.scroller-inner {
-    position: relative;
-}
-.wrapper{
-    position: relative;
-    overflow: hidden;
+.offcanvas {
+  position: fixed;
+
+  a {
+    display: block;  
+  }
 }
 
-.mp-pusher {
-    position: relative;
-    left: 0;
+
+// Vertical offcanvas 
+.offcanvas--vertical {
+  width: rem(240);
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+
+  a {
+    border-bottom: $hairline;
+    padding: rem($line/2);
+  }
+}
+ 
+// Horizontal offcanvas
+.offcanvas--horizontal {
+  width: 100%;
+  height: rem(150);
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+
+  h3 {
     height: 100%;
+    width: 20%;
+    float: left;
+  }
+
+  a {
+      float: left;
+      width: 20%;
+      padding: rem($line/2);
+      border-left: $hairline;
+  }
 }
+ 
 
-.mp-menu {
-    position: absolute; /* we can't use fixed here :( */
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: rem(300px);
-    height: 100%;
-    transform: translate3d(-100%, 0, 0);
+
+/* Vertical menu that slides from the left or right */
+ 
+.offcanvas-left {
+    left: -240px;
 }
-
-.mp-level {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translate3d(-100%, 0, 0);
+ 
+.offcanvas-right {
+    right: -240px;
 }
-
-/* overlays for pusher and for level that gets covered */
-.mp-pusher::after,
-.mp-level::after,
-.mp-level::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    content: '';
-    opacity: 0;
+ 
+.offcanvas-left.offcanvas-open {
+    left: 0px;
 }
-
-.mp-pusher::after,
-.mp-level::after {
-    transition:opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s;
+ 
+.offcanvas-right.offcanvas-open {
+    right: 0px;
 }
-
-.mp-level::after {
-    z-index: -1;
+ 
+/* Horizontal menu that slides from the top or bottom */
+ 
+.offcanvas-top {
+    top: -150px;
 }
-
-.mp-pusher.mp-pushed::after,
-.mp-level.mp-level-overlay::after {
-    transition:opacity 0.3s;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
+ 
+.offcanvas-bottom {
+    bottom: -150px;
 }
-
-.mp-level.mp-level-overlay {
-    cursor: pointer;
+ 
+.offcanvas-top.offcanvas-open {
+    top: 0px;
 }
-
-.mp-level.mp-level-overlay.mp-level::before {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    opacity: 1;
+ 
+.offcanvas-bottom.offcanvas-open {
+    bottom: 0px;
 }
-
-.mp-pusher,
-.mp-level {
-    transition:all 0.5s;
+ 
+/* Push classes applied to the body */
+ 
+.offcanvas-push {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
 }
-
-/* overlap */
-.mp-overlap .mp-level.mp-level-open {
-    transform: translate3d(-40px, 0, 0);
+ 
+.offcanvas-push-toright {
+    left: 240px;
 }
-
-/* First level */
-.mp-menu > .mp-level,
-.mp-menu > .mp-level.mp-level-open,
-.mp-menu.mp-overlap > .mp-level,
-.mp-menu.mp-overlap > .mp-level.mp-level-open {
-    transform: translate3d(0, 0, 0);
+ 
+.offcanvas-push-toleft {
+    left: -240px;
 }
-
-/* cover */
-.mp-cover .mp-level.mp-level-open {
-    transform: translate3d(0, 0, 0);
+ 
+/* Transitions */
+ 
+.offcanvas,
+.offcanvas-push {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
-
-.mp-cover .mp-level.mp-level-open > ul > li > .mp-level:not(.mp-level-open) {
-    transform: translate3d(-100%, 0, 0);
+ 
+/* Example media queries */
+ 
+@media screen and (max-width: 55.1875em){
+ 
+    .offcanvas-horizontal {
+        font-size: 75%;
+        height: 110px;
+    }
+ 
+    .offcanvas-top {
+        top: -110px;
+    }
+ 
+    .offcanvas-bottom {
+        bottom: -110px;
+    }
+ 
 }
-
-/* content style */
-.mp-menu {
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    li {
-        display:block;
-        width:100%;
-        padding:0;
-    }
-    a {
-        display: block;
-    }
-}
-
-
-.mp-menu.mp-overlap h2::before {
-    margin-right:rem($line/2);
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.1s 0.3s;
-    transform: translateX(-100%);
-}
-
-.mp-menu {
-    a {
-        padding:rem($line/1.5 $line/2 $line/1.5 $line/1.5);
-        width:100%;
-    }
-    li > a {
-        display: block;
-        float:left;
-        outline: none;
-        transition: background 0.3s, box-shadow 0.3s;
-    }
-    .mp-deeper {
-        padding:rem($line/1.3 $line/2 $line/1.7 $line/2);
-        border-right:1px solid;
-        width:17%;
-        text-align: center;
-
-        &:hover,
-        &:active,
-        &:focus {
-            transition:all 0.3s;
-            padding-left: rem($line/4);
-            padding-right: rem($line/1.5);
-        }
-
-        + a {
-            padding:rem($line/1.5 $line/2 $line/1.5 $line/2);
-            width:83%;
-        }
-    }
-}
-
-.mp-menu ul li::before {
-    position: absolute;
-    left: 10px;
-    z-index: -1;
-    line-height: 3.5;
-}
-
-/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
-/* We'll show the first level only */
-.no-csstransforms3d .mp-pusher,
-.no-js .mp-pusher {
-    padding-left: rem(300px);
-}
-
-.no-csstransforms3d .mp-menu .mp-level,
-.no-js .mp-menu .mp-level {
-    display: none;
-}
-
-.no-csstransforms3d .mp-menu > .mp-level,
-.no-js .mp-menu > .mp-level {
-    display: block;
-}
-
-@media only screen and (min-width: $screenSmall) {
-    .trigger {
-        display: none;
-    }
+ 
+@media screen and (max-height: 26.375em){
+ 
+    .offcanvas-vertical {
+        font-size: 90%;
+        width: 190px;
+    }
+ 
+    .offcanvas-left,
+    .offcanvas-push-toleft {
+        left: -190px;
+    }
+ 
+    .offcanvas-right {
+        right: -190px;
+    }
+ 
+    .offcanvas-push-toright {
+        left: 190px;
+    }
 }

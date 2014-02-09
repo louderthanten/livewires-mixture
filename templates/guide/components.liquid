@@ -10,7 +10,7 @@
 <header class="row">
     <div class="container">
         <h1>Components</h1>
-        <p class="lead">Components combine bits and peices into small reusable pieces that act as the building blocks to our modules and layouts.</p>
+        <p class="lead">Components combine basic HTML elements into small reusable pieces that act as the building blocks to our modules and layouts.</p>
     </div>
 </header>
 
@@ -20,7 +20,7 @@
 
         <div class="split-content">
             <h3>Breadcrumbs</h3>
-            {% include "modules/breadcrumbs" %}
+            {% include "components/breadcrumbs" %}
 
             <h3>More links</h3>
             <p class="more"><a href="">Read more &gt;</a></p>
@@ -29,12 +29,52 @@
             <h3>Pagination</h3>
 
             <h4>Standard</h4>
-            {% include "modules/pagination" %}
+            {% include "components/pagination" %}
 
             <h4>Mini</h4>
-            {% include "modules/pagination--mini" %}
+            {% include "components/pagination--mini" %}
         </div>
 
+    </div>
+</section>
+<section class="row">
+    <div class="container">
+        <h2>Simple tabs</h2>
+        <ul class="tabs">
+            <li><a href="#tab1">Tab 1</a></li>
+            <li><a href="#tab2">Tab 2</a></li>
+            <li><a href="#tab3">Tab 3</a></li>
+            <li><a href="#tab4">Tab 4</a></li>
+        </ul>
+        <section id="tab1" class="tab-content content reverse">
+            <h3>Tab 1</h3>
+            <p>Here is some content under tab 1.</p>
+        </section>
+        <section id="tab2" class="tab-content content reverse">
+            <h3>Tab 2</h3>
+            <p>This tab has an image in it.</p>
+            <figure>
+                {{ "2500x1666" | placeholder | image_tag }}
+            </figure>
+        </section>
+        <section id="tab3" class="tab-content content reverse">
+            <h3>Tab 3</h3>
+            <p>This tab has a video in it.</p>
+            <figure class="video">
+                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </figure>
+        </section>
+        <section id="tab4" class="tab-content content reverse">
+            <h3>Tab </h3>
+            <p>Here is some long content under tab 4.</p>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Donec sed odio dui.</p>
+
+            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
+
+            <p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
+
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        </section>
     </div>
 </section>
 <section class="row">
@@ -43,12 +83,16 @@
         <div class="split-content">
             <h3>Time stamp</h3>
             <time datetime="2011-01-12">January 12<sup>th</sup>, 2011</time>
+
+            <hr>
+            <h3>Price</h3>
+            <p class="price">$100.00</p>
         </div>
         <div class="split-content">
             <h3>VCard</h3>
             <div class="vcard">
-                <p class="org"><strong>Company name</strong></p>
                 <p class="adr">
+                    <strong class="org">Company name</strong>
                     <span class="street-address">123 Chester street</span>
                     <span class="locality">Vancouver</span>, <span class="region">BC</span> <span class="postal-code">V7B 0B4</span>
                     <span class="country-name">Canada</span>
@@ -116,7 +160,6 @@
         </aside>
     </div>
 </section>
-
 <section class="row">
     <div class="container">
         <h2>Hidden Content</h2>

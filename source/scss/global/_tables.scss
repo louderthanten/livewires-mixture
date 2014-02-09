@@ -49,23 +49,23 @@
 //  </table>
 
 table{
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 
-    ul,
-    ol,
-    dl,
-    p {
-        margin-bottom: 0;
-    }
+  ul,
+  ol,
+  dl,
+  p {
+    margin-bottom: 0;
+  }
 
-    img {
-        max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 }
 th,
 td {
-    text-align: left;
+  text-align: left;
 }
 
 
@@ -73,20 +73,20 @@ td {
 // Cell alignments
 
 [colspan]{
-    text-align: center;
+  text-align: center;
 }
 [colspan="1"]{
-    text-align: left;
+  text-align: left;
 }
 [rowspan]{
-    vertical-align: middle;
+  vertical-align: middle;
 }
 [rowspan="1"]{
-    vertical-align: top;
+  vertical-align: top;
 }
 .numerical,
 .delete {
-    text-align: right;
+  text-align: right;
 }
 
 
@@ -126,51 +126,51 @@ td {
 //  Bordered tables
 .table--bordered{
 
-    th,
-    td{
-        border:$rule;
+  th,
+  td{
+    border:$rule;
 
-        &:empty{
-            border:none;
-        }
+    &:empty{
+      border:none;
     }
+  }
 }
 
 .table--lined {
-    thead tr {
-        border-bottom: $rule;
-    }
-    tbody tr {
-        border-bottom: $hairline;
-    }
+  thead tr {
+    border-bottom: $rule;
+  }
+  tbody tr {
+    border-bottom: $hairline;
+  }
 }
 
 
 // Responsive tables. Let's kick these in at smaller screens.
 @media only screen and (max-width: $screenSmall) {
 
-    table,
-    tbody,
-    tfoot,
-    th,
-    td,
-    tr {
-        display: block !important;
-    }
-    thead {
-        display: none;
-    }
-    thead,
-    tfoot,
-    tbody,
-    tr {
-        clear:both;
-    }
-    tr {
-        width:100%;
-    }
-    .numerical,
-    .delete {
-      text-align: left;
-    }
+  table,
+  tbody,
+  tfoot,
+  th,
+  td,
+  tr {
+    display: block !important;
+  }
+  thead {
+    display: none;
+  }
+  thead,
+  tfoot,
+  tbody,
+  tr {
+    clear:both;
+  }
+  tr {
+    width:100%;
+  }
+  .numerical,
+  .delete {
+    text-align: left;
+  }
 }

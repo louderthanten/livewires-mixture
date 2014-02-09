@@ -30,17 +30,15 @@
 @import "../components/drawers";
 @import "../components/breadcrumbs";
 @import "../components/pagination";
-@import "../components/tags";
 @import "../components/link-list";
-@import "../components/tabs";
 @import "../components/switches";
 @import "../components/option-buttons";
-@import "../components/gallery";
 @import "../components/vcards";
 
 // UI modules
 @import "../modules/navigation/horizontal";
 @import "../modules/navigation/offcanvas";
+@import "../modules/navigation/tabs";
 @import "../modules/header";
 @import "../modules/cover";
 @import "../modules/layout";

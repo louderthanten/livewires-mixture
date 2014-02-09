@@ -40,22 +40,23 @@
 .invisible {
   visibility: hidden; }
 
-.right {
+.pull-right {
   float: right; }
 
-.left {
+.pull-left {
   float: left; }
 
 .clear {
   clear: both; }
 
-nav ul, .grid {
+.clearfix, nav ul, .grid {
   zoom: 1; }
-  nav ul:before, .grid:before, nav ul:after, .grid:after {
+  .clearfix:before, nav ul:before, .grid:before, .clearfix:after, nav ul:after, .grid:after {
     content: " ";
     display: table; }
-  nav ul:after, .grid:after {
+  .clearfix:after, nav ul:after, .grid:after {
     clear: both; }
+
 
 
 .text--left {

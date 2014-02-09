@@ -6,12 +6,12 @@ form {
 
 // Let's remove some odd decisions from Normalize on fieldsets.
 fieldset {
-    @extend %group;
-    padding:0;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    border:none;
-    display: block;
+  @extend %group;
+  padding:0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border:none;
+  display: block;
 }
 
 // Let's wrap our fields in a field class for easier manipulation. Here's how I generally do a required text field:
@@ -22,20 +22,20 @@ fieldset {
 // </div>
 
 .field {
-    @extend %group;
-    position: relative;
-    padding-bottom: rem($line);
+  @extend %group;
+  position: relative;
+  padding-bottom: rem($line);
 }
 
 // Treat checkbox fields (and any other unique field group types) slightly different
 .field--check {
-    label {
-        @extend %group;
-    }
+  label {
+    @extend %group;
+  }
 }
 
 legend {
-    @extend %group;
+  @extend %group;
 }
 
 label,
@@ -45,9 +45,9 @@ label,
 
 // Add some error styling. Keeping the labels absolutely positioned prevents them from altering the layout when visible.
 .label--error {
-    position:absolute;
-    left:0;
-    bottom:0;
+  position:absolute;
+  left:0;
+  bottom:0;
 }
 
 
@@ -60,40 +60,40 @@ label,
 //   <input type="password" class="text-input" />
 
 .text-input {
-    -webkit-appearance: none;
-    display:block;
-    width:100%;
-    outline:none;
-    border: $hairline;
-    border-radius: $radius;
-    font-family:$sans;
-    padding:$line/2;
+  -webkit-appearance: none;
+  display:block;
+  width:100%;
+  outline:none;
+  border: $hairline;
+  border-radius: $radius;
+  font-family:$sans;
+  padding:$line/2;
 
-    &:active,
-    &:focus {
+  &:active,
+  &:focus {
 
-    }
+  }
 
-    &.error {
+  &.error {
 
-    }
+  }
 }
 
 textarea {
-    @extend .text-input;
-    min-height: $line*6;
+  @extend .text-input;
+  min-height: $line*6;
 }
 
 .search-input,
 input[type=search] {
-    @extend .text-input;
-    overflow:hidden;
-    box-sizing:border-box;
+  @extend .text-input;
+  overflow:hidden;
+  box-sizing:border-box;
 
-    &:focus,
-    &:active {
+  &:focus,
+  &:active {
 
-    }
+  }
 }
 
 select {
@@ -101,7 +101,7 @@ select {
 }
 
 input[type=file] {
-    @extend .text-input;
+  @extend .text-input;
 }
 
 
@@ -109,14 +109,14 @@ input[type=file] {
 .check-label,
 .field--check label,
 .field--check .label{
-    display:inline-block;
+  display:inline-block;
 }
 .check-list {
-    list-style: none;
+  list-style: none;
 }
 input[type=checkbox],
 input[type=radio] {
-    margin-right: 0.5em;
+  margin-right: 0.5em;
 }
 
 //  Extra help text displayed after a field when that field is in focus, e.g.:
@@ -132,22 +132,22 @@ input[type=radio] {
 
 // small
 .extra-help{
-    display:inline-block;
-    visibility:hidden;
+  display:inline-block;
+  visibility:hidden;
 }
 .text-input:active + .extra-help,
 .text-input:focus + .extra-help{
-    visibility:visible;
+  visibility:visible;
 }
 
 // Modified forms
 .form--mini {
-    .field {
+  .field {
 
-    }
-    .text-input {
+  }
+  .text-input {
 
-    }
+  }
 }
 
 // Inline forms are good for embedding fields in text. Another hat tip to Inuit. http://inuitcss.com/
@@ -164,28 +164,28 @@ input[type=radio] {
 // </div>
 
 .form--inline {
-    label {
-        display:inline-block;
-        font:inherit;
-    }
+  label {
+    display:inline-block;
+    font:inherit;
+  }
 }
 
 // Not all fields need to be full width. Here are some field building blocks
 // I'm kicking these in at a wider screen, but make some for mobile. If you dare. ;)
 @media only screen and (min-width: $screenSmall) {
-    .field--half,
-    .field--third,
-    .field--two-third {
-        float:left;
-        padding:0;
-    }
-    .field--half {
-        width:$c4*2;
-    }
-    .field--third {
-        width:$c3;
-    }
-    .field--two-third {
-        width:$c3*2;
-    }
+  .field--half,
+  .field--third,
+  .field--two-third {
+    float:left;
+    padding:0;
+  }
+  .field--half {
+    width:$c4*2;
+  }
+  .field--third {
+    width:$c3;
+  }
+  .field--two-third {
+    width:$c3*2;
+  }
 }

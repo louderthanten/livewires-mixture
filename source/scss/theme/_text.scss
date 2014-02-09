@@ -1,7 +1,23 @@
 // TEXT COLOURS
+body {
+    color: $text;
+}
 * {
     @include selected($background, $accent);
 }
+
+a {
+  &:link,
+  &:visited {
+    color:$blue;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color:$red;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -33,3 +49,4 @@ a.disabled {
 .highlight  {
     background: $accent;
 }
+

@@ -21,35 +21,35 @@
 //</nav>
 
 .pagination {
-    @extend %group;
-    margin-top: rem($line);
+  @extend %group;
+  margin-top: rem($line);
 
-    li {
-        display:block;
-        float:left;
-    }
-    a {
-        display:block;
+  li {
+    display:block;
+    float:left;
+  }
+  a {
+    display:block;
 
-        &:link,
-        &:visited {
+    &:link,
+    &:visited {
 
-        }
-
-        &:hover,
-        &:active {
-
-        }
     }
 
-    .current a{
-        cursor: default;
+    &:hover,
+    &:active {
+
     }
+  }
+
+  .current a{
+    cursor: default;
+  }
 }
 
 .pagination--mini {
-    a {
-        display: block;
-        float:left;
-    }
+  a {
+    display: block;
+    float:left;
+  }
 }
