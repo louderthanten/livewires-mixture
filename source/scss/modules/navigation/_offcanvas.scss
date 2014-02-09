@@ -1,146 +1,101 @@
-.offcanvas {
-  position: fixed;
+// Set the width of vertical offcanvas areas
+$offcanvas-width: rem($line*10);
+
+// Set the height of horizontal offcanvas areas
+$offcanvas-height: rem($line*6);
+
+
+.offcanvas--top,
+.offcanvas--left,
+.offcanvas--bottom,
+.offcanvas--right {
+  position: fixed;
+  z-index: 1000;
 
   a {
-    display: block;  
+    display: block;
+    padding: rem($line/2);
+    text-decoration: none;
+    font-family: $sans;
   }
 }
 
+// Transitions
+.offcanvas--top,
+.offcanvas--left,
+.offcanvas--bottom,
+.offcanvas--right,
+.offcanvas--push {
+  transition: all 0.3s ease;
+}
 
 // Vertical offcanvas 
-.offcanvas--vertical {
-  width: rem(240);
+.offcanvas--right,
+.offcanvas--left {
+  width: $offcanvas-width;
   height: 100%;
   top: 0;
-  z-index: 1000;
 
-  a {
-    border-bottom: $hairline;
-    padding: rem($line/2);
+  li {
+    display: block;
   }
 }
- 
+
 // Horizontal offcanvas
-.offcanvas--horizontal {
+.offcanvas--top,
+.offcanvas--bottom {
   width: 100%;
-  height: rem(150);
+  height: $offcanvas-height;
   left: 0;
-  z-index: 1000;
   overflow: hidden;
 
-  h3 {
-    height: 100%;
-    width: 20%;
+  a {
     float: left;
   }
+}
 
-  a {
-      float: left;
-      width: 20%;
-      padding: rem($line/2);
-      border-left: $hairline;
+// Vertical menu that slides from the left or right: ;
+.offcanvas--left {
+  left: $offcanvas-width * -1;
+
+  &.offcanvas--open {
+    left: 0px;
   }
 }
- 
+.offcanvas--right {
+  right: $offcanvas-width * -1;
 
+  &.offcanvas--open {
+    right: 0px;
+  }
+}
 
-/* Vertical menu that slides from the left or right */
- 
-.offcanvas-left {
-    left: -240px;
+// Horizontal menu that slides from the top or bottom
+.offcanvas--top {
+  top: $offcanvas-height * -1;
+
+  &.offcanvas--open {
+    top: 0px;
+  }
 }
- 
-.offcanvas-right {
-    right: -240px;
+.offcanvas--bottom {
+  bottom: $offcanvas-height * -1;
+
+  &.offcanvas--open {
+    bottom: 0px;
+  }
 }
- 
-.offcanvas-left.offcanvas-open {
-    left: 0px;
+
+// Push classes applied to the body
+.offcanvas--push {
+  overflow-x: hidden;
+  left: 0;
 }
- 
-.offcanvas-right.offcanvas-open {
-    right: 0px;
+
+.offcanvas--push-right {
+  left: $offcanvas-width * -1;
 }
- 
-/* Horizontal menu that slides from the top or bottom */
- 
-.offcanvas-top {
-    top: -150px;
-}
- 
-.offcanvas-bottom {
-    bottom: -150px;
-}
- 
-.offcanvas-top.offcanvas-open {
-    top: 0px;
-}
- 
-.offcanvas-bottom.offcanvas-open {
-    bottom: 0px;
-}
- 
-/* Push classes applied to the body */
- 
-.offcanvas-push {
-    overflow-x: hidden;
-    position: relative;
-    left: 0;
-}
- 
-.offcanvas-push-toright {
-    left: 240px;
-}
- 
-.offcanvas-push-toleft {
-    left: -240px;
-}
- 
-/* Transitions */
- 
-.offcanvas,
-.offcanvas-push {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
- 
-/* Example media queries */
- 
-@media screen and (max-width: 55.1875em){
- 
-    .offcanvas-horizontal {
-        font-size: 75%;
-        height: 110px;
-    }
- 
-    .offcanvas-top {
-        top: -110px;
-    }
- 
-    .offcanvas-bottom {
-        bottom: -110px;
-    }
- 
-}
- 
-@media screen and (max-height: 26.375em){
- 
-    .offcanvas-vertical {
-        font-size: 90%;
-        width: 190px;
-    }
- 
-    .offcanvas-left,
-    .offcanvas-push-toleft {
-        left: -190px;
-    }
- 
-    .offcanvas-right {
-        right: -190px;
-    }
- 
-    .offcanvas-push-toright {
-        left: 190px;
-    }
+
+.offcanvas--push-left {
+  left: $offcanvas-width;
 }

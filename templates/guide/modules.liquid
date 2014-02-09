@@ -15,6 +15,33 @@
     </div>
 </header>
 
+<section class="row">
+  <div class="container">
+    <h2>Offcanvas navigation</h2>
+    <p>We use a lightweight offcanvas implementation with a few flexible options:</p>
+    <div class="js-open-canvas offcanvas-trigger"><a href="#oc-top">Top Offcanvas</a></div>
+    <div class="js-open-canvas offcanvas-trigger"><a href="#oc-right">Right Offcanvas</a></div>
+    <div class="js-open-canvas offcanvas-trigger"><a href="#oc-bottom">Bottom Offcanvas</a></div>
+    <div class="js-open-canvas offcanvas-trigger"><a href="#oc-left">Left Offcanvas</a></div>
+
+    <p>These are great for mobile navigation, hidden drawers, and even alerts.</p>
+
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Left example. Other options are offcanvas--top, offcanvas--right, offcanvas--bottom --&gt;
+    &lt;nav class="offcanvas--left" id="offcanvas"&gt;
+      &lt;!-- Offcanvas content. Put anything you want in here --&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Other site content below --&gt;
+    &lt;main role="main"&gt;
+      &lt;!-- Point the href to the id of the offcanvas area --&gt;
+      &lt;div class="js-open-canvas"&gt;&lt;a href="#offcanvas"&gt;Offcanvas toggle&lt;/a&gt;&lt;/div&gt;
+    &lt;/main&gt;</code></pre>
+
+    <p>You can easily set the width and height of the offcanvas areas by adjusting the <code>$offcanvas-height</code> &amp; <code>$offcanvas-width</code> variables in <code>/source/scss/modules/navigation/offcanvas.scss</code></p>
+  </div>
+</section>
+
 {% include "modules/tabs" %}
 
 {% endblock %}
