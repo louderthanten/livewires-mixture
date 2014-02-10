@@ -6,7 +6,6 @@
   }
   li {
     display: block;
-    border-bottom: $hairline;
   }
   a {
     display: block;
@@ -24,7 +23,6 @@
     }
     li {
       display: inline-block;
-      border:none;
     }
     a {
       padding:rem($line/2);

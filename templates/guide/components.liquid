@@ -1,222 +1,277 @@
 {% block styles %}
-    {{ "guide.css" | asset_url | stylesheet_tag }}
+  {{ "guide.css" | asset_url | stylesheet_tag }}
 {% endblock %}
 
 {% block header %}
-    {% include "guide/header" %}
+  {% include "modules/offcanvas" %}
+  {% include "guide/header" %}
 {% endblock %}
 
 {% block content %}
 <header class="row">
-    <div class="container">
-        <h1>Components</h1>
-        <p class="lead">Components combine basic HTML elements into small reusable pieces that act as the building blocks to our modules and layouts.</p>
-    </div>
+  <div class="container">
+    <h1>Components</h1>
+    <p class="lead">Components combine basic HTML elements into small reusable pieces that act as the building blocks to our modules and layouts.</p>
+  </div>
 </header>
 
 <section class="row">
-    <div class="container">
-        <h2>Navigation</h2>
+  <div class="container">
+    <h2>Mini navigation</h2>
+    <hr>
+    <div class="split-content">
+      <h3>Breadcrumbs</h3>
+      {% include "components/breadcrumbs" %}
 
-        <div class="split-content">
-            <h3>Breadcrumbs</h3>
-            {% include "components/breadcrumbs" %}
-
-            <h3>More links</h3>
-            <p class="more"><a href="">Read more &gt;</a></p>
-        </div>
-        <div class="split-content">
-            <h3>Pagination</h3>
-
-            <h4>Standard</h4>
-            {% include "components/pagination" %}
-
-            <h4>Mini</h4>
-            {% include "components/pagination--mini" %}
-        </div>
-
+      <h3>More links</h3>
+      <p class="more"><a href="">Read more &gt;</a></p>
     </div>
+    <div class="split-content">
+      <h3>Pagination</h3>
+
+      <h4>Standard</h4>
+      {% include "components/pagination" %}
+
+      <h4>Mini</h4>
+      {% include "components/pagination--mini" %}
+    </div>
+
+    <h2>Offcanvas navigation</h2>
+    <hr>
+
+    <p>We use a lightweight offcanvas implementation with a few flexible options. These are great for mobile navigation, hidden drawers, and even alerts.</p>
+
+    <p>You can easily set the width and height of the offcanvas areas by adjusting the <code>$offcanvas-height</code> &amp; <code>$offcanvas-width</code> variables in <code>/source/scss/modules/navigation/offcanvas.scss</code>.</p>
+
+    <p>Add <code>class="offcanvas--push"</code> to the <code>&lt;body&gt;</code> element to push the page to the side when the left or right menu opens.</p>
+
+    <nav class="horizontal-nav">
+      <ul>
+        <li class="js-open-canvas offcanvas-trigger"><a href="#oc-left" class="button">Left Offcanvas</a></li>
+        <li class="js-open-canvas offcanvas-trigger"><a href="#oc-top" class="button">Top Offcanvas</a></li>
+        <li class="js-open-canvas offcanvas-trigger"><a href="#oc-right" class="button">Right Offcanvas</a></li>
+        <li class="js-open-canvas offcanvas-trigger"><a href="#oc-bottom" class="button">Bottom Offcanvas</a></li>
+      </ul>
+    </nav>
+
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Add offcanvas--push to the body element to push page content --&gt;
+    &lt;body class="offcanvas--push"&gt;
+      &lt;!-- Left example. Other options are offcanvas--top, offcanvas--right, offcanvas--bottom --&gt;
+      &lt;nav class="offcanvas--left" id="offcanvas"&gt;
+      &lt;!-- Offcanvas content. Put anything you want in here --&gt;
+      &lt;/nav&gt;
+
+      &lt;!-- Other site content below --&gt;
+      &lt;main role="main"&gt;
+      &lt;!-- Point the href to the id of the offcanvas area --&gt;
+      &lt;div class="js-open-canvas"&gt;&lt;a href="#offcanvas"&gt;Offcanvas toggle&lt;/a&gt;&lt;/div&gt;
+      &lt;/main&gt;
+    &lt;/body&gt;</code></pre>
+
+  </div>
+</section>
+
+<section class="row">
+  <div class="container">
+    <h2>Tabs</h2>
+    <hr>
+    <p>Our tabs implementation is pretty flexible. You can even link directly to a tab by linking to its id.</p>
+    <p>E.g. <code>&lt;a href="/guide/components#tab2"&gt;</code>
+
+    <p>If you follow the general pattern, you can place anything in the tab elements.</p>
+    <ul class="tabs">
+      <li><a href="#tab1">Tab 1</a></li>
+      <li><a href="#tab2">Tab 2</a></li>
+      <li><a href="#tab3">Tab 3</a></li>
+      <li><a href="#tab4">Tab 4</a></li>
+    </ul>
+    <section id="tab1" class="tab-content content reverse">
+      <h3>Tab 1</h3>
+      <p>Here is some content under tab 1.</p>
+    </section>
+    <section id="tab2" class="tab-content content reverse">
+      <h3>Tab 2</h3>
+      <p>This tab has an image in it.</p>
+      <figure>
+        {{ "2000x1200" | placeholder | image_tag }}
+      </figure>
+    </section>
+    <section id="tab3" class="tab-content content reverse">
+      <h3>Tab 3</h3>
+      <p>This tab has a video in it.</p>
+      <figure class="video">
+        <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </figure>
+    </section>
+    <section id="tab4" class="tab-content content reverse">
+      <h3>Tab </h3>
+      <p>Here is some long content under tab 4.</p>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Donec sed odio dui.</p>
+
+      <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
+
+      <p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
+
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+    </section>
+
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Tab navigation --&gt;
+    &lt;ul class="tabs"&gt;
+      &lt;li&gt;&lt;a href="#tab1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#tab2"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#tab3"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- Tabbed content --&gt;
+    &lt;div id="tab1"&gt;
+      &lt;!-- Tab 1 stuff --&gt;
+    &lt;/div&gt;
+    &lt;div id="tab2"&gt;
+      &lt;!-- Tab 2 stuff --&gt;
+    &lt;/div&gt;
+    &lt;div id="tab3"&gt;
+      &lt;!-- Tab 3 stuff --&gt;
+    &lt;/div&gt;</code></pre>
+
+  </div>
 </section>
 <section class="row">
-    <div class="container">
-        <h2>Simple tabs</h2>
-        <ul class="tabs">
-            <li><a href="#tab1">Tab 1</a></li>
-            <li><a href="#tab2">Tab 2</a></li>
-            <li><a href="#tab3">Tab 3</a></li>
-            <li><a href="#tab4">Tab 4</a></li>
-        </ul>
-        <section id="tab1" class="tab-content content reverse">
-            <h3>Tab 1</h3>
-            <p>Here is some content under tab 1.</p>
-        </section>
-        <section id="tab2" class="tab-content content reverse">
-            <h3>Tab 2</h3>
-            <p>This tab has an image in it.</p>
-            <figure>
-                {{ "2500x1666" | placeholder | image_tag }}
-            </figure>
-        </section>
-        <section id="tab3" class="tab-content content reverse">
-            <h3>Tab 3</h3>
-            <p>This tab has a video in it.</p>
-            <figure class="video">
-                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </figure>
-        </section>
-        <section id="tab4" class="tab-content content reverse">
-            <h3>Tab </h3>
-            <p>Here is some long content under tab 4.</p>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Donec sed odio dui.</p>
+  <div class="container">
+    <h2>Drawers</h2>
+    <hr>
+    <p>Use drawers to easily show and hide content. These work great both page-wide and within elements like callouts as shown below.</p>
+    <p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
 
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Point the href to the id of the drawer --&gt;
+    &lt;a href="#drawer" class="button js-reveal"&gt;Open drawer&lt;/a&gt;
 
-            <p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
-
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-        </section>
-    </div>
-</section>
-<section class="row">
-    <div class="container">
-        <h2>Misc</h2>
-        <div class="split-content">
-            <h3>Time stamp</h3>
-            <time datetime="2011-01-12">January 12<sup>th</sup>, 2011</time>
-
-            <hr>
-            <h3>Price</h3>
-            <p class="price">$100.00</p>
-        </div>
-        <div class="split-content">
-            <h3>VCard</h3>
-            <div class="vcard">
-                <p class="adr">
-                    <strong class="org">Company name</strong>
-                    <span class="street-address">123 Chester street</span>
-                    <span class="locality">Vancouver</span>, <span class="region">BC</span> <span class="postal-code">V7B 0B4</span>
-                    <span class="country-name">Canada</span>
-                </p>
-                <p class="tel">
-                    <span class="type">Phone</span>
-                    <a href="tel:+18885555555" class="value" title="+18885555555">1 (888) 555-5555</a>
-                </p>
-                <p class="email">
-                    <span class="type">Email</span>
-                    <a href="mailto:name@example.com" class="value" title="name@example.com">name@example.com</a>
-                </p>
-
-            </div>
-        </div>
-    </div>
-</section>
-<section class="row callouts">
-    <div class="container">
-        <h2>Callouts</h2>
-    </div>
-    <div class="container">
-        <aside class="callout">
-            <div class="content reverse">
-                <h2>Content Callout</h2>
-                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-            </div>
-        </aside>
-
-        <aside class="callout">
-            <figure>
-                {{ "1200x800" | placeholder | image_tag }}
-            </figure>
-            <div class="content">
-                <h2>Image Callout</h2>
-                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-            </div>
-        </aside>
-
-        <aside class="callout">
-            <figure class="video">
-                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </figure>
-            <div class="content">
-                <h2>Video Callout</h2>
-                <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-            </div>
-        </aside>
-
-        <aside class="callout">
-            <div class="content reverse">
-                <h2>Form Callout</h2>
-                <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
-                <form action="">
-                    <div class="field">
-                        <input type="text" class="text-input" placeholder="Name" />
-                    </div>
-                    <div class="field">
-                        <input type="email" class="text-input" placeholder="Email" />
-                    </div>
-
-                    <button type="submit" class="button--red button--small">Submit</button>
-                </form>
-            </div>
-        </aside>
-    </div>
-</section>
-<section class="row">
-    <div class="container">
-        <h2>Hidden Content</h2>
-
-        <h3>Page-wide drawer</h3>
-        <p><a href="#drawer" class="button js-reveal">Open drawer</a></p>
-    </div>
+    &lt;!-- Drawer content. Anything here is hidden --&gt;
+    &lt;div class="drawer" id="drawer"&gt;
+      &lt;!-- Contents of drawer --&gt;
+    &lt;/div&gt;</code></pre>
+  </div>
 </section>
 <section class="drawer reverse" id="drawer">
-    <div class="container">
-        <div class="content">
-            <h2>Hidden drawer</h2>
-            <p>A page wide drawer for hidden content. You can put anything you want to hide in here.<p>
-        </div>
+  <div class="container">
+    <div class="content">
+      <h2>Hidden drawer</h2>
+      <p>A page wide drawer for hidden content. You can put anything you want to hide in here.<p>
     </div>
+  </div>
 </section>
-<section class="callouts">
-    <div class="container">
-        <h2>Callout drawers</h2>
-    </div>
-    <div class="container">
-        <aside class="callout">
-            <div class="content reverse">
-                <h2>Callout Drawer</h2>
-                <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
-                <p><a href="#callout-drawer-1" class="js-reveal button button--red">Open drawer</a></p>
+<section class="row callouts">
+  <div class="container">
+    <h2>Callouts</h2>
+    <hr>
+    <p>These patterns are great for making wells and callouts inside of sidebars and primary content areas. Add images, videos, and forms to make them even more powerful.</p>
 
-                <form action="" id="callout-drawer-1" class="drawer">
-                    <div class="field">
-                        <input type="text" class="text-input" placeholder="Name" />
-                    </div>
-                    <div class="field">
-                        <input type="email" class="text-input" placeholder="Email" />
-                    </div>
-                     <button type="submit" class="button--red button--small">Submit</button>
-                </form>
-            </div>
-        </aside>
+    <h3>Markup example</h3>
+    <pre class="line-numbers language-markup"><code>    &lt;!-- Basic callout structure --&gt;
+    &lt;aside class="callout"&gt;
+      &lt;figure&gt;
+        &lt;!-- Image or other content that should go edge-to-edge --&gt;
+      &lt;figure&gt;
+      &lt;div class="content"&gt;
+        &lt;!-- Inner content with background and padding --&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;</code></pre>
+  </div>
+</section>
+<section class="row callouts">
+  <div class="container">
+    <aside class="callout">
+      <div class="content">
+        <h2>Callout</h2>
+        <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+      </div>
+    </aside>
+    <aside class="callout">
+      <div class="content reverse">
+        <h2>Dark Callout</h2>
+        <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+      </div>
+    </aside>
 
-    </div>
+    <aside class="callout">
+      <figure>
+        {{ "800x400" | placeholder | image_tag }}
+      </figure>
+      <div class="content">
+        <h2>Image Callout</h2>
+        <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections.</p>
+      </div>
+    </aside>
+
+    <aside class="callout">
+      <figure class="video">
+        <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </figure>
+      <div class="content">
+        <h2>Video Callout</h2>
+        <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections.</p>
+      </div>
+    </aside>
+
+    <aside class="callout">
+      <div class="content reverse">
+        <h2>Form Callout</h2>
+        <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+        <form action="">
+          <div class="field">
+            <input type="text" class="text-input" placeholder="Name" />
+          </div>
+          <div class="field">
+            <input type="email" class="text-input" placeholder="Email" />
+          </div>
+
+          <button type="submit" class="button--red button--small">Submit</button>
+        </form>
+      </div>
+    </aside>
+
+    <aside class="callout">
+      <div class="content reverse">
+        <h2>Callout with drawer</h2>
+        <p>Callout content is a related aside that doesn't fit directly inside normal page content.</p>
+        <p><a href="#callout-drawer-1" class="js-reveal button button--red">Open drawer</a></p>
+
+        <form action="" id="callout-drawer-1" class="drawer">
+          <div class="field">
+            <input type="text" class="text-input" placeholder="Name" />
+          </div>
+          <div class="field">
+            <input type="email" class="text-input" placeholder="Email" />
+          </div>
+           <button type="submit" class="button--red button--small">Submit</button>
+        </form>
+      </div>
+    </aside>
+  </div>
 </section>
 <section class="row">
-    <div class="container">
-        <h2>Media</h2>
-        <div class="split-content">
-            <h3>Responsive image</h3>
-            <figure>
-                {{ "2500x1666" | placeholder | image_tag }}
-                <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
-            </figure>
-        </div>
-        <div class="split-content">
-            <h3>Responsive embedded video</h3>
-            <figure class="video">
-                <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </figure>
-        </div>
+  <div class="container">
+    <h2>Media</h2>
+    <hr>
+    <p>We can make our images responsive by wrapping them in<code>&lt;figure&gt;</code> elements. Add a <code>video</code> class for responsive videos, or <code>map</code> for maps.</p>
+
+    <p>To make life easier, we&rsquo;ve included a script to automatically add appropriate figure tags to images, videos, and maps inside of elements with a <code>content</code> class. Nice for those pesky CMS-powered content blocks.</p>
+
+    <div class="split-content">
+      <h3>Responsive image</h3>
+      <figure>
+        {{ "2500x1666" | placeholder | image_tag }}
+        <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
+      </figure>
     </div>
+    <div class="split-content">
+      <h3>Responsive embedded video</h3>
+      <figure class="video">
+        <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </figure>
+    </div>
+  </div>
 </section>
 {% endblock %}

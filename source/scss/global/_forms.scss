@@ -64,7 +64,7 @@ label,
   display:block;
   width:100%;
   outline:none;
-  border: $hairline;
+  border: $rule;
   border-radius: $radius;
   font-family:$sans;
   padding:$line/2;
@@ -113,6 +113,10 @@ input[type=file] {
 }
 .check-list {
   list-style: none;
+
+  label {
+    cursor: pointer;
+  }
 }
 input[type=checkbox],
 input[type=radio] {

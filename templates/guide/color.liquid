@@ -1,29 +1,41 @@
 {% block styles %}
-    {{ "guide.css" | asset_url | stylesheet_tag }}
+  {{ "guide.css" | asset_url | stylesheet_tag }}
 {% endblock %}
 
 {% block header %}
-    {% include "guide/header" %}
+  {% include "guide/header" %}
 {% endblock %}
 
 {% block content %}
 <header class="row">
-    <div class="container">
-        <h1>Color</h1>
-        <p class="lead">Add your colors here for easy reference.</p>
-    </div>
+  <div class="container">
+    <h1>Color</h1>
+    <p class="lead">Add your colors here for easy reference.</p>
+  </div>
 </header>
 <section class="row colors">
-    <div class="container">
-        <div class="swatch color1">
-            <p>Dark grey<br />$text<br />#333333</p>
-        </div>
-        <div class="swatch color2">
-            <p>Grey<br />$mid-text<br />#999999</p>
-        </div>
-        <div class="swatch color3">
-            <p>Red<br />$accent<br />#FF0000</p>
-        </div>
+  <div class="container">
+    <div class="swatch color1">
+      <p>$background<br />#FFFFFF</p>
     </div>
+    <div class="swatch color2">
+      <p>$dark-background<br />#DDDDDD</p>
+    </div>
+    <div class="swatch color3">
+      <p>$light-text<br />#AAAAAA</p>
+    </div>
+    <div class="swatch color4">
+      <p>$mid-text<br />#666666</p>
+    </div>
+    <div class="swatch color5">
+      <p>$text<br />#333333</p>
+    </div>
+    <div class="swatch color6">
+      <p>$red<br />#D13731</p>
+    </div>
+    <div class="swatch color7">
+      <p>$blue<br />#44B3E1</p>
+    </div>
+  </div>
 </section>
 {% endblock %}

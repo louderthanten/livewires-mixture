@@ -5,7 +5,8 @@
 
 // Default code block styling
 code,
-pre {
+pre,
+kbd {
   @extend .small;
   font-family: $mono;
   direction: ltr;
@@ -28,7 +29,8 @@ pre {
 }
 
 //Inline code
-:not(pre) > code {
+:not(pre) > code,
+kbd {
   padding:rem(3 4 1 4);
   font-size: 1em;
 }

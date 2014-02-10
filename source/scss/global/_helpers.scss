@@ -38,7 +38,9 @@
     display: none;
   }
 }
-
+.hide  {
+  display: none;
+}
 .hidden {
   display: none;
   visibility: hidden;
@@ -102,6 +104,7 @@
   }
 }
 // Add group extend to clearfix class for use in markup:
+.group,
 .clearfix {
   @extend %group;
 }
@@ -123,7 +126,4 @@
 }
 .text--center {
   text-align: center;
-}
-.hide  {
-  display: none;
 }

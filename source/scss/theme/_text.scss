@@ -1,9 +1,9 @@
 // TEXT COLOURS
 body {
-    color: $text;
+  color: $text;
 }
 * {
-    @include selected($background, $accent);
+  @include selected($background, $accent);
 }
 
 a {
@@ -24,29 +24,29 @@ h3,
 h4,
 h5,
 h6 {
-    > span,
-    > small,
-    > strong {
-        color:$light-text;
+  > span,
+  > small,
+  > strong {
+    color:$light-text;
+  }
+  a {
+    &:link,
+    &:visited {
+      color: $accent;
     }
-    a {
-        &:link,
-        &:visited {
-            color: $accent;
-        }
-        &:hover,
-        &:active,
-        &:focus {
-            color:$mid-text;
-        }
+    &:hover,
+    &:active,
+    &:focus {
+      color:$mid-text;
     }
+  }
 }
 
 a.disabled {
-    color:$mid-text !important;
+  color:$mid-text !important;
 }
 
 .highlight  {
-    background: $accent;
+  background: $accent;
 }
 

@@ -86,16 +86,17 @@ $offcanvas-height: rem($line*6);
   }
 }
 
-// Push classes applied to the body
+// Add this class to the body element to push it to the side when the menu opens
 .offcanvas--push {
   overflow-x: hidden;
   left: 0;
-}
 
-.offcanvas--push-right {
-  left: $offcanvas-width * -1;
-}
 
-.offcanvas--push-left {
-  left: $offcanvas-width;
+  &.offcanvas--push-right {
+    left: $offcanvas-width * -1;
+  }
+
+  &.offcanvas--push-left {
+    left: $offcanvas-width;
+  }
 }

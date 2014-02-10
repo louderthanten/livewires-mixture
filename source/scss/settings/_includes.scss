@@ -34,15 +34,14 @@
 @import "../components/switches";
 @import "../components/option-buttons";
 @import "../components/vcards";
+@import "../components/navigation/horizontal";
+@import "../components/navigation/offcanvas";
+@import "../components/navigation/tabs";
 
 // UI modules
-@import "../modules/navigation/horizontal";
-@import "../modules/navigation/offcanvas";
-@import "../modules/navigation/tabs";
 @import "../modules/header";
 @import "../modules/cover";
 @import "../modules/layout";
-@import "../modules/comments";
 @import "../modules/footer";
 
 // Theme styles
@@ -54,4 +53,5 @@
 @import "../theme/forms";
 @import "../theme/buttons";
 @import "../theme/special-fields";
-//@import "../theme/offcanvas";
+@import "../theme/offcanvas";
+@import "../theme/callouts";

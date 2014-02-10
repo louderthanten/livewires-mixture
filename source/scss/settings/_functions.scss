@@ -14,8 +14,6 @@
 // If you require to comma separate your list
 // rem((16px, 32px, 48), 8px);
 
-
-
 @function convert-to-rem($value, $base-value: $root)  {
   $value: strip-unit($value) / strip-unit($base-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0

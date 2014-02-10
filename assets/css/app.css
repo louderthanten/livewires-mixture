@@ -323,6 +323,9 @@ table {
   .ir br {
     display: none; }
 
+.hide {
+  display: none; }
+
 .hidden {
   display: none;
   visibility: hidden; }
@@ -357,12 +360,12 @@ table {
 .clear {
   clear: both; }
 
-.clearfix, .button-group, .pill-buttons, fieldset, .field, .field--check label, legend, .callout, .callout .content, .drawer, .pagination, .link-list, .switch, .horizontal-nav ul, .container, .container > * {
+.group, .clearfix, .button-group, .pill-buttons, fieldset, .field, .field--check label, legend, .callout, .callout .content, .drawer, .pagination, .link-list, .switch, .horizontal-nav ul, .container, .container > * {
   zoom: 1; }
-  .clearfix:before, .button-group:before, .pill-buttons:before, fieldset:before, .field:before, .field--check label:before, legend:before, .callout:before, .callout .content:before, .drawer:before, .pagination:before, .link-list:before, .switch:before, .horizontal-nav ul:before, .container:before, .container > :before, .clearfix:after, .button-group:after, .pill-buttons:after, fieldset:after, .field:after, .field--check label:after, legend:after, .callout:after, .callout .content:after, .drawer:after, .pagination:after, .link-list:after, .switch:after, .horizontal-nav ul:after, .container:after, .container > :after {
+  .group:before, .clearfix:before, .button-group:before, .pill-buttons:before, fieldset:before, .field:before, .field--check label:before, legend:before, .callout:before, .callout .content:before, .drawer:before, .pagination:before, .link-list:before, .switch:before, .horizontal-nav ul:before, .container:before, .container > :before, .group:after, .clearfix:after, .button-group:after, .pill-buttons:after, fieldset:after, .field:after, .field--check label:after, legend:after, .callout:after, .callout .content:after, .drawer:after, .pagination:after, .link-list:after, .switch:after, .horizontal-nav ul:after, .container:after, .container > :after {
     content: " ";
     display: table; }
-  .clearfix:after, .button-group:after, .pill-buttons:after, fieldset:after, .field:after, .field--check label:after, legend:after, .callout:after, .callout .content:after, .drawer:after, .pagination:after, .link-list:after, .switch:after, .horizontal-nav ul:after, .container:after, .container > :after {
+  .group:after, .clearfix:after, .button-group:after, .pill-buttons:after, fieldset:after, .field:after, .field--check label:after, legend:after, .callout:after, .callout .content:after, .drawer:after, .pagination:after, .link-list:after, .switch:after, .horizontal-nav ul:after, .container:after, .container > :after {
     clear: both; }
 
 
@@ -375,9 +378,6 @@ table {
 
 .text--center {
   text-align: center; }
-
-.hide {
-  display: none; }
 
 body {
   font-size: 16px;
@@ -437,7 +437,7 @@ h1 {
 h2 {
   font-family: sans-serif; }
   h2 > span, h2 > small {
-    color: #999999; }
+    color: #666666; }
 
 h3 {
   font-family: sans-serif; }
@@ -488,10 +488,10 @@ hr {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border: 0;
-  border-top: 1px solid #333333; }
+  border-top: 1px solid #AAAAAA; }
 
 .rule--light {
-  border-top: 1px solid #999999; }
+  border-top: 1px solid #DDDDDD; }
 
 .rule--red {
   border-top: 1px solid #d13731; }
@@ -563,7 +563,7 @@ fieldset {
   display: block;
   width: 100%;
   outline: none;
-  border: 1px solid #999999;
+  border: 1px solid #AAAAAA;
   border-radius: 3px;
   font-family: sans-serif;
   padding: 12px; }
@@ -583,6 +583,8 @@ textarea {
 
 .check-list {
   list-style: none; }
+  .check-list label {
+    cursor: pointer; }
 
 input[type=checkbox], input[type=radio] {
   margin-right: 0.5em; }
@@ -724,14 +726,14 @@ th, td {
   width: 95%; }
 
 .table--bordered th, .table--bordered td {
-  border: 1px solid #333333; }
+  border: 1px solid #AAAAAA; }
   .table--bordered th:empty, .table--bordered td:empty {
     border: none; }
 
 .table--lined thead tr {
-  border-bottom: 1px solid #333333; }
+  border-bottom: 1px solid #AAAAAA; }
 .table--lined tbody tr {
-  border-bottom: 1px solid #999999; }
+  border-bottom: 1px solid #DDDDDD; }
 
 @media only screen and (max-width: 48em) {
   table, tbody, tfoot, th, td, tr {
@@ -785,7 +787,7 @@ blockquote {
 
 
 
-code, pre {
+code, pre, kbd {
   font-family: monospace;
   direction: ltr;
   text-align: left;
@@ -806,7 +808,7 @@ pre {
   pre > code {
     margin: 0; }
 
-:not(pre) > code {
+:not(pre) > code, kbd {
   padding: 0.1875rem 0.25rem 0.0625rem 0.25rem;
   font-size: 1em; }
 
@@ -833,7 +835,7 @@ pre.line-numbers > code {
   left: -1.5rem;
   width: 3rem;
   /* works for line-numbers below 1000 lines */
-  border-right: 1px solid #999999;
+  border-right: 1px solid #DDDDDD;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1082,8 +1084,7 @@ figcaption .source {
   padding: 0;
   margin-bottom: 0; }
 .horizontal-nav li {
-  display: block;
-  border-bottom: 1px solid #999999; }
+  display: block; }
 .horizontal-nav a {
   display: block;
   width: 100%;
@@ -1094,8 +1095,7 @@ figcaption .source {
 
 @media only screen and (min-width: 48em) {
   .horizontal-nav li {
-    display: inline-block;
-    border: none; }
+    display: inline-block; }
   .horizontal-nav a {
     padding: 0.75rem; }
   .horizontal-nav--center ul {
@@ -1153,12 +1153,10 @@ figcaption .source {
 .offcanvas--push {
   overflow-x: hidden;
   left: 0; }
-
-.offcanvas--push-right {
-  left: -15rem; }
-
-.offcanvas--push-left {
-  left: 15rem; }
+  .offcanvas--push.offcanvas--push-right {
+    left: -15rem; }
+  .offcanvas--push.offcanvas--push-left {
+    left: 15rem; }
 
 .tabs {
   padding: 0;
@@ -1272,10 +1270,10 @@ h1 > span, h1 > small, h1 > strong, h2 > span, h2 > small, h2 > strong, h3 > spa
 h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3 a:link, h3 a:visited, h4 a:link, h4 a:visited, h5 a:link, h5 a:visited, h6 a:link, h6 a:visited {
   color: #d13731; }
 h1 a:hover, h1 a:active, h1 a:focus, h2 a:hover, h2 a:active, h2 a:focus, h3 a:hover, h3 a:active, h3 a:focus, h4 a:hover, h4 a:active, h4 a:focus, h5 a:hover, h5 a:active, h5 a:focus, h6 a:hover, h6 a:active, h6 a:focus {
-  color: #999999; }
+  color: #666666; }
 
 a.disabled {
-  color: #999999 !important; }
+  color: #666666 !important; }
 
 .highlight {
   background: #d13731; }
@@ -1330,39 +1328,39 @@ a:hover .fa-youtube, a:hover .fa-youtube-play, a:hover .fa-youtube-square, a:act
   background-color: #333333; }
 
 code, pre {
-  background: #DDDDDD;
-  color: #d13731; }
+  background: #333333;
+  color: #FFFFFF; }
   code ::-moz-selection, pre ::-moz-selection {
-    background: #333333;
+    background: #AAAAAA;
     color: #FFFFFF; }
   code ::selection, pre ::selection {
-    background: #333333;
+    background: #AAAAAA;
     color: #FFFFFF; }
 
 :not(pre) > code {
   background: #DDDDDD;
   color: #333333; }
 
-.token.comment, .token.prolog, .token.doctype, .token.cdata {
+.token.comment {
+  color: #666666; }
+
+.token.prolog, .token.doctype, .token.cdata {
   color: #AAAAAA; }
 
 .token.punctuation {
-  color: #999999; }
+  color: #AAAAAA; }
 
-.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol {
-  color: #333333; }
-
-.token.selector, .token.attr-name, .token.string, .token.builtin {
-  color: #d13731; }
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.selector, .token.attr-name, .token.string, .token.builtin {
+  color: #AAAAAA; }
 
 .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable {
-  color: #d13731; }
+  color: #FFFFFF; }
 
 .token.atrule, .token.attr-value, .token.keyword {
-  color: #d13731; }
+  color: #FFFFFF; }
 
 .token.regex, .token.important {
-  color: #d13731; }
+  color: #FFFFFF; }
 
 .line-numbers-rows > span:before {
   color: #AAAAAA; }
@@ -1393,14 +1391,14 @@ button, input[type="submit"], .button, .option-buttons label, .pill-buttons labe
     background-color: #44b3e1; }
 
 .button--grey, .tabs a, a.button--grey, .tabs a {
-  background: #999999;
+  background: #666666;
   color: #FFFFFF; }
   .button--grey:active, .tabs a:active, .button--grey:focus, .tabs a:focus, a.button--grey:active, .tabs a:active, a.button--grey:focus, .tabs a:focus {
     background-color: #333333; }
 
 a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.button--disabled:focus, .button--disabled, .button--disabled:hover, .button--disabled:active, .button--disabled:focus {
   background-color: #AAAAAA !important;
-  color: #999999 !important; }
+  color: #666666 !important; }
 
 .option-buttons label, .pill-buttons label, .ui-slider, .switch {
   background: #333333; }
@@ -1414,5 +1412,11 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
 .switch span:last-child {
   border-color: #333333;
   box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px black, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px #d13731; }
+
+/* General styles for all menus */
+.callout .content {
+  background-color: #DDDDDD; }
+.callout .reverse {
+  background-color: #333333; }
 
 /*# sourceMappingURL=app.css.map */
