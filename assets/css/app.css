@@ -1247,9 +1247,6 @@ html, body {
   background: #333333;
   color: #FFFFFF; }
 
-.table--striped tbody tr:nth-of-type(odd) {
-  background-color: #e6e6e6; }
-
 body {
   color: #333333; }
 
@@ -1376,6 +1373,9 @@ code, pre {
   .text-input:-ms-input-placeholder, textarea:-ms-input-placeholder, .search-input:-ms-input-placeholder, input[type=search]:-ms-input-placeholder, input[type=file]:-ms-input-placeholder {
     /* IE 10+ */
     color: #AAAAAA; }
+
+.table--striped tbody tr:nth-of-type(odd) {
+  background-color: #e6e6e6; }
 
 button, input[type="submit"], .button, .option-buttons label, .pill-buttons label, .tabs a, a.button, .tabs a {
   background: #333333;
