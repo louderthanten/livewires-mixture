@@ -98,10 +98,6 @@ body {
   .secondary-content {
     width: $c4; // Feel free to use combine unit widths to make a compound grid
   }
-  .split-content {
-    width:$c4*2;
-    float:left;
-  }
 }
 
 @media only screen and (min-width: $screenLarge) {

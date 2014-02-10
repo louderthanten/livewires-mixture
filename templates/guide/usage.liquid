@@ -11,42 +11,69 @@
   <h1>Basic usage</h1>
   <p class="lead">One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to navigate Live Wires.</p>
 </header>
+
 <section class="row container">
-    <h2>Markup</h2>
+    <h2 id="structure">Project structure</h2>
+    <p>Here's how a Live Wires project is organized:</p>
+
+    <dl>
+      <dt><code>/assets/</code></dt>
+      <dd>All compiled static assets reside here. Drop your images and font files in here. This is also where all sass, coffeescript, and javascript is combined, compiled, and minified for production use. Don&rsquo;t edit these css and js files. They will get overwritten.</dd>
+      <dt><code>/models/</code></dt>
+      <dd>Contains Mixture's <a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
+      <dt><code>/source/</code></dt>
+      <dd>This contains all of the pre-compiled Sass, Coffeescript, and javascript files. This is where you would write your CSS and Javascript. See below for more details on how these are organized.</dd>
+      <dt><code>/templates/</code></dt>
+      <dd>This is where your site templates reside. Templates for this guide can be found in the <code>guide</code> folders.</dd>
+      <dt><code>mixture.json</code></dt>
+      <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
+    </dl>
+
+    <h2 id="markup">Markup</h2>
+    <hr>
     <p>Live Wires uses standard HTML5 for markup with a simplified version of <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name our classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues. Here&rsquo;s the basic syntax:</p>
 
     <pre class="language-scss"><code>.block {} /* A component or module */
 .block__element {} /* A descendent of that module */
 .block--modifier {} /* A modified or alternate version of the module */</code></pre>
 
-    <p><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Read more</a></p>
+    <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
 
     <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
 
-    <h2>CSS</h2>
+    <h2 id="js">Javascript</h2>
+    <hr>
+    <p>We are using Coffescript to write our javascript. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone.</p>
+
+    <p>Like our CSS and HTML, we try to keeo our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code>. You can include and exclude the scripts you want in your project by editing <code>/source/coffee/app.mix.js</code>, following the existing syntax.</p>
+
+    <h3>Third-party scripts</h3>
+    <p>We place all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder. You can include or exclude the plugins you want to use by editing the <code>vendor.mix.js</code> file in that folder.</p>
+
+    <h2 id="css">CSS</h2>
     <hr>
 
-    <p>All of the styles are written using the SCSS variety of <a href="http://sass-lang.com/">Sass</a>. All files can be found in <code>/source/scss/</code>. We&rsquo;ve written a lot of starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
+    <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All files can be found in <code>/source/scss/</code>. We&rsquo;ve written a lot of starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
 
     <h3>SCSS file structure</h3>
+      <h4><code>~/settings/</code></h4>
+      <p>Contains the project variables, mixins, and other things that make Sass so powerful. Here&rsquo;s a taste of what you can do:</p>
+      <dl>
+      <dt><code>_variables.scss</code></dt>
+      <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units in here.</dd>
 
-    <h4><code>~/settings/</code></h4>
+      <dt><code>_color.scss</code></dt>
+      <dd>We keep our color variables separate so we can easily use multiple color schemes.</dd>
 
-    <h5><code>_variables.scss</code></h5>
-    <p>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units in here.</p>
+      <dt><code>_includes.scss</code></dt>
+      <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you should be able to use as much or as little as you like.</dd>
 
-    <h5><code>_color.scss</code></h5>
-    <p>We keep our color variables separate so we can easily use multiple color schemes.</p>
+      <dt><code>_font-faces.scss</code></dt>
+      <dd>Add any font or icon @font-face includes to this file.</dd>
 
-    <h5><code>_includes.scss</code></h5>
-    <p>Use this to include or exclude the sections you want in your project. We made everything modular, so you should be able to use as much or as little as you like.</p>
-
-    <h5><code>_font-faces.scss</code></h5>
-    <p>Add any font or icon @font-face includes to this file.</p>
-
-    <h5><code>_mixins.scss</code> &amp; <code>_functions.scss</code></h5>
-    <p>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</p>
-
+      <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
+      <dd>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</dd>
+    </dl>
 
     <h4><code>~/global/</code></h4>
     <p>Stand-alone elements and small peices that make up components. <em>e.g. paragraphs, headings, form fields</em></p>
@@ -66,17 +93,8 @@
     <h4><code>~/vendor/</code></h4>
     <p>Drop any third-party styles in here. We keep these untouched so they can be updated in the future.</p>
 
-    <h2>Javascript</h2>
-    <hr>
-    <p>We are using Coffescript to write our javascript. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone.</p>
+    <h3>Helpers</h3>
 
-    <p>Like our CSS and HTML, we try to keeo our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code>. You can include and exclude the scripts you want in your project by editing <code>/source/coffee/app.mix.js</code>, following the existing syntax.</p>
-
-    <h3>Third-party scripts</h3>
-    <p>We place all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder. You can include or exclude the plugins you want to use by editing the <code>vendor.mix.js</code> file in that folder.</p>
-
-    <h2>Helpers</h2>
-    <hr>
     <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/global/_helpers.scss</code> for more.</p>
 
     <h3><code>.hidden</code></h3>
@@ -115,13 +133,14 @@
 
     <h3><code>@extend %group;</code></h3>
 
-    <p>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. (adding a class of <code>clearfix</code> or <code>group</code> also works but isn&rsuo;t as cool).</p>
+    <p>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. (adding a class of <code>clearfix</code> or <code>group</code> also works but isn&rsquo;t as cool).</p>
 
     <h3><code>@extend %vertical-align;</code></h3>
 
     <p>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</p>
 
-    <h2>Compatibility</h2>
+    <h2 id="compatibility">Compatibility</h2>
+    <hr>
     <p>We support all modern browsers including Internet Explorer 9 and up. Although we advise against it, if you do need to support IE8 or lower, most incompatilibilites can be solved by using jQuery 1.x with the following polyfills:</p>
 
     <ul>
@@ -131,7 +150,6 @@
       <li><a href="http://selectivizr.com/">Selectivizr</a></li>
     </ul>
 
-    <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll need to adjust the settings in mixture.json for other browsers.</p>
-
+    <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json for other browsers.</p>
 </section>
 {% endblock %}

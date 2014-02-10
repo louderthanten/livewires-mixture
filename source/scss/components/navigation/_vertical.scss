@@ -1,5 +1,5 @@
 // Navigation lists
-.link-list {
+.vertical-nav {
   @extend %group;
   margin-left: 0;
   margin-right: 0;
@@ -10,6 +10,9 @@
 
   a {
     display: block;
+    text-decoration: none;
+    font-family: $sans;
+    padding:rem($line/4) 0;
 
     &:link,
     &:visited {
@@ -24,18 +27,6 @@
   .current {
     a {
       cursor: default;
-    }
-  }
-}
-
-@media only screen and (min-width: $screenSmall) {
-  .link-list--horizontal {
-    li {
-      float:left;
-
-      a {
-
-      }
     }
   }
 }

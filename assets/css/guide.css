@@ -198,6 +198,13 @@
     padding-right: 0.75rem;
     width: 50%;
     float: left; }
+  .secondary-nav {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    float: left;
+    width: 20%; }
+  .primary-content {
+    width: 80%; }
   .grid {
     padding: 0 !important; }
     .grid.grid--2-4-8 .four {
@@ -229,6 +236,11 @@
       clear: both; } }
 
 @media only screen and (min-width: 64em) {
+  .split-content {
+    width: 50%;
+    float: left; }
+  .primary-content {
+    margin-left: 0; }
   .type-sample p {
     font-size: 16px;
     font-size: 1rem;

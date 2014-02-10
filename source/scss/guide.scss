@@ -205,6 +205,14 @@
     width:$c8*4;
     float:left;
   }
+  .secondary-nav {
+    @include gutter;
+    float:left;
+    width:$c5;
+  }
+  .primary-content {
+    width:$c5*4;
+  }
   .grid {
     padding:0 !important;
 
@@ -259,6 +267,13 @@
 }
 
 @media only screen and (min-width: $screenMedium) {
+  .split-content {
+    width:$c4*2;
+    float:left;
+  }
+  .primary-content {
+    margin-left: 0;
+  }
   .type-sample {
     p {
       @include font-size(16, 24);
