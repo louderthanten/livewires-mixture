@@ -6,15 +6,32 @@
 <header class="row">
     <div class="container">
         <h1>Live Wires User Interface Guide</h1>
-        <p class="lead">Here you&rsquo;ll find the building block components of your site: everything from our typefaces, to content formatting, form elements, colour palettes, and iconography.</p>
-
-        <p>Use this library as a blueprint and a reference for building additional design templates or scaling the design.</p>
+        <p class="lead">Welcome to your very own Live Wires project. Live Wires is a framework made with Sass and Mixture that allows you to create responsive grey-box wireframes in HTML &amp SCSS. Customize them, style them, and share them as living low-fidelity prototypes instead of static files you sweat over and later toss away.</p> 
+       <p>Today we stop making trash and start building a living, breathing beauty that will look and act the way it was imagined. Let's do this.</p>
+        
+        <h2>How do I use this guide?</h2>
+        <p>Get more details on how to use Live Wires:</p> 
+       [button] <p>Usage guidelines</p>
+       [button] <p>View the complete guide</p>
+       [button] <p>See an example</p>
     </div>
 </header>
-<section class="row">
-    <div class="container">
-        <h2>Sections</h2>
 
-    </div>
+<section class="row container">
+    <h2 id="structure">Project structure</h2>
+    <p>Here's how a Live Wires project is organized:</p>
+
+    <dl>
+      <dt><code>/assets/</code></dt>
+      <dd>All compiled static assets reside here. Drop your images and font files in here. This is also where all sass, coffeescript, and javascript is combined, compiled, and minified for production use. Don&rsquo;t edit these css and js files. They will get overwritten.</dd>
+      <dt><code>/models/</code></dt>
+      <dd>Contains Mixture's <a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
+      <dt><code>/source/</code></dt>
+      <dd>This contains all of the pre-compiled Sass, Coffeescript, and javascript files. This is where you would write your CSS and Javascript. See below for more details on how these are organized.</dd>
+      <dt><code>/templates/</code></dt>
+      <dd>This is where your site templates reside. Templates for this guide can be found in the <code>guide</code> folders.</dd>
+      <dt><code>mixture.json</code></dt>
+      <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
+    </dl>
 </section>
 {% endblock %}
