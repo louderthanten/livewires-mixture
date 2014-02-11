@@ -1,0 +1,88 @@
+[
+  {
+    "directory": false,
+    "key": "index",
+    "name": "Index",
+    "url": "/index"
+  },
+  {
+    "directory": false,
+    "key": "404",
+    "name": "404",
+    "url": "/404"
+  },
+  {
+    "directory": false,
+    "key": "example",
+    "name": "Example",
+    "url": "/example"
+  },
+  {
+    "children": [
+      {
+        "directory": false,
+        "key": "color",
+        "name": "Color",
+        "url": "/guide/color"
+      },
+      {
+        "directory": false,
+        "key": "components",
+        "name": "Components",
+        "url": "/guide/components"
+      },
+      {
+        "directory": false,
+        "key": "forms",
+        "name": "Forms",
+        "url": "/guide/forms"
+      },
+      {
+        "directory": false,
+        "key": "grids",
+        "name": "Grids",
+        "url": "/guide/grids"
+      },
+      {
+        "directory": false,
+        "key": "icons",
+        "name": "Icons",
+        "url": "/guide/icons"
+      },
+      {
+        "directory": false,
+        "key": "index",
+        "name": "Index",
+        "url": "/guide/index"
+      },
+      {
+        "directory": false,
+        "key": "modules",
+        "name": "Modules",
+        "url": "/guide/modules"
+      },
+      {
+        "directory": false,
+        "key": "templates",
+        "name": "Templates",
+        "url": "/guide/templates"
+      },
+      {
+        "directory": false,
+        "key": "typography",
+        "name": "Typography",
+        "url": "/guide/typography"
+      },
+      {
+        "directory": false,
+        "key": "usage",
+        "name": "Usage",
+        "url": "/guide/usage"
+      }
+    ],
+    "directory": true,
+    "key": "guide",
+    "name": "Guide",
+    "url": "/guide"
+  }
+]
