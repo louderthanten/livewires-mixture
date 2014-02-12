@@ -33,6 +33,12 @@
       },
       {
         "directory": false,
+        "key": "elements",
+        "name": "Elements",
+        "url": "/guide/elements"
+      },
+      {
+        "directory": false,
         "key": "forms",
         "name": "Forms",
         "url": "/guide/forms"
