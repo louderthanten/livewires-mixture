@@ -4,6 +4,19 @@
 
 {% block header %}
   {% include "guide/header" %}
+  <div class="sub-nav">
+    <nav class="horizontal-nav container">
+      <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+      <ul class="collapse" id="sections">
+        <li><a href="#structure">Project structure</a></li>
+        <li><a href="#markup">Markup</a></li>
+        <li><a href="#js">Javascript</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#helpers">Helpers</a></li>
+        <li><a href="#compatibility">Compatibility</a></li>
+      </ul>
+    </nav>
+  </div>
 {% endblock %}
 
 {% block content %}
@@ -12,7 +25,7 @@
   <p class="lead">One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to navigate Live Wires.</p>
 </header>
 
-<section class="row container">
+<section class="row container" id="structure">
     <h2 id="structure">Project structure</h2>
     <p>Here's how a Live Wires project is organized:</p>
 
@@ -29,6 +42,8 @@
       <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
     </dl>
 
+    <p class="more"><a href="#header">Top</a></p>
+
     <h2 id="markup">Markup</h2>
     <hr>
     <p>Live Wires uses standard HTML5 for markup with a simplified version of <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name our classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues. Here&rsquo;s the basic syntax:</p>
@@ -41,6 +56,8 @@
 
     <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
 
+    <p class="more"><a href="#header">Top</a></p>
+
     <h2 id="js">Javascript</h2>
     <hr>
     <p>We are using Coffescript to write our javascript. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone.</p>
@@ -49,6 +66,8 @@
 
     <h3>Third-party scripts</h3>
     <p>We place all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder. You can include or exclude the plugins you want to use by editing the <code>vendor.mix.js</code> file in that folder.</p>
+
+    <p class="more"><a href="#header">Top</a></p>
 
     <h2 id="css">CSS</h2>
     <hr>
@@ -93,8 +112,10 @@
     <h4><code>~/vendor/</code></h4>
     <p>Drop any third-party styles in here. We keep these untouched so they can be updated in the future.</p>
 
-    <h3>Helpers</h3>
+    <p class="more"><a href="#header">Top</a></p>
 
+    <h2 id="helpers">Helpers</h2>
+    <hr>
     <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/global/_helpers.scss</code> for more.</p>
 
     <h3><code>.hidden</code></h3>
@@ -139,6 +160,8 @@
 
     <p>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</p>
 
+    <p class="more"><a href="#header">Top</a></p>
+
     <h2 id="compatibility">Compatibility</h2>
     <hr>
     <p>We support all modern browsers including Internet Explorer 9 and up. Although we advise against it, if you do need to support IE8 or lower, most incompatilibilites can be solved by using jQuery 1.x with the following polyfills:</p>
@@ -151,5 +174,8 @@
     </ul>
 
     <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json for other browsers.</p>
+
+    <p class="more"><a href="#header">Top</a></p>
+
 </section>
 {% endblock %}

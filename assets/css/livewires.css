@@ -1159,7 +1159,8 @@ pre.line-numbers > code {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   .drawer .container {
-    padding: 3rem 0; }
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
     .drawer .container > *:first-child, .drawer .container > *:first-child > *:first-child, .drawer .container > *:first-child > *:first-child > *:first-child {
       margin-top: 0; }
     .drawer .container > *:last-child, .drawer .container > *:last-child > *:last-child, .drawer .container > *:last-child > *:last-child > *:last-child {

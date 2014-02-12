@@ -27,12 +27,6 @@
       },
       {
         "directory": false,
-        "key": "color",
-        "name": "Color",
-        "url": "/guide/color"
-      },
-      {
-        "directory": false,
         "key": "components",
         "name": "Components",
         "url": "/guide/components"
@@ -45,21 +39,9 @@
       },
       {
         "directory": false,
-        "key": "forms",
-        "name": "Forms",
-        "url": "/guide/forms"
-      },
-      {
-        "directory": false,
-        "key": "grids",
-        "name": "Grids",
-        "url": "/guide/grids"
-      },
-      {
-        "directory": false,
-        "key": "icons",
-        "name": "Icons",
-        "url": "/guide/icons"
+        "key": "grid",
+        "name": "Grid",
+        "url": "/guide/grid"
       },
       {
         "directory": false,
@@ -75,21 +57,9 @@
       },
       {
         "directory": false,
-        "key": "tables",
-        "name": "Tables",
-        "url": "/guide/tables"
-      },
-      {
-        "directory": false,
         "key": "templates",
         "name": "Templates",
         "url": "/guide/templates"
-      },
-      {
-        "directory": false,
-        "key": "typography",
-        "name": "Typography",
-        "url": "/guide/typography"
       }
     ],
     "directory": true,

@@ -111,14 +111,23 @@
   .logo span {
     display: block; }
 
+.horizontal-nav ul {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.2s linear;
+  transition: max-height 0.2s linear; }
+  .horizontal-nav ul.opened {
+    max-height: 2000px; }
+
 .main .horizontal-nav {
   margin: 1.5rem 0; }
 
 .header {
   padding-top: 1.5rem; }
 
-.sub-nav {
-  background: #666666; }
+
+.more {
+  clear: both; }
 
 .type-sample p {
   font-size: 24px;
@@ -209,8 +218,12 @@
   .tagline {
     float: left;
     margin-top: 1rem; }
-  .header .horizontal-nav {
+  .horizontal-nav {
     clear: both; }
+    .horizontal-nav .trigger {
+      display: none; }
+    .horizontal-nav ul {
+      max-height: none; }
   .paragraphs {
     width: 75%; }
   .iconset {

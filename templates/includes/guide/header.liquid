@@ -1,13 +1,13 @@
-<header class="header reverse">
+<header class="header reverse" id="header">
     <div class="container">
         <h1 class="logo"><a href="/guide/index/">{% if global.logo %}<img src="{{ global.logo }}" alt="{{ global.title }}" />{% else %}{{ global.title }}{% endif %}</a></h1>
         <nav class="horizontal-nav collapse">
-            <ul>
+            <p class="trigger"><a href="#primary" class="js-reveal">Menu</a></p>
+            <ul id="primary">
                 <li><a href="/guide/index/">Usage</a></li>
                 <li><a href="/guide/brand/">Brand</a></li>
-                <li><a href="/guide/typography/">Typography</a></li>
-                <li><a href="/guide/forms/">Forms</a></li>
-                <li><a href="/guide/grids/">Grid</a></li>
+                <li><a href="/guide/grid/">Grid</a></li>
+                <li><a href="/guide/elements/">Elements</a></li>
                 <li><a href="/guide/components/">Components</a></li>
                 <li><a href="/guide/modules/">Modules</a></li>
                 <li><a href="/guide/templates/">Templates</a></li>

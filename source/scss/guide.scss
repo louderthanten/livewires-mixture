@@ -54,16 +54,32 @@
 }
 // Layout sections
 //==============================================================================
+
+.horizontal-nav {
+  ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s linear;
+
+    &.opened {
+      max-height: 2000px;
+    }
+  }
+}
+
 .main .horizontal-nav {
   margin:rem($line) 0;
 }
+
 .header {
   padding-top: rem($line);
 }
 .sub-nav {
-  background:$mid-text;
+  //background:$mid-text;
 }
-
+.more {
+  clear:both;
+}
 // Type Section
 //==============================================================================
 .type-sample {
@@ -216,8 +232,14 @@
     float:left;
     margin-top: rem($line/1.5);
   }
-  .header .horizontal-nav {
+  .horizontal-nav {
     clear: both;
+    .trigger {
+      display: none;
+    }
+    ul {
+      max-height: none;
+    }
   }
   .paragraphs {
     width:$c4*3;
