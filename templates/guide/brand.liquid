@@ -1,0 +1,117 @@
+{% block styles %}
+  {{ "guide.css" | asset_url | stylesheet_tag }}
+{% endblock %}
+
+{% block header %}
+  {% include "guide/header" %}
+{% endblock %}
+
+{% block content %}
+<header class="row container">
+  <h1>Brand</h1>
+  <p class="lead">Add your logos, typefaces, and colors here.</p>
+</header>
+
+<section class="row container">
+  <h2>Logos</h2>
+  <hr>
+  <figure>
+    <img src="{{ global.logo }}" alt="{{ global.title }}" />
+  </figure>
+</section>
+
+<section class="row container">
+  <h2>Typefaces</h2>
+  <hr>
+  <div class="type-sample primary split-content">
+
+  <h3>Serif</h3>
+
+  <h4>Regular</h4>
+  <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</p>
+
+  <h4>Italic</h4>
+  <p><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</em></p>
+
+  <h4>Bold</h4>
+  <p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</strong></p>
+
+  <h4>Bold italic</h4>
+  <p><strong><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</em></strong></p>
+  </div>
+
+  <div class="type-sample secondary split-content">
+  <h3>Sans</h3>
+
+  <h4>Regular</h4>
+  <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</p>
+
+  <h4>Italic</h4>
+  <p><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</em></p>
+
+  <h4>Bold</h4>
+  <p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</strong></p>
+
+  <h4>Bold italic</h4>
+  <p><strong><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+  abcdefghijklmnopqrstuvwxyz<br />
+  1234567890<br />
+  #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</em></strong></p>
+  </div>
+</section>
+
+<section class="row container colors">
+  <h2>Colors</h2>
+  <hr>
+  <p>Add your colors here for easy reference.</p>
+  <div class="swatch color1">
+    <p>$background<br />#FFFFFF</p>
+  </div>
+  <div class="swatch color2">
+    <p>$dark-background<br />#DDDDDD</p>
+  </div>
+  <div class="swatch color3">
+    <p>$light-text<br />#AAAAAA</p>
+  </div>
+  <div class="swatch color4">
+    <p>$mid-text<br />#666666</p>
+  </div>
+  <div class="swatch color5">
+    <p>$text<br />#333333</p>
+  </div>
+  <div class="swatch color6">
+    <p>$red<br />#D13731</p>
+  </div>
+  <div class="swatch color7">
+    <p>$blue<br />#44B3E1</p>
+  </div>
+</section>
+
+<section class="row container">
+  <h2>Icons</h2>
+  <hr>
+  <p>Add your icons here. They are nice and easy to use and render well across several browsers and sizes.</p>
+
+</section>
+{% endblock %}

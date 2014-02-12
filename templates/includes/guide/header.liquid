@@ -1,17 +1,15 @@
-<header class="header row reverse">
+<header class="header reverse">
     <div class="container">
-        <h1><a href="/" class="logo">{{ global.title }}</a></h1>
-        <p class="tagline">{{ global.tagline }}</p>
+        <h1 class="logo"><a href="/guide/index/">{% if global.logo %}<img src="{{ global.logo }}" alt="{{ global.title }}" />{% else %}{{ global.title }}{% endif %}</a></h1>
         <nav class="horizontal-nav collapse">
             <ul>
-                <li><a href="/guide/usage/">Usage</a></li>
+                <li><a href="/guide/index/">Usage</a></li>
+                <li><a href="/guide/brand/">Brand</a></li>
                 <li><a href="/guide/typography/">Typography</a></li>
-                <li><a href="/guide/grids/">Grids</a></li>
                 <li><a href="/guide/forms/">Forms</a></li>
-                <li><a href="/guide/icons/">Icons</a></li>
-                <li><a href="/guide/color/">Color</a></li>
+                <li><a href="/guide/grids/">Grid</a></li>
                 <li><a href="/guide/components/">Components</a></li>
-                <li><a href="/guide/modules/">Layout Modules</a></li>
+                <li><a href="/guide/modules/">Modules</a></li>
                 <li><a href="/guide/templates/">Templates</a></li>
             </ul>
         </nav>

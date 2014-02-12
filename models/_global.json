@@ -1,5 +1,6 @@
 {
   "title": "Live Wires",
+  "logo": "/assets/img/logo.png",
   "tagline": "Light-weight prototyping with HTML & SCSS.",
   "twitter": "louderthanten",
   "domain": "http://livewires.io",

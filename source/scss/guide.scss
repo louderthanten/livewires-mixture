@@ -43,19 +43,26 @@
 //==============================================================================
 // Change this if you want to customize the look, feel, or stucture of the Guide
 
-
-// Header
-//==============================================================================
 .logo {
-  max-width: 200px;
+  margin-bottom: 0;
+  img {
+    max-width: 240px;
+  }
+  span {
+    display: block;
+  }
 }
-
 // Layout sections
 //==============================================================================
 .main .horizontal-nav {
   margin:rem($line) 0;
 }
-
+.header {
+  padding-top: rem($line);
+}
+.sub-nav {
+  background:$mid-text;
+}
 
 // Type Section
 //==============================================================================
@@ -197,6 +204,21 @@
 
 
 @media only screen and (min-width: $screenSmall) {
+  .logo {
+    float:left;
+    margin-top: 0;
+
+    span {
+      display: inline;
+    }
+  }
+  .tagline {
+    float:left;
+    margin-top: rem($line/1.5);
+  }
+  .header .horizontal-nav {
+    clear: both;
+  }
   .paragraphs {
     width:$c4*3;
   }

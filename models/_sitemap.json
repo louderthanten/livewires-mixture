@@ -21,6 +21,12 @@
     "children": [
       {
         "directory": false,
+        "key": "brand",
+        "name": "Brand",
+        "url": "/guide/brand"
+      },
+      {
+        "directory": false,
         "key": "color",
         "name": "Color",
         "url": "/guide/color"
@@ -69,6 +75,12 @@
       },
       {
         "directory": false,
+        "key": "tables",
+        "name": "Tables",
+        "url": "/guide/tables"
+      },
+      {
+        "directory": false,
         "key": "templates",
         "name": "Templates",
         "url": "/guide/templates"
@@ -78,12 +90,6 @@
         "key": "typography",
         "name": "Typography",
         "url": "/guide/typography"
-      },
-      {
-        "directory": false,
-        "key": "usage",
-        "name": "Usage",
-        "url": "/guide/usage"
       }
     ],
     "directory": true,

@@ -433,14 +433,18 @@ sub {
 
 h1 {
   font-family: sans-serif; }
+  h1 span, h1 small {
+    font-size: 0.5em; }
 
 h2 {
   font-family: sans-serif; }
-  h2 > span, h2 > small {
-    color: #666666; }
+  h2 span, h2 small {
+    font-size: 0.5em; }
 
 h3 {
   font-family: sans-serif; }
+  h3 span, h3 small {
+    font-size: 0.5em; }
 
 h4 {
   font-family: sans-serif; }
@@ -481,6 +485,48 @@ ul, ol, dl {
 
 nav ul {
   list-style: none; }
+
+q {
+  quotes: "‘" "’" "“" "”"; }
+  q:before {
+    content: "‘";
+    content: open-quote; }
+  q:after {
+    content: "’";
+    content: close-quote; }
+  q q:before {
+    content: "“";
+    content: open-quote; }
+  q q:after {
+    content: "”";
+    content: close-quote; }
+
+blockquote {
+  quotes: "“" "”";
+  text-indent: -0.5em; }
+  blockquote p:before {
+    content: "“";
+    content: open-quote; }
+  blockquote p:after {
+    content: "";
+    content: no-close-quote; }
+  blockquote p:last-of-type:after {
+    content: "”";
+    content: close-quote; }
+  blockquote q:before {
+    content: "‘";
+    content: open-quote; }
+  blockquote q:after {
+    content: "’";
+    content: close-quote; }
+
+
+
+.vcard .type {
+  display: block; }
+
+.street-address, .country-name {
+  display: block; }
 
 button, input[type="submit"], .button, .option-buttons label, .pill-buttons label, .tabs a, a.button, .tabs a {
   position: relative;
@@ -1134,50 +1180,6 @@ fieldset {
   display: inline-block;
   font: inherit; }
 
-q {
-  quotes: "‘" "’" "“" "”"; }
-  q:before {
-    content: "‘";
-    content: open-quote; }
-  q:after {
-    content: "’";
-    content: close-quote; }
-  q q:before {
-    content: "“";
-    content: open-quote; }
-  q q:after {
-    content: "”";
-    content: close-quote; }
-
-blockquote {
-  quotes: "“" "”";
-  text-indent: -0.5em; }
-  blockquote p:before {
-    content: "“";
-    content: open-quote; }
-  blockquote p:after {
-    content: "";
-    content: no-close-quote; }
-  blockquote p:last-of-type:after {
-    content: "”";
-    content: close-quote; }
-  blockquote q:before {
-    content: "‘";
-    content: open-quote; }
-  blockquote q:after {
-    content: "’";
-    content: close-quote; }
-
-
-
-.vcard .type {
-  display: block; }
-
-.street-address, .country-name {
-  display: block; }
-
-.header .logo {
-  max-width: 200px; }
 
 .cover {
   position: relative;
@@ -1384,7 +1386,13 @@ button, input[type="submit"], .button, .option-buttons label, .pill-buttons labe
   background: #d13731;
   color: #FFFFFF; }
   .button--red:active, .button--red:focus, a.button--red:active, a.button--red:focus {
-    background-color: #44b3e1; }
+    background-color: #333333; }
+
+.button--blue, a.button--blue {
+  background: #44b3e1;
+  color: #FFFFFF; }
+  .button--blue:active, .button--blue:focus, a.button--blue:active, a.button--blue:focus {
+    background-color: #333333; }
 
 .button--grey, .tabs a, a.button--grey, .tabs a {
   background: #666666;

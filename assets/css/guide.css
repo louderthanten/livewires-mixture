@@ -105,10 +105,20 @@
   background: #44b3e1; }
 
 .logo {
-  max-width: 200px; }
+  margin-bottom: 0; }
+  .logo img {
+    max-width: 240px; }
+  .logo span {
+    display: block; }
 
 .main .horizontal-nav {
   margin: 1.5rem 0; }
+
+.header {
+  padding-top: 1.5rem; }
+
+.sub-nav {
+  background: #666666; }
 
 .type-sample p {
   font-size: 24px;
@@ -191,6 +201,16 @@
   list-style: none; }
 
 @media only screen and (min-width: 48em) {
+  .logo {
+    float: left;
+    margin-top: 0; }
+    .logo span {
+      display: inline; }
+  .tagline {
+    float: left;
+    margin-top: 1rem; }
+  .header .horizontal-nav {
+    clear: both; }
   .paragraphs {
     width: 75%; }
   .iconset {
