@@ -9,6 +9,8 @@
     <nav class="horizontal-nav container">
       <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
       <ul class="collapse" id="sections">
+        <li><a href="#howto">How to use</a></li>
+        <li><a href="#resizing">Units &amp; resizing</a></li>
         <li><a href="#grids">Grid examples</a></li>
         <li><a href="#modular-scale">Modular Scale</a></li>
       </ul>
@@ -20,11 +22,38 @@
 <header class="row container">
   <h1>Grid</h1>
   <p class="lead">We&rsquo;re using a folding compound grid for maximum flexibility in our responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
+</header>
+
+<section class="row container" id="howto">
+  <h2>How to use</h2>
   <p>The concept is loosely based on <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> fabulous <a href="http://goldengridsystem.com/">Golden Grid System</a>.</p>
   <p>Unlike other grid frameworks, our grid system is not attached to css classes. Instead, they are set in SCSS using our simple grid varables. This keeps our markup clean and our layout much easier to modify at various breakpoints. You can even combine them to make interesting compound grids.</p>
 
-  <p>In fact, we don't consider this system a framework at all.</p>
-  <p><em>E.G. To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</em></p>
+  <p>In fact, we don't consider this system a framework at all. The only thing we've setup for you are the following grid variables and a couple classes for dividing page sections.</p>
+
+  <h3>Default grid variables</h3>
+  <pre class="language-scss"><code>   //Three Column Grid
+    $c3: 100% / 3;
+    //Four Column Grid
+    $c4: 100% / 4;
+    // Five Columns
+    $c5: 100% / 5;
+    //Six Column Grid
+    $c6: 100% / 6;
+    //Seven Column Grid
+    $c7: 100% / 7;
+    //Eight Column Grid
+    $c8: 100% / 8;
+    //Nine Column Grid
+    $c9: 100% / 9;
+    //Ten Column Grid
+    $c10: 100% / 10;
+    //Twelve Column Grid
+    $c12: 100% / 12;
+    //Sixteen Column Grid
+    $c16: 100% / 16;</code></pre>
+
+  <p><em>To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</em></p>
 
     <pre class="language-scss line-numbers"><code>    /* Create a 4-column object centered in a 6-column grid */
     .object{
@@ -71,9 +100,40 @@
       }
     }</code></pre>
 
-</header>
+  <p class="more"><a href="#header">Top</a></p>
+</section>
 
+<section class="row container" id="resizing">
+  <h2>Units &amp; resizing</h2>
+  <hr>
+  <p>Every single dimension in our project is defined using relative units. Aside from our grid units and margins, which use percentages, we use <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">Rems</a>. When everything is set using rems, we can proportionally zoom the entire project simply by changing the font-size of our <code>&lt;html&gt;</code> element.</p>
 
+  <h3>Example</h3>
+  <pre class="language-scss line-numbers"><code>   // Our default font-size is 100%
+    html {
+      font-size: 100%;
+    }
+
+    // We can proportionally increase the size of the enire site
+    // by simply increasing or decreasing the root font-size.
+    @media only screen and (min-width: $screenSmall) {
+      html {
+        font-size: 105%; // Increases everything defined by rems by 5%.
+      }
+    }</code></pre>
+
+    <p>To make it easy to work with rems, we've included a handy <code>rem()</code> function inspired by <a href="http://foundation.zurb.com">Foundation&rsquo;s</a> <code>rem-calc()</code>.</p>
+
+    <h3>Examples</h3>
+    <pre class="language-scss line-numbers"><code>    .object {
+       // Here's a few ways you can use the rem() function
+       padding: rem(24px); // Converts a px value to rems
+       padding: rem(24); // You can even leave out the px suffix
+       padding: rem(24 12); // And use with multiple shorthand values
+       padding: rem($line $line/2) // Use the $line variable for consistent spacing & flexibility
+    }</code></pre>
+
+</section>
 
 <section class="grids row container" id="grids">
     <h2>Grid examples</h2>
@@ -159,6 +219,7 @@
         <div class="folding seven five three"><span></span></div>
       </div>
     </div>
+
   <p class="more"><a href="#header">Top</a></p>
 </section>
 

@@ -19,12 +19,7 @@
 @import "../elements/forms/fields";
 @import "../elements/forms/switches";
 @import "../elements/forms/option-buttons";
-@import "../elements/media/images";
-@import "../elements/media/maps";
-@import "../elements/media/videos";
 @import "../elements/borders";
-@import "../elements/icons";
-@import "../elements/tables";
 @import "../elements/animation";
 
 // Components
@@ -34,15 +29,17 @@
 @import "../components/navigation/tabs";
 @import "../components/navigation/pagination";
 @import "../components/navigation/breadcrumbs";
+@import "../components/media/images";
+@import "../components/media/maps";
+@import "../components/media/videos";
 @import "../components/code";
 @import "../components/callouts";
 @import "../components/drawers";
 @import "../components/forms";
-
+@import "../components/tables";
 
 // Modules
 @import "../modules/header";
-@import "../modules/cover";
 @import "../modules/layout";
 @import "../modules/footer";
 

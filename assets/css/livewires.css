@@ -731,61 +731,6 @@ input[type=checkbox], input[type=radio] {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px; }
 
-img {
-  max-width: 100%;
-  height: auto; }
-
-figure {
-  position: relative; }
-  figure > img, figure > iframe {
-    display: block;
-    margin: 0; }
-
-figcaption .source {
-  display: block; }
-
-@media only screen and (min-width: 48em) {
-  .img--right {
-    margin-bottom: 0.75rem;
-    margin-left: 0.75rem;
-    float: right; }
-  .img--left {
-    margin-bottom: 0.75rem;
-    margin-right: 0.75rem;
-    float: left; }
-  .img--center {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 0.75rem; }
-  figcaption .source {
-    float: right;
-    text-align: right; } }
-
-.map {
-  position: relative;
-  max-height: 144px;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden; }
-  .map object, .map embed, .map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%; }
-
-#googlemap img, object, embed, #map_canvas embed, #map_canvas img, #map_canvas object {
-  max-width: 100%;
-  max-height: 100%; }
-
-@media only screen and (min-width: 48em) {
-  .map {
-    max-height: auto; } }
-
-
 hr {
   clear: both;
   height: 0;
@@ -802,141 +747,6 @@ hr {
 
 .rule--white {
   border-top: 1px solid #FFFFFF; }
-
-table {
-  border-collapse: collapse;
-  width: 100%; }
-  table ul, table ol, table dl, table p {
-    margin-bottom: 0; }
-  table img {
-    max-width: 100%; }
-
-th, td {
-  text-align: left; }
-
-[colspan] {
-  text-align: center; }
-
-[colspan="1"] {
-  text-align: left; }
-
-[rowspan] {
-  vertical-align: middle; }
-
-[rowspan="1"] {
-  vertical-align: top; }
-
-.numerical, .delete {
-  text-align: right; }
-
-.t1 {
-  width: 1%; }
-
-.t5 {
-  width: 5%; }
-
-.t10 {
-  width: 10%; }
-
-.t12 {
-  width: 12.5%; }
-
-/* 1/8 */
-.t15 {
-  width: 15%; }
-
-.t20 {
-  width: 20%; }
-
-.t25 {
-  width: 25%; }
-
-/* 1/4 */
-.t30 {
-  width: 30%; }
-
-.t33 {
-  width: 33.333%; }
-
-/* 1/3 */
-.t35 {
-  width: 35%; }
-
-.t37 {
-  width: 37.5%; }
-
-/* 3/8 */
-.t40 {
-  width: 40%; }
-
-.t45 {
-  width: 45%; }
-
-.t50 {
-  width: 50%; }
-
-/* 1/2 */
-.t55 {
-  width: 55%; }
-
-.t60 {
-  width: 60%; }
-
-.t62 {
-  width: 62.5%; }
-
-/* 5/8 */
-.t65 {
-  width: 65%; }
-
-.t66 {
-  width: 66.666%; }
-
-/* 2/3 */
-.t70 {
-  width: 70%; }
-
-.t75 {
-  width: 75%; }
-
-/* 3/4*/
-.t80 {
-  width: 80%; }
-
-.t85 {
-  width: 85%; }
-
-.t87 {
-  width: 87.5%; }
-
-/* 7/8 */
-.t90 {
-  width: 90%; }
-
-.t95 {
-  width: 95%; }
-
-.table--bordered th, .table--bordered td {
-  border: 1px solid #AAAAAA; }
-  .table--bordered th:empty, .table--bordered td:empty {
-    border: none; }
-
-.table--lined thead tr {
-  border-bottom: 1px solid #AAAAAA; }
-.table--lined tbody tr {
-  border-bottom: 1px solid #DDDDDD; }
-
-@media only screen and (max-width: 48em) {
-  table, tbody, tfoot, th, td, tr {
-    display: block !important; }
-  thead {
-    display: none; }
-  thead, tfoot, tbody, tr {
-    clear: both; }
-  tr {
-    width: 100%; }
-  .numerical, .delete {
-    text-align: left; } }
 
 a, button, input[type="submit"] {
   -webkit-transition: all 0.2s linear;
@@ -1076,6 +886,61 @@ a, button, input[type="submit"] {
   padding-top: 0.75rem;
   margin-bottom: 1.5rem; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
+figure {
+  position: relative; }
+  figure > img, figure > iframe {
+    display: block;
+    margin: 0; }
+
+figcaption .source {
+  display: block; }
+
+@media only screen and (min-width: 48em) {
+  .img--right {
+    margin-bottom: 0.75rem;
+    margin-left: 0.75rem;
+    float: right; }
+  .img--left {
+    margin-bottom: 0.75rem;
+    margin-right: 0.75rem;
+    float: left; }
+  .img--center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0.75rem; }
+  figcaption .source {
+    float: right;
+    text-align: right; } }
+
+.map {
+  position: relative;
+  max-height: 144px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+  .map object, .map embed, .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }
+
+#googlemap img, object, embed, #map_canvas embed, #map_canvas img, #map_canvas object {
+  max-width: 100%;
+  max-height: 100%; }
+
+@media only screen and (min-width: 48em) {
+  .map {
+    max-height: auto; } }
+
+
 code, pre, kbd {
   font-family: monospace;
   direction: ltr;
@@ -1181,13 +1046,141 @@ fieldset {
   display: inline-block;
   font: inherit; }
 
+table {
+  border-collapse: collapse;
+  width: 100%; }
+  table ul, table ol, table dl, table p {
+    margin-bottom: 0; }
+  table img {
+    max-width: 100%; }
 
-.cover {
-  position: relative;
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+th, td {
+  text-align: left; }
+
+[colspan] {
+  text-align: center; }
+
+[colspan="1"] {
+  text-align: left; }
+
+[rowspan] {
+  vertical-align: middle; }
+
+[rowspan="1"] {
+  vertical-align: top; }
+
+.numerical, .delete {
+  text-align: right; }
+
+.t1 {
+  width: 1%; }
+
+.t5 {
+  width: 5%; }
+
+.t10 {
+  width: 10%; }
+
+.t12 {
+  width: 12.5%; }
+
+/* 1/8 */
+.t15 {
+  width: 15%; }
+
+.t20 {
+  width: 20%; }
+
+.t25 {
+  width: 25%; }
+
+/* 1/4 */
+.t30 {
+  width: 30%; }
+
+.t33 {
+  width: 33.333%; }
+
+/* 1/3 */
+.t35 {
+  width: 35%; }
+
+.t37 {
+  width: 37.5%; }
+
+/* 3/8 */
+.t40 {
+  width: 40%; }
+
+.t45 {
+  width: 45%; }
+
+.t50 {
+  width: 50%; }
+
+/* 1/2 */
+.t55 {
+  width: 55%; }
+
+.t60 {
+  width: 60%; }
+
+.t62 {
+  width: 62.5%; }
+
+/* 5/8 */
+.t65 {
+  width: 65%; }
+
+.t66 {
+  width: 66.666%; }
+
+/* 2/3 */
+.t70 {
+  width: 70%; }
+
+.t75 {
+  width: 75%; }
+
+/* 3/4*/
+.t80 {
+  width: 80%; }
+
+.t85 {
+  width: 85%; }
+
+.t87 {
+  width: 87.5%; }
+
+/* 7/8 */
+.t90 {
+  width: 90%; }
+
+.t95 {
+  width: 95%; }
+
+.table--bordered th, .table--bordered td {
+  border: 1px solid #AAAAAA; }
+  .table--bordered th:empty, .table--bordered td:empty {
+    border: none; }
+
+.table--lined thead tr {
+  border-bottom: 1px solid #AAAAAA; }
+.table--lined tbody tr {
+  border-bottom: 1px solid #DDDDDD; }
+
+@media only screen and (max-width: 48em) {
+  table, tbody, tfoot, th, td, tr {
+    display: block !important; }
+  thead {
+    display: none; }
+  thead, tfoot, tbody, tr {
+    clear: both; }
+  tr {
+    width: 100%; }
+  .numerical, .delete {
+    text-align: left; } }
+
 
 html {
   font-size: 100%;
