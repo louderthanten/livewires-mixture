@@ -950,7 +950,7 @@ a, button, input[type="submit"] {
 .horizontal-nav a {
   display: block;
   width: 100%;
-  padding: 0.375rem 5%;
+  padding: 0.375rem 5.55556%;
   font-family: serif;
   text-decoration: none;
   font-family: sans-serif; }
@@ -1203,7 +1203,7 @@ html, body {
 
 .container {
   position: relative;
-  padding: 0 5%; }
+  padding: 0 5.55556%; }
 
 .container--mobile-full {
   margin: 0; }
@@ -1213,7 +1213,7 @@ html, body {
 
 @media only screen and (min-width: 48em) {
   .container--mobile-full {
-    margin: 0 5%; }
+    margin: 0 5.55556%; }
   .container > *:not(.collapse) {
     padding-left: 0.75rem;
     padding-right: 0.75rem; }
@@ -1228,7 +1228,7 @@ html, body {
   html {
     font-size: 107.5%; }
   .container {
-    margin: 0 10%; }
+    margin: 0 11.11111%; }
   .primary-content {
     margin-left: 14.28571%;
     width: 42.85714%; }
@@ -1245,6 +1245,9 @@ html, body {
 .reverse {
   background: #333333;
   color: #FFFFFF; }
+
+.subtle {
+  background: #DDDDDD; }
 
 body {
   color: #333333; }
@@ -1419,10 +1422,6 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
   box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px black, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px #d13731; }
 
 /* General styles for all menus */
-.callout .content {
-  background-color: #DDDDDD; }
-.callout .reverse {
-  background-color: #333333; }
 
 .content p, .content li, .content dd {
   line-height: 1.25;

@@ -317,7 +317,7 @@
 
 <section class="row container callouts">
   <aside class="callout">
-    <div class="content">
+    <div class="content subtle">
       <h2>Callout</h2>
       <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
     </div>
@@ -333,7 +333,7 @@
     <figure>
       <img src="http://placehold.it/800x400" alt="">
     </figure>
-    <div class="content">
+    <div class="content subtle">
       <h2>Image Callout</h2>
       <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections.</p>
     </div>
@@ -343,7 +343,7 @@
     <figure class="video">
       <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </figure>
-    <div class="content">
+    <div class="content subtle">
       <h2>Video Callout</h2>
       <p>Callout content is a related aside that doesn't fit directly inside normal page content. It may also my use to highlight important sections.</p>
     </div>
@@ -514,4 +514,8 @@
     <p class="more"><a href="#header">Top</a></p>
 </section>
 
+{% endblock %}
+
+{% block footer %}
+  {% include "guide/footer" %}
 {% endblock %}

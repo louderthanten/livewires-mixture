@@ -50,15 +50,17 @@
 
 
         <!-- Header section -->
-        {% block header %}{% endblock %}
+        {% block header %}{% include "modules/header" %}{% endblock %}
 
         <!-- Content block, child page inject content -->
         <main class="main" id="main" role="main">
         {% block content %}{% endblock %}
         </main>
 
-		<!-- footer -->
-        {% include "modules/footer" %}
+        <!-- Footer section -->
+        {% block footer %}{% include "modules/footer" %}{% endblock %}
+
+
         <!-- Script block allowing child pages to inject their own scripts -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/jquery-2.0.3.min.js"><\/script>')</script>

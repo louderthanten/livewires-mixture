@@ -9,9 +9,8 @@
     <nav class="horizontal-nav container">
       <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
       <ul class="collapse" id="sections">
-        <li><a href="#modular-scale">Modular Scale</a></li>
         <li><a href="#grids">Grid examples</a></li>
-
+        <li><a href="#modular-scale">Modular Scale</a></li>
       </ul>
     </nav>
   </div>
@@ -20,8 +19,11 @@
 {% block content %}
 <header class="row container">
   <h1>Grid</h1>
-  <p class="lead">We&rsquo;re using a complex folding compound grid for maximum flexibility in our responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
-  <p>Our grid system is not attached to classes like other pre-packaged CSS grid systems. Instead, they are set in SCSS using our simple grid varables. This keeps our markup clean and our layout much easier to modify at various breakpoints. You can even combine them to make interesting compound grids.</p>
+  <p class="lead">We&rsquo;re using a folding compound grid for maximum flexibility in our responsive layouts. This is a fluid grid with flexible columns and fixed-width gutters to maintain proportional spacing and alignment for all screen dimensions.</p>
+  <p>The concept is loosely based on <a href="http://www.jonikorpi.com/">Joni Korpi&rsquo;s</a> fabulous <a href="http://goldengridsystem.com/">Golden Grid System</a>.</p>
+  <p>Unlike other grid frameworks, our grid system is not attached to css classes. Instead, they are set in SCSS using our simple grid varables. This keeps our markup clean and our layout much easier to modify at various breakpoints. You can even combine them to make interesting compound grids.</p>
+
+  <p>In fact, we don't consider this system a framework at all.</p>
   <p><em>E.G. To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</em></p>
 
     <pre class="language-scss line-numbers"><code>    /* Create a 4-column object centered in a 6-column grid */
@@ -30,7 +32,135 @@
       width:$c6*4; /* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */
       margin-left:$c6*1; /* Moves object 1 column to the right. */
     }</code></pre>
+
+  <p>By default, this grid would be from one edge of the browser to the other. Probably not ideal for most people. To give your page some margins, we have two classes to give you some structure and extra theming power:</p>
+
+  <pre class="language-markup line-numbers"><code>    &lt;!-- If you don't need a unique background for your section,
+    you can combine row and container classes --&gt;
+    &lt;div class="row container"&gt;
+      &lt;section class="object"&gt;
+        &lt;!-- Content that aligns to the grid --&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+    <!-- If you do need a unique background for your section, separate your row and container classes -->
+    &lt;div class="row"&gt; &lt;!-- Apply background here --&gt;
+      &lt;div class="container"&gt; &lt;!-- Contains grid --&gt;
+        &lt;section class="object"&gt;
+          &lt;!-- Content that aligns to the grid --&gt;
+        &lt;/section&gt;
+        &lt;section class="object2"&gt;
+          &lt;!-- Content that aligns to the grid --&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+  <h2><code>.row</code></h2>
+  <p>Our row classes are designed to stretch from one edge of your browser to the other so you can add background colors and full-bleed images. We also like to add some vertical padding for consistent white space between sections.</p>
+
+  <h2><code>.container</code></h2>
+  <p>Container classes contain our grid and add vertical margins to our sections. You can add a max-width value to give your design a static width after a certain size, but we recommend sticking with a fully fluid system based on percentages:</p>
+
+  <p>Define your page width by using the <code>$margin</code> variable. We usually set this with a percentage based on one of our smaller grid units. For example, the base margin of Live Wires is <code>$margin: 100% / 18</code> (which adds an extra column to either side of our 16 column grid).</p>
+
+  <p>This is fine at small window sizes, but what about at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.container</code> classes:</p>
+
+    <pre class="language-scss line-numbers"><code>    /* Increase margins after a certain width */
+    @media only screen and (min-width: $screenMedium) {
+      .container {
+        margin: 0 $margin * 2 /* Double the margin size to squeeze the main content. */
+      }
+    }</code></pre>
+
 </header>
+
+
+
+<section class="grids row container" id="grids">
+    <h2>Grid examples</h2>
+    <h3>Two/Four/Eight responsive folding grid</h3>
+    <div class="grid grid--2-4-8">
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four"><span></span></div>
+      <div class="folding eight"><span></span></div>
+      <div class="folding eight four two"><span></span></div>
+      <div class="folding eight"><span></span></div>
+    </div>
+
+    <h3>Three/Five/Seven responsive folding grid</h3>
+    <div class="grid grid--3-5-7">
+      <div class="folding seven five three"><span></span></div>
+      <div class="folding seven five"><span></span></div>
+      <div class="folding seven"><span></span></div>
+      <div class="folding seven five three"><span></span></div>
+      <div class="folding seven"><span></span></div>
+      <div class="folding seven five"><span></span></div>
+      <div class="folding seven five three"><span></span></div>
+    </div>
+
+    <h3>Three/Six/Twelve responsive folding grid</h3>
+    <div class="grid grid--3-6-12">
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six three"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+      <div class="folding twelve six"><span></span></div>
+      <div class="folding twelve"><span></span></div>
+    </div>
+
+    <h3>Four/Eight Sixteen responsive folding grid</h3>
+    <div class="grid grid--4-8-16">
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight four"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+      <div class="folding sixteen eight"><span></span></div>
+      <div class="folding sixteen"><span></span></div>
+    </div>
+
+    <h3>Compound grid example</h3>
+    <div class="combined-grid">
+      <div class="grid grid--2-4-8">
+        <div class="folding eight four two"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four"><span></span></div>
+        <div class="folding eight"><span></span></div>
+        <div class="folding eight four two"><span></span></div>
+        <div class="folding eight"><span></span></div>
+      </div>
+
+      <div class="grid grid--3-5-7">
+        <div class="folding seven five three"><span></span></div>
+        <div class="folding seven five"><span></span></div>
+        <div class="folding seven"><span></span></div>
+        <div class="folding seven five three"><span></span></div>
+        <div class="folding seven"><span></span></div>
+        <div class="folding seven five"><span></span></div>
+        <div class="folding seven five three"><span></span></div>
+      </div>
+    </div>
+  <p class="more"><a href="#header">Top</a></p>
+</section>
 
 <section class="row container" id="modular-scale">
   <h2>Modular scale</h2>
@@ -332,93 +462,8 @@
   <p class="more"><a href="#header">Top</a></p>
 </section>
 
-<section class="grids row container" id="grids">
-    <h2>Grid examples</h2>
-    <h3>Two/Four/Eight responsive folding grid</h3>
-    <div class="grid grid--2-4-8">
-      <div class="folding eight four two"><span></span></div>
-      <div class="folding eight"><span></span></div>
-      <div class="folding eight four"><span></span></div>
-      <div class="folding eight"><span></span></div>
-      <div class="folding eight four"><span></span></div>
-      <div class="folding eight"><span></span></div>
-      <div class="folding eight four two"><span></span></div>
-      <div class="folding eight"><span></span></div>
-    </div>
+{% endblock %}
 
-    <h3>Three/Five/Seven responsive folding grid</h3>
-    <div class="grid grid--3-5-7">
-      <div class="folding seven five three"><span></span></div>
-      <div class="folding seven five"><span></span></div>
-      <div class="folding seven"><span></span></div>
-      <div class="folding seven five three"><span></span></div>
-      <div class="folding seven"><span></span></div>
-      <div class="folding seven five"><span></span></div>
-      <div class="folding seven five three"><span></span></div>
-    </div>
-
-    <h3>Three/Six/Twelve responsive folding grid</h3>
-    <div class="grid grid--3-6-12">
-      <div class="folding twelve six three"><span></span></div>
-      <div class="folding twelve"><span></span></div>
-      <div class="folding twelve six"><span></span></div>
-      <div class="folding twelve"><span></span></div>
-      <div class="folding twelve six three"><span></span></div>
-      <div class="folding twelve"><span></span></div>
-      <div class="folding twelve six"><span></span></div>
-      <div class="folding twelve"><span></span></div>
-      <div class="folding twelve six three"><span></span></div>
-      <div class="folding twelve"><span></span></div>
-      <div class="folding twelve six"><span></span></div>
-      <div class="folding twelve"><span></span></div>
-    </div>
-
-    <h3>Four/Eight Sixteen responsive folding grid</h3>
-    <div class="grid grid--4-8-16">
-      <div class="folding sixteen eight four"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-      <div class="folding sixteen eight"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-      <div class="folding sixteen eight four"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-      <div class="folding sixteen eight"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-      <div class="folding sixteen eight four"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-      <div class="folding sixteen eight"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-      <div class="folding sixteen eight four"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-      <div class="folding sixteen eight"><span></span></div>
-      <div class="folding sixteen"><span></span></div>
-    </div>
-
-    <h3>Compound grid example</h3>
-    <div class="combined-grid">
-      <div class="grid grid--2-4-8">
-        <div class="folding eight four two"><span></span></div>
-        <div class="folding eight"><span></span></div>
-        <div class="folding eight four"><span></span></div>
-        <div class="folding eight"><span></span></div>
-        <div class="folding eight four"><span></span></div>
-        <div class="folding eight"><span></span></div>
-        <div class="folding eight four two"><span></span></div>
-        <div class="folding eight"><span></span></div>
-      </div>
-
-      <div class="grid grid--3-5-7">
-        <div class="folding seven five three"><span></span></div>
-        <div class="folding seven five"><span></span></div>
-        <div class="folding seven"><span></span></div>
-        <div class="folding seven five three"><span></span></div>
-        <div class="folding seven"><span></span></div>
-        <div class="folding seven five"><span></span></div>
-        <div class="folding seven five three"><span></span></div>
-      </div>
-    </div>
-  <p class="more"><a href="#header">Top</a></p>
-</section>
-
-
-
+{% block footer %}
+  {% include "guide/footer" %}
 {% endblock %}
