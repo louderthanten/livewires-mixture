@@ -1,6 +1,7 @@
 {% block styles %}
   {{ "guide.css" | asset_url | stylesheet_tag }}
 {% endblock %}
+{% block page-class %}pg-components{% endblock %}
 
 {% block header %}
   {% include "modules/offcanvas" %}
@@ -38,7 +39,7 @@
   <div class="split-content">
     <h3>Responsive image</h3>
     <figure>
-      {{ "2500x1666" | placeholder | image_tag }}
+      <img src="http://placehold.it/2000x1200" alt="">
       <figcaption><p>Explanatory caption to compliment image. <small class="source">Photographer: First Last</small></p></figcaption>
     </figure>
   </div>
@@ -330,7 +331,7 @@
 
   <aside class="callout">
     <figure>
-      {{ "800x400" | placeholder | image_tag }}
+      <img src="http://placehold.it/800x400" alt="">
     </figure>
     <div class="content">
       <h2>Image Callout</h2>
@@ -406,7 +407,7 @@
     <h3>Tab 2</h3>
     <p>This tab has an image in it.</p>
     <figure>
-      {{ "2000x1200" | placeholder | image_tag }}
+      <img src="http://placehold.it/2000x1200" alt="">
     </figure>
   </section>
   <section id="tab3" class="tab-content content reverse">

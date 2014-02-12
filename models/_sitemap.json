@@ -45,12 +45,6 @@
       },
       {
         "directory": false,
-        "key": "index",
-        "name": "Index",
-        "url": "/guide/index"
-      },
-      {
-        "directory": false,
         "key": "modules",
         "name": "Modules",
         "url": "/guide/modules"
@@ -60,6 +54,12 @@
         "key": "templates",
         "name": "Templates",
         "url": "/guide/templates"
+      },
+      {
+        "directory": false,
+        "key": "usage",
+        "name": "Usage",
+        "url": "/guide/usage"
       }
     ],
     "directory": true,

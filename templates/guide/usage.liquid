@@ -1,13 +1,13 @@
 {% block styles %}
   {{ "guide.css" | asset_url | stylesheet_tag }}
 {% endblock %}
+{% block page-class %}pg-usage{% endblock %}
 
 {% block header %}
   {% include "guide/header" %}
   <div class="sub-nav">
     <nav class="horizontal-nav container">
-      <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
-      <ul class="collapse" id="sections">
+      <ul class="collapse">
         <li><a href="#structure">Project structure</a></li>
         <li><a href="#markup">Markup</a></li>
         <li><a href="#js">Javascript</a></li>
@@ -21,13 +21,13 @@
 
 {% block content %}
 <header class="row container">
-  <h1>Basic usage</h1>
+  <h1>Usage</h1>
   <p class="lead">One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to navigate Live Wires.</p>
 </header>
 
 <section class="row container" id="structure">
     <h2 id="structure">Project structure</h2>
-    <p>Here's how a Live Wires project is organized:</p>
+    <p>Here&rsquo;s how a Live Wires project is organized:</p>
 
     <dl>
       <dt><code>/assets/</code></dt>

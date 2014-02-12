@@ -67,6 +67,20 @@
   }
 }
 
+// current states in primary nav
+.pg-brand .primary__brand,
+.pg-usage .primary__usage,
+.pg-grid .primary__grid,
+.pg-elements .primary__elements,
+.pg-modules .primary__modules,
+.pg-components .primary__components,
+.pg-templates .primary__templates {
+  a {
+    color:$background;
+    cursor: default;
+  }
+}
+
 .main .horizontal-nav {
   margin:rem($line) 0;
 }

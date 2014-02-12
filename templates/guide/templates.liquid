@@ -1,6 +1,7 @@
 {% block styles %}
     {{ "guide.css" | asset_url | stylesheet_tag }}
 {% endblock %}
+{% block page-class %}pg-templates{% endblock %}
 
 {% block header %}
     {% include "guide/header" %}

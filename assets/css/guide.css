@@ -119,6 +119,10 @@
   .horizontal-nav ul.opened {
     max-height: 2000px; }
 
+.pg-brand .primary__brand a, .pg-usage .primary__usage a, .pg-grid .primary__grid a, .pg-elements .primary__elements a, .pg-modules .primary__modules a, .pg-components .primary__components a, .pg-templates .primary__templates a {
+  color: #FFFFFF;
+  cursor: default; }
+
 .main .horizontal-nav {
   margin: 1.5rem 0; }
 

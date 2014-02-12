@@ -1,6 +1,7 @@
 {% block styles %}
   {{ "guide.css" | asset_url | stylesheet_tag }}
 {% endblock %}
+{% block page-class %}pg-elements{% endblock %}
 
 {% block header %}
   {% include "guide/header" %}
@@ -24,8 +25,8 @@
 
 {% block content %}
 <header class="row container">
-  <h1>Typography</h1>
-  <p class="lead">A well-planned typographic system is essential for a successful design. Make your first design decisions here.</p>
+  <h1>Elements</h1>
+  <p class="lead">All the independent design elements that are used to build our components and modules.</p>
 </header>
 
 <section class="row container" id="headings">
