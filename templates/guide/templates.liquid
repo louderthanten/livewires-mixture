@@ -1,29 +1,26 @@
 {% block styles %}
-    {{ "guide.css" | asset_url | stylesheet_tag }}
+  {{ "guide.css" | asset_url | stylesheet_tag }}
 {% endblock %}
 {% block page-class %}pg-templates{% endblock %}
 
 {% block header %}
-    {% include "guide/header" %}
+  {% include "guide/header" %}
 {% endblock %}
 
 {% block content %}
-<header class="row">
-    <div class="container">
-        <h1>Templates</h1>
-        <p class="lead">Some example templates</p>
-    </div>
+<header class="row container">
+  <h1>Templates</h1>
+  <p class="lead">Some example templates</p>
 </header>
-<section class="row">
-    <div class="container">
-        <section class="primary-content">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/example/">Example</a></li>
-                <li><a href="/404/">404</a></li>
-            </ul>
-        </section>
-    </div>
+
+<section class="row container">
+  <section class="primary-content">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/example/">Example</a></li>
+      <li><a href="/404/">404</a></li>
+    </ul>
+  </section>
 </section>
 
 {% endblock %}
