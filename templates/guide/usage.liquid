@@ -23,6 +23,39 @@
 {% block content %}
 <header class="row container">
   <h1>Usage</h1>
+  	<h2>Live Wires User Interface Guide</h2>
+        <p class="lead">Welcome to your very own Live Wires project. Live Wires is a framework made with Sass and <a href= "http://mixture.io">Mixture</a> that allows you to create responsive wireframes in HTML &amp SCSS. Customize your wireframes, style them, and share them as living low-fidelity prototypes instead of static files you sweat over and later toss away. 
+        <p>When you're done, refine your styles and layouts, and rejoice. You now have a complete foundation for a fully-functioning prototype without any wasted time or code.</p> 
+       <p>Today we stop making trash and start building a living, breathing idea that will look and act the way it was imagined.</p>
+        
+        <h2>How do I use this guide?</h2>
+        <p>The guide breaks down the setup, configuration, and application of Live Wires. All of its documentation is self-contained within these pages.</p>
+        <p>PSST! Once you've completed your wireframe, you might be pretty jazzed to find that if you keep styling these pages and you might just notice an elegant style guide taking shape. More hints on how to do this on the way.</p> 
+    
+       [button] <p>See a template example</p>
+       
+       <h3>Support</h3>
+       <p>Submit your bug reports, pull requests, and questions to <a href="https://github.com/louderthanten/livewires/issues">GitHub</a>.</p>
+       <p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info. 
+</header>
+
+<section class="row container">
+    <h2 id="structure">Project structure</h2>
+    <p>Here's how a Live Wires project is organized:</p>
+
+    <dl>
+      <dt><code>/assets/</code></dt>
+      <dd>This is where all compiled static assets live. Drop your images and font files here. This is also where all Sass, CoffeeScript, and Javascript is combined, compiled, and minified for production use. Don&rsquo;t edit these css and js files. They will get overwritten.</dd>
+      <dt><code>/models/</code></dt>
+      <dd>Contains Mixture's <a href="http://docs.mixture.io/models">model files</a>. We've added one with some global variables to get you started.</dd>
+      <dt><code>/source/</code></dt>
+      <dd>This contains all of the pre-compiled Sass, Coffeescript, and javascript files. This is where you would write your CSS and Javascript. See below for more details on how these are organized.</dd>
+      <dt><code>/templates/</code></dt>
+      <dd>This is where your site templates reside. Templates for this guide can be found in the <code>guide</code> folders.</dd>
+      <dt><code>mixture.json</code></dt>
+      <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
+</section>
+
   <p class="lead">One of the core philosphies behind Live Wires is to stay out of the way as much as possible. We don't want to impose any code standards or force you into a box. Saying that we do have some guidelines that we like that will make it easier to navigate Live Wires.</p>
 </header>
 
