@@ -1238,15 +1238,16 @@ html, body {
 .footer {
   clear: both; }
 
+body {
+  background: #FFFFFF;
+  color: #333333; }
+
 .reverse {
   background: #333333;
   color: #FFFFFF; }
 
 .subtle {
   background: #DDDDDD; }
-
-body {
-  color: #333333; }
 
 * ::-moz-selection {
   background: #d13731;
@@ -2130,3 +2131,4 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
   visibility: hidden; }
 
 /*# sourceMappingURL=livewires.css.map */
+
