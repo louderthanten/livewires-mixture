@@ -1333,6 +1333,9 @@ code, pre {
     background: #AAAAAA;
     color: #FFFFFF; }
 
+.reverse code, .reverse pre {
+  background: #262626; }
+
 :not(pre) > code {
   background: #DDDDDD;
   color: #333333; }
@@ -1421,4 +1424,3 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
 /* General styles for all menus */
 
 /*# sourceMappingURL=app.css.map */
-
