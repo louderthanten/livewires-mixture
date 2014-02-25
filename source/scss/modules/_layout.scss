@@ -2,16 +2,15 @@
 
 // This page is for setting up our general layout structure.
 //
-// If you've been a good little developer and stuck to using rem units, we can resize our entire layout proportionally by manipulating the font-size on the html element.
+// If you can stuck to using rem units, you can resize the entire layout
+// proportionally by manipulating the font-size on the html element.
 html {
   font-size: 100%;
   min-height: 100%;
-  overflow-y:scroll;
 }
 
 html,
 body {
-  height:100%;
   position: relative;
 }
 
@@ -37,9 +36,9 @@ body {
 .container {
   @extend %group; // Call in a clearfix style
   position:relative;
-  padding: 0 $margin;
+  padding: 0 $margin; // Apply our margin value to the sides of the container
 
-  // Let's just apply border-box sizing and clearfixing to the container's immediate children while we're here.
+  // Apply clearfix to immediate descenders of the container
   > * {
     @extend %group;
   }
@@ -50,18 +49,8 @@ body {
   margin: 0;
 }
 
-.primary-content{
-
-}
-.secondary-content {
-
-}
-.split-content {
-
-}
-
 @media only screen and (min-width: $screenSmall) {
-  // Bring margins back to our mobile edge-to-edge styles
+  // Bring margins back to our mobile-full styles
   .container--mobile-full {
     margin:0 $margin;
   }
@@ -71,21 +60,36 @@ body {
       @include gutter;
     }
   }
+
+  // Add some layout modules here. Here are some examples:
+  //
+  // Markup example:
+  // <section class="row">
+  //      <div class="container">
+  //          <section class="primary-content">
+  //              … Main page stuff …
+  //          </section>
+  //          <aside class="secondary-content">
+  //              … Secondary content (sidebar perhaps?) …
+  //           </aside>
+  //      </div>
+  //  </section>
+
   .primary-content {
-    // Example
-    float:left;
-    width:$c5*3;
+    width:$c5*3; // Creates an object that's 3/5 the width of its container
+    float:left;  // Float this block to the left
+
   }
   .secondary-content {
-    //Example
-    float:right;
-    width:$c5*2;
+    width:$c5*2; // Creats an object that's 2/5 the width of the container
+    float:right; // Floats this block to the right
   }
   .split-content {
-    width:$c4*2;
+    width:$c4*2; // Creates objects that are 1/2 the width of the container
     float:left;
   }
 }
+
 @media only screen and (min-width: $screenMedium) {
   html {
     font-size: 107.5%; // You can proportionally resize your entire layout with this line if you stick to rem units everywhere.
@@ -99,20 +103,12 @@ body {
     width:$c7*3; // Three units of a 7-column grid
   }
   .secondary-content {
-    width: $c4; // Feel free to use combine unit widths to make a compound grid
+    width: $c4; // Uses a 1/4 unit-grid for a more complex compound grid https://gridsetapp.com/specs/gerstner/
   }
 }
 
 @media only screen and (min-width: $screenLarge) {
-  .container {
 
-  }
-  .primary-content {
-
-  }
-  .secondary-content {
-
-  }
 }
 @media only screen and (min-width: $screenXlarge) {
 
