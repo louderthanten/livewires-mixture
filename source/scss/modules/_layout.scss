@@ -36,7 +36,7 @@ body {
 .container {
   @extend %group; // Call in a clearfix style
   position:relative;
-  padding: 0 $margin; // Apply our margin value to the sides of the container
+  margin: 0 $margin; // Apply our margin value to the sides of the container
 
   // Apply clearfix to immediate descenders of the container
   > * {
@@ -50,6 +50,9 @@ body {
 }
 
 @media only screen and (min-width: $screenSmall) {
+  .row {
+    padding: rem($line*2 0); // Increase row padding for more space at wider sizes
+  }
   // Bring margins back to our mobile-full styles
   .container--mobile-full {
     margin:0 $margin;

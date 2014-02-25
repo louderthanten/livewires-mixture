@@ -55,7 +55,7 @@
 // Layout sections
 //==============================================================================
 
-.horizontal-nav {
+.horizontal-nav--guide {
   ul {
     overflow: hidden;
     max-height: 0;
@@ -84,7 +84,7 @@
   }
 }
 
-.main .horizontal-nav {
+.main .horizontal-nav--guide {
   margin:rem($line) 0;
 }
 
