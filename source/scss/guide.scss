@@ -65,6 +65,9 @@
       max-height: 2000px;
     }
   }
+  a {
+    @include font-size(14, 14);
+  }
 }
 
 // current states in primary nav
