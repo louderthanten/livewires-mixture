@@ -5,22 +5,20 @@
 
 {% block header %}
   {% include "guide/header" %}
-  <div class="sub-nav">
-    <nav class="horizontal-nav horizontal-nav--guide container">
-      <ul class="collapse">
-        <li><a href="#structure">Project structure</a></li>
-        <li><a href="#markup">Markup</a></li>
-        <li><a href="#js">Javascript</a></li>
-        <li><a href="#css">CSS</a></li>
-        <li><a href="#helpers">Helpers</a></li>
-        <li><a href="#compatibility">Compatibility</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="horizontal-nav horizontal-nav--guide row">
+    <ul class="collapse">
+      <li><a href="#structure">Project structure</a></li>
+      <li><a href="#markup">Markup</a></li>
+      <li><a href="#js">Javascript</a></li>
+      <li><a href="#css">CSS</a></li>
+      <li><a href="#helpers">Helpers</a></li>
+      <li><a href="#compatibility">Compatibility</a></li>
+    </ul>
+  </nav>
 {% endblock %}
 
 {% block content %}
-<header class="row container">
+<header class="row">
   <h1>Usage</h1>
   	<h2>Live Wires User Interface Guide</h2>
     <p class="lead">Welcome to Live Wires. Live Wires is a framework made with Sass and <a href= "http://mixture.io">Mixture</a> that allows you to create responsive wireframes in HTML &amp SCSS. Customize your wireframes, style them, and share them as living low-fidelity prototypes instead of static files you sweat over and later toss away.
@@ -36,7 +34,7 @@
    <p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info.</p>
 </header>
 
-<section class="row container">
+<section class="row">
   <h2 id="structure">Project structure</h2>
   <p>Here's how a Live Wires project is organized:</p>
 
@@ -58,7 +56,7 @@
 
 
 
-<section class="row container" id="structure">
+<section class="row" id="structure">
     <h2 id="structure">Project structure</h2>
     <p>Here&rsquo;s how a Live Wires project is organized:</p>
 
@@ -75,7 +73,7 @@
       <dd>Your <a href="http://docs.mixture.io/mixture">Mixture settings</a>.</dd>
     </dl>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 
     <h2 id="markup">Markup</h2>
     <hr>
@@ -89,7 +87,7 @@
 
     <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 
     <h2 id="js">Javascript</h2>
     <hr>
@@ -100,7 +98,7 @@
     <h3>Third-party scripts</h3>
     <p>We place all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder. You can include or exclude the plugins you want to use by editing the <code>vendor.mix.js</code> file in that folder.</p>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 
     <h2 id="css">CSS</h2>
     <hr>
@@ -145,7 +143,7 @@
     <h4><code>~/vendor/</code></h4>
     <p>Drop any third-party styles in here. We keep these untouched so they can be updated in the future.</p>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 
     <h2 id="helpers">Helpers</h2>
     <hr>
@@ -193,7 +191,7 @@
 
     <p>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</p>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 
     <h2 id="compatibility">Compatibility</h2>
     <hr>
@@ -208,7 +206,7 @@
 
     <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json for other browsers.</p>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 
 </section>
 {% endblock %}

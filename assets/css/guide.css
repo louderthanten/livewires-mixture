@@ -111,17 +111,19 @@
   .logo span {
     display: block; }
 
-.horizontal-nav--guide ul {
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: max-height 0.2s linear;
-  transition: max-height 0.2s linear; }
-  .horizontal-nav--guide ul.opened {
-    max-height: 2000px; }
-.horizontal-nav--guide a {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1; }
+.horizontal-nav--guide {
+  padding-top: 0; }
+  .horizontal-nav--guide ul {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height 0.2s linear;
+    transition: max-height 0.2s linear; }
+    .horizontal-nav--guide ul.opened {
+      max-height: 2000px; }
+  .horizontal-nav--guide a {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1; }
 
 .pg-brand .primary__brand a, .pg-usage .primary__usage a, .pg-grid .primary__grid a, .pg-elements .primary__elements a, .pg-modules .primary__modules a, .pg-components .primary__components a, .pg-templates .primary__templates a {
   color: #FFFFFF;

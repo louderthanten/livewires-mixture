@@ -6,26 +6,24 @@
 
 {% block header %}
   {% include "guide/header" %}
-  <div class="sub-nav">
-    <nav class="horizontal-nav horizontal-nav--guide container">
-      <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
-      <ul class="collapse" id="sections">
-        <li><a href="#logos">Logos</a></li>
-        <li><a href="#typefaces">Typefaces</a></li>
-        <li><a href="#color">Colors</a></li>
-        <li><a href="#icons">Icons</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="horizontal-nav horizontal-nav--guide row">
+    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+    <ul class="collapse" id="sections">
+      <li><a href="#logos">Logos</a></li>
+      <li><a href="#typefaces">Typefaces</a></li>
+      <li><a href="#color">Colors</a></li>
+      <li><a href="#icons">Icons</a></li>
+    </ul>
+  </nav>
 {% endblock %}
 
 {% block content %}
-<header class="row container">
+<header class="row">
   <h1>Brand</h1>
   <p class="lead">Add your logos, typefaces, and colors here.</p>
 </header>
 
-<section class="row container" id="logos">
+<section class="row" id="logos">
   <h2>Logos</h2>
   <hr>
   <figure>
@@ -33,7 +31,7 @@
   </figure>
 </section>
 
-<section class="row container" id="typefaces">
+<section class="row" id="typefaces">
   <h2>Typefaces</h2>
   <hr>
   <div class="type-sample primary split-content">
@@ -93,10 +91,10 @@
   #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</em></strong></p>
   </div>
 
-  <p class="more"><a href="#header">Top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
-<section class="row container colors" id="color">
+<section class="row colors" id="color">
   <h2>Colors</h2>
   <hr>
   <p>Add your colors here for easy reference.</p>
@@ -122,10 +120,10 @@
     <p>$blue<br />#44B3E1</p>
   </div>
 
-  <p class="more"><a href="#header">Top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
-<section class="row container" id="icons">
+<section class="row" id="icons">
   <h2>Icons</h2>
   <hr>
   <p>Add your icons here. They are nice and easy to use and render well across several browsers and sizes. We've loaded in <a href="http://fontawesome.io/">Fontawesome</a> for prototyping, but we would recommend finding a set that fits with your website style as you would a typeface.</p>
@@ -2344,7 +2342,7 @@
       fa-plus-square-o
       <span class="muted">(&amp;#xf196;)</span>
     </div>
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
   </div>
 </section>
 {% endblock %}

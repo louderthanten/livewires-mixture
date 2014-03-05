@@ -7,30 +7,28 @@
 {% block header %}
   {% include "modules/offcanvas" %}
   {% include "guide/header" %}
-  <div class="sub-nav">
-    <nav class="horizontal-nav horizontal-nav--guide container">
-      <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
-      <ul class="collapse" id="sections">
-        <li><a href="#media">Media</a></li>
-        <li><a href="#tables">Tables</a></li>
-        <li><a href="#code">Code</a></li>
-        <li><a href="#mini-nav">Mini Navigation</a></li>
-        <li><a href="#callouts">Callouts</a></li>
-        <li><a href="#tabs">Tabs</a></li>
-        <li><a href="#drawers">Drawers</a></li>
-        <li><a href="#offcanvas">Offcanvas Content</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="horizontal-nav horizontal-nav--guide row">
+    <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
+    <ul class="collapse" id="sections">
+      <li><a href="#media">Media</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#nav">Navigation</a></li>
+      <li><a href="#callouts">Callouts</a></li>
+      <li><a href="#tabs">Tabs</a></li>
+      <li><a href="#drawers">Drawers</a></li>
+      <li><a href="#offcanvas">Offcanvas Content</a></li>
+    </ul>
+  </nav>
 {% endblock %}
 
 {% block content %}
-<header class="row container">
+<header class="row">
   <h1>Components</h1>
   <p class="lead">Components combine basic HTML elements into small reusable pieces that act as the building blocks to our modules and layouts.</p>
 </header>
 
-<section class="row container" id="media">
+<section class="row" id="media">
   <h2>Media</h2>
   <hr>
   <p>We can make our images responsive by wrapping them in<code>&lt;figure&gt;</code> elements. Add a <code>video</code> class for responsive videos, or <code>map</code> for maps.</p>
@@ -52,10 +50,10 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20821.939822233115!2d-123.12433310318293!3d49.28127672734369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C+BC!5e0!3m2!1sen!2s!4v1392173356350" width="800" height="600" frameborder="0" style="border:0"></iframe>
   </figure>
 
-  <p class="more"><a href="#header">Top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
-<section class="row container" id="tables">
+<section class="row" id="tables">
   <h2>Tables</h2>
   <hr>
   <p>Sometimes we need to show tabular data. Here are some different ways to show it and make them responsive.</p>
@@ -240,10 +238,10 @@
     </tbody>
   </table>
 
-  <p class="more"><a href="#header">Top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
-<section class="row container" id="code">
+<section class="row" id="code">
   <h2>Code</h2>
   <hr>
   <p>We use Prism.js to add syntax highlighting and line numbers. Visit <a href="http://prismjs.com/">Prism.js</a> to configure the languages and plugins you require.</p>
@@ -275,32 +273,68 @@
       }
     }&lt;/code&gt;&lt;/pre&gt;</code></pre>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
+</section>
+<section class="row" id="nav">
+  <h2>Navigation</h2>
+  <hr>
+  <div class="split-content">
+    <h3>Breadcrumbs</h3>
+    {% include "components/breadcrumbs" %}
+  </div>
+
+  <div class="split-content">
+    <h3>Pagination</h3>
+
+    <h4>Standard</h4>
+    {% include "components/pagination" %}
+
+    <h4>Mini</h4>
+    {% include "components/pagination--mini" %}
+  </div>
+  <div class="split-content">
+    <h3>Vertical navigation</h3>
+    <nav class="vertical-nav">
+      <ul>
+       <li><a href="/page">Nav Item 1</a></li>
+       <li><a href="/page">Nav Item 2</a></li>
+       <li><a href="/page">Nav Item 3</a></li>
+      </ul>
+    </nav>
+
+    <h4>Markup example</h4>
+    <pre class="line-numbers language-markup"><code>    &lt;nav class="vertical-nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;</code></pre>
+  </div>
+  <div class="split-content">
+    <h3>Horizontal navigation</h3>
+    <nav class="horizontal-nav">
+      <ul>
+       <li><a href="/page">Nav Item 1</a></li>
+       <li><a href="/page">Nav Item 2</a></li>
+       <li><a href="/page">Nav Item 3</a></li>
+      </ul>
+    </nav>
+
+    <h4>Markup example</h4>
+    <pre class="line-numbers language-markup"><code>    &lt;nav class="horizontal-nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/page"&gt;Page name&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;</code></pre>
+  </div>
+
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
-<section class="row container" id="mini-nav">
-    <h2>Mini navigation</h2>
-    <hr>
-
-    <div class="split-content">
-      <h3>Breadcrumbs</h3>
-      {% include "components/breadcrumbs" %}
-    </div>
-
-    <div class="split-content">
-      <h3>Pagination</h3>
-
-      <h4>Standard</h4>
-      {% include "components/pagination" %}
-
-      <h4>Mini</h4>
-      {% include "components/pagination--mini" %}
-    </div>
-
-    <p class="more"><a href="#header">Top</a></p>
-</section>
-
-<section class="row container" id="callouts">
+<section class="row" id="callouts">
     <h2>Callouts</h2>
     <hr>
     <p>These patterns are great for making wells and callouts inside of sidebars and primary content areas. Add images, videos, and forms to make them even more powerful.</p>
@@ -317,7 +351,7 @@
     &lt;/aside&gt;</code></pre>
 </section>
 
-<section class="row container callouts">
+<section class="row callouts">
   <aside class="callout">
     <div class="content subtle">
       <h2>Callout</h2>
@@ -387,10 +421,10 @@
     </div>
   </aside>
 
-  <p class="more"><a href="#header">Top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
-<section class="row container" id="tabs">
+<section class="row" id="tabs">
   <h2>Tabs</h2>
   <hr>
   <p>Our tabs implementation is pretty flexible. You can even link directly to a tab by linking to its id.</p>
@@ -456,10 +490,10 @@
     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
   </section>
 
-  <p class="more"><a href="#header">Top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
-<section class="row container" id="drawers">
+<section class="row" id="drawers">
   <h2>Drawers</h2>
   <hr>
   <p>Use drawers to easily show and hide content. These work great both page-wide and within elements like callouts as shown below.</p>
@@ -474,19 +508,17 @@
       &lt;!-- Contents of drawer --&gt;
     &lt;/div&gt;</code></pre>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 </section>
 
 <section class="drawer reverse" id="drawer">
-  <div class="container">
-    <div class="content">
-      <h2>Hidden drawer</h2>
-      <p>A page wide drawer for hidden content. You can put anything you want to hide in here.<p>
-    </div>
+  <div class="content row">
+    <h2>Hidden drawer</h2>
+    <p>A page wide drawer for hidden content. You can put anything you want to hide in here.<p>
   </div>
 </section>
 
-<section class="row container" id="offcanvas">
+<section class="row" id="offcanvas">
   <h2>Offcanvas content</h2>
   <hr>
   <p>We use a lightweight offcanvas implementation with a few flexible options. These are great for mobile navigation, hidden drawers, and even alerts.</p>
@@ -517,7 +549,7 @@
       &lt;/main&gt;
     &lt;/body&gt;</code></pre>
 
-    <p class="more"><a href="#header">Top</a></p>
+    <p class="more"><a href="#header">To top</a></p>
 </section>
 
 {% endblock %}

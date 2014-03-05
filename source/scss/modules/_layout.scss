@@ -14,69 +14,54 @@ body {
   position: relative;
 }
 
-// I use .row classes for edge-to-edge page sections width full-bleed images or background colors.
-// A .container gives the content some margins and sets up the edges of the grid.
+// I use .row classes to separate page sections and establish the grid within
+// those sections. Add color classes from theme/_layout.scss to modify the background
 //
 // Markup example:
 // <section class="row">
-//      <div class="container">
-//          <section class="primary-content">
-//              … Main page stuff …
-//          </section>
-//          <aside class="secondary-content">
-//              … Secondary content (sidebar perhaps?) …
-//           </aside>
-//      </div>
-//  </section>
+//    <section class="primary-content">
+//        … Main page stuff …
+//    </section>
+//    <aside class="secondary-content">
+//        … Secondary content (sidebar perhaps?) …
+//     </aside>
+// </section>
 .row {
-  padding: rem($line 0);
-}
-
-//Creates margins with a half-gutter on either side.
-.container {
   @extend %group; // Call in a clearfix style
   position:relative;
-  margin: 0 $margin; // Apply our margin value to the sides of the container
-
-  // Apply clearfix to immediate descenders of the container
+  padding: rem($line) $margin; //Creates margins with a half-gutter on either side.
   > * {
     @extend %group;
   }
 }
 
 // Edge to edge container on mobile
-.container--mobile-full {
-  margin: 0;
+.row--mobile-full {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media only screen and (min-width: $screenSmall) {
-  .row {
-    padding: rem($line*2 0); // Increase row padding for more space at wider sizes
-  }
-  // Bring margins back to our mobile-full styles
-  .container--mobile-full {
-    margin:0 $margin;
-  }
-  .container {
+  .row,
+  .row--mobile-full {
+    padding: rem($line*2) $margin; // Increase row padding for more space at wider sizes
     // Add gutters to container's immediate children unless they have a .collapse class.
     > *:not(.collapse) {
       @include gutter;
     }
   }
 
-  // Add some layout modules here. Here are some examples:
-  //
-  // Markup example:
-  // <section class="row">
-  //      <div class="container">
-  //          <section class="primary-content">
-  //              … Main page stuff …
-  //          </section>
-  //          <aside class="secondary-content">
-  //              … Secondary content (sidebar perhaps?) …
-  //           </aside>
-  //      </div>
-  //  </section>
+// Add some layout modules here. Here are some examples:
+//
+// Markup example:
+// <section class="row">
+//    <section class="primary-content">
+//        … Main page stuff …
+//    </section>
+//    <aside class="secondary-content">
+//        … Secondary content (sidebar perhaps?) …
+//     </aside>
+// </section>
 
   .primary-content {
     width:$c5*3; // Creates an object that's 3/5 the width of its container
@@ -97,8 +82,9 @@ body {
   html {
     font-size: 107.5%; // You can proportionally resize your entire layout with this line if you stick to rem units everywhere.
   }
-  .container {
-    margin: 0 $margin *2;  // If your layout feels like it's getting too wide, multiply the margins instead of adding a stuffy max-width.
+  .row {
+    padding-left:$margin*2;
+    padding-right:$margin*2;
   }
   .primary-content {
     // Change grid as you move up
