@@ -12,7 +12,53 @@
     "url": "/404"
   },
   {
-    "directory": false,
+    "children": [
+      {
+        "directory": false,
+        "key": "about",
+        "name": "About",
+        "url": "/example/about"
+      },
+      {
+        "directory": false,
+        "key": "contact",
+        "name": "Contact",
+        "url": "/example/contact"
+      },
+      {
+        "directory": false,
+        "key": "index",
+        "name": "Index",
+        "url": "/example/index"
+      },
+      {
+        "children": [
+          {
+            "directory": false,
+            "key": "archive",
+            "name": "Archive",
+            "url": "/example/news/archive"
+          },
+          {
+            "directory": false,
+            "key": "detail",
+            "name": "Detail",
+            "url": "/example/news/detail"
+          },
+          {
+            "directory": false,
+            "key": "index",
+            "name": "Index",
+            "url": "/example/news/index"
+          }
+        ],
+        "directory": true,
+        "key": "news",
+        "name": "News",
+        "url": "/example/news"
+      }
+    ],
+    "directory": true,
     "key": "example",
     "name": "Example",
     "url": "/example"

@@ -35,6 +35,12 @@ body {
   }
 }
 
+// remove vertical padding on rows
+.row--tight {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 // Edge to edge container on mobile
 .row--mobile-full {
   padding-left: 0;
@@ -50,7 +56,11 @@ body {
       @include gutter;
     }
   }
-
+  // remove vertical padding on rows
+  .row--tight {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 // Add some layout modules here. Here are some examples:
 //
 // Markup example:

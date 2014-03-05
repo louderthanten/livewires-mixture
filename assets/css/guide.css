@@ -107,6 +107,7 @@
 .logo {
   margin-bottom: 0; }
   .logo img {
+    width: 100%;
     max-width: 240px; }
   .logo span {
     display: block; }
@@ -318,4 +319,3 @@
       clear: none; } }
 
 /*# sourceMappingURL=guide.css.map */
-

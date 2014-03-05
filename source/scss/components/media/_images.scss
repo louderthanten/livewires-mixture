@@ -17,6 +17,7 @@ img {
 }
 figure {
   position:relative;
+  margin-bottom: rem($line);
 
   > img,
   > iframe {

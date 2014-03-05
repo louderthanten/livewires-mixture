@@ -27,7 +27,7 @@
   <h2>Logos</h2>
   <hr>
   <figure>
-    <img src="{{ global.logo }}" alt="{{ global.title }}" />
+    {% if global.logo %}<img src="{{ global.logo }}" alt="{{ global.title }}" />{% else %}{{ global.title }}{% endif %}
   </figure>
 </section>
 
@@ -2345,8 +2345,4 @@
     <p class="more"><a href="#header">To top</a></p>
   </div>
 </section>
-{% endblock %}
-
-{% block footer %}
-  {% include "guide/footer" %}
 {% endblock %}

@@ -280,17 +280,31 @@
   <hr>
   <div class="split-content">
     <h3>Breadcrumbs</h3>
-    {% include "components/breadcrumbs" %}
+    <nav class="breadcrumbs">
+      <p><a href="/">Home</a> / <a href="">Parent page</a> / <span class="active">Current page</span></p>
+    </nav>
   </div>
 
   <div class="split-content">
     <h3>Pagination</h3>
 
     <h4>Standard</h4>
-    {% include "components/pagination" %}
+    <nav class="pagination">
+      <ul>
+        <li><a href="#">&laquo;</a></li>
+        <li class="current"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </nav>
 
     <h4>Mini</h4>
-    {% include "components/pagination--mini" %}
+    <nav class="pagination pagination--mini">
+      <p><a href="" class="prev">&laquo;&nbsp;Prev</a>&nbsp;<a href="" class="next">Next&nbsp;&raquo;</a></p>
+    </nav>
   </div>
   <div class="split-content">
     <h3>Vertical navigation</h3>
@@ -552,8 +566,4 @@
     <p class="more"><a href="#header">To top</a></p>
 </section>
 
-{% endblock %}
-
-{% block footer %}
-  {% include "guide/footer" %}
 {% endblock %}
