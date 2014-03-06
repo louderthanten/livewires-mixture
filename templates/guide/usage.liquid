@@ -37,6 +37,7 @@
   <p><a href="/example/index" class="button">See a Live Wires template example</a></p>
   <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="setup">
   <h2>Setup</h2>
   <hr>
@@ -50,7 +51,7 @@
     <dt>Step 4</dt>
     <dd>Refer to the included guide and examples to start building your templates.</dd>
   </dl>
-  <h3></h3>
+
   <div class="split-content callout callout--clear">
     <div class="content subtle">
       <h4>Grunt setup</h4>
@@ -79,19 +80,19 @@
       <p>You can learn more about Grunt and find more plugins and documentation on the <a href="http://gruntjs.com">Grunt site</a>.</p>
     </div>
   </div>
+
   <div class="split-content callout callout--clear">
     <div class="content subtle">
       <h4>Mixture setup</h4>
       <p><a href="http://mixture.io">Mixture</a> is our preferred front-end development tool, and we recommend using it for your own projects. It's a no brainer to setup and includes a full set of tools that rivals anything Grunt can do for our design-oriented purposes. It allows us to dive in and start designing without having to setup servers, dance around the command line, and configure a bunch of complicated scripts. Read more about it on the <a href="http://mixture.io">Mixture site</a>.</p>
 
-      <p>There's nothing you <em>need</em> to do to get setup beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few setting you may want to adjust:</p>
-
-
-
+      <p>There's nothing you <em>need</em> to do to get setup beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few settings you may want to customize in in the <code>mixture.json</code> and <code>/models/_global.json</code> files.</p>
     </div>
+
   </div>
   <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="structure">
   <h2>Project structure</h2>
   <hr>
@@ -106,6 +107,7 @@
 
     <dt><code>/source/</code></dt>
     <dd>This contains all of the pre-compiled Sass, Coffeescript, and javaScript plugin files. This is where you would write your CSS and javaScript.</dd>
+
   </dl>
 
   <aside class="callout callout--clear">
@@ -124,132 +126,157 @@
     </div>
   </aside>
 
-
-    <p class="more"><a href="#header">To top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
 
 
 <section class="row" id="markup">
-    <h2 id="markup">Markup</h2>
-    <hr>
-    <p>We use standard HTML5 for markup, but recommend the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues.</p>
-    <p>Here&rsquo;s the basic syntax:</p>
+  <h2 id="markup">Markup</h2>
+  <hr>
+  <p>We use standard HTML5 for markup, but recommend the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues.</p>
+  <p>Here&rsquo;s the basic syntax:</p>
 
-    <pre class="language-scss"><code>.block {} /* A component or module */
+  <pre class="language-scss"><code>.block {} /* A component or module */
 .block__element {} /* A descendent of that module */
 .block--modifier {} /* A modified or alternate version of the module */</code></pre>
 
-    <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
+  <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
 
-    <aside class="callout callout--clear">
-      <div class="subtle content">
-        <h3>Mixture specific</h3>
-        <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
-      </div>
-    </aside>
+  <p>We also include a few <a href="#helpers">helper classes</a> to assist with positioning and debugging.</p>
+
+  <aside class="callout callout--clear">
+    <div class="subtle content">
+      <h3>Mixture specific</h3>
+      <p>The Mixture version of Live Wires takes advantage of the <a href="http://docs.mixture.io/templates">Liquid templating</a> language for better template construction.</p>
+    </div>
+  </aside>
 
 
-    <p class="more"><a href="#header">To top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="css">
 
-    <h2>CSS</h2>
-    <hr>
+  <h2>CSS</h2>
+  <hr>
 
-    <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/source/scss/</code>. We&rsquo;ve setup a few basic starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
+  <p>All of the styles are written using <a href="http://sass-lang.com/">Sass</a>. All source files can be found in <code>/source/scss/</code>. We&rsquo;ve setup a few basic starter styles to get you going, but encourage you to go through each file and customize to your liking. It's a fine way to design a UI system once you get the hang of it.</p>
 
-    <h3>SCSS file structure</h3>
-      <h4>/source/scss/settings/</h4>
-      <p>Contains the project variables, mixins, and other things that make Sass so powerful. Here&rsquo;s a taste of what you can do:</p>
-      <dl>
-      <dt><code>_variables.scss</code></dt>
-      <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units in here.</dd>
+  <h3>SCSS file structure</h3>
 
-      <dt><code>_colors.scss</code></dt>
-      <dd>We keep our color variables separate so we can easily experiement with multiple color schemes.</dd>
+  <h4>/source/scss/</h4>
+  <p>Contains all of the styles in the project. This guide, the examples, and your own templates all share the same css. This means, whenever you make changes to your styles, they will be reflected across your project. This very guide becomes your own style guide as you shape your templates. We like to use the guide to style each element, component, and module.</p>
 
-      <dt><code>_includes.scss</code></dt>
-      <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you should be able to use as much or as little as you like.</dd>
+  <dl>
+    <dt><code>app.scss</code></dt>
+    <dd>This generates your projects main css file into <code>/httpdocs/css/app.css</code>. It has three includes:</dd>
 
-      <dt><code>_font-faces.scss</code></dt>
-      <dd>Add any font or icon @font-face includes to this file.</dd>
+    <dt><code>@import "settings/_color";</code></dt>
+    <dd>Pulls in your color variables for easy experimentation between color schemes.</dd>
 
-      <dt><code>_helpers.scss</code></dt>
-      <dd>Some non-semantic classes and %placeholders to help debug and position your elements. See what's included <a href="#helpers">below</a>.</dd>
+    <dt><code>@import "settings/_includes";</code></dt>
+    <dd>Pulls in all the elements, components, and modules you want to include in your project.</dd>
 
-      <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
-      <dd>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</dd>
-    </dl>
+    <dt><code>@import "settings/_livewires";</code></dt>
+    <dd>Pulls in Live Wires styles which blank out all text inside of any element with a <code>.content</code> class in your HTML. Remove it to get rid of the blank text feature.</dd>
+  </dl>
 
-    <h4>/sources/scss/elements/</h4>
-    <p>Stand-alone elements and small peices that make up components. <em>e.g. paragraphs, headings, form fields</em></p>
+  <h4>/source/scss/settings/</h4>
+  <p>Contains the project variables, mixins, and other things that make Sass so powerful. Here&rsquo;s a taste of what you can do:</p>
 
-    <h4>/sources/scss/components/</h4>
-    <p>The re-usable pieces that consist of groups of elements. <em>e.g. callouts, pagination, code blocks</em></p>
+  <dl>
+    <dt><code>_variables.scss</code></dt>
+    <dd>Set most global variables in here. You can set things like base typographic settings, default corner radius, breakpoint widths, and grid units in here.</dd>
 
-    <h4>/sources/scss/modules/</h4>
-    <p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
+    <dt><code>_colors.scss</code></dt>
+    <dd>We keep our color variables separate so we can easily experiement with multiple color schemes.</dd>
 
-    <h4>/sources/scss/pages/</h4>
-    <p>Page-specific styles. We recommend keeping larger files in this section out of the main stylesheet and only calling them on their respective pages.</p>
+    <dt><code>_includes.scss</code></dt>
+    <dd>Use this to include or exclude the sections you want in your project. We made everything modular, so you should be able to use as much or as little as you like.</dd>
 
-    <h4>/sources/scss/theme/</h4>
-    <p>This contains all color-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less error prone.</p>
+    <dt><code>_livewires.scss</code></dt>
+    <dd>Blanks out text inside of any element with a <code>.content</code> class in your HTML. Include this when presenting wire frames to clients or your team to focus their attention on layout and flow, rather than textual content.</dd>
 
-    <h4>/sources/scss/vendor/</h4>
-    <p>Drop any third-party styles in here. We try to keep these untouched so they can be updated in the future.</p>
+    <dt><code>_font-faces.scss</code></dt>
+    <dd>Add any font or icon @font-face includes to this file.</dd>
 
-    <p class="more"><a href="#header">To top</a></p>
+    <dt><code>_helpers.scss</code></dt>
+    <dd>Some non-semantic classes and %placeholders to help debug and position your elements. See what's included <a href="#helpers">below</a>.</dd>
+
+    <dt><code>_mixins.scss</code> &amp; <code>_functions.scss</code></dt>
+    <dd>These include powerful enhacements to help save time. Have a browse to see what's available and how they work.</dd>
+  </dl>
+
+  <h4>/sources/scss/elements/</h4>
+  <p>Stand-alone elements and small peices that make up components. <em>e.g. paragraphs, headings, form fields</em></p>
+
+  <h4>/sources/scss/components/</h4>
+  <p>The re-usable pieces that consist of groups of elements. <em>e.g. callouts, pagination, code blocks</em></p>
+
+  <h4>/sources/scss/modules/</h4>
+  <p>Major chunks that make up the main sections of a template. They often contain components and global elements, and are often used once per page. <em>e.g. headers, footers, layout modules</em></p>
+
+  <h4>/sources/scss/pages/</h4>
+  <p>Page-specific styles. We recommend keeping larger files in this section out of the main stylesheet and only calling them on their respective pages.</p>
+
+  <h4>/sources/scss/theme/</h4>
+  <p>This contains all color-related styles. We&rsquo;ve kept all the color assignments separate from structural styles to make theming easier, faster, and less error prone.</p>
+
+  <h4>/sources/scss/vendor/</h4>
+  <p>Drop any third-party styles in here. We try to keep these untouched so they can be updated in the future.</p>
+
+  <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="helpers">
-    <h2>Helpers</h2>
-    <hr>
-    <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/settings/_helpers.scss</code> for more.</p>
+  <h2>Helpers</h2>
+  <hr>
+  <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/settings/_helpers.scss</code> for more.</p>
 
-    <h3><code>.hidden</code></h3>
+  <h3><code>.hidden</code></h3>
 
-    <p>Hide stuff from screenreaders and browsers.</p>
+  <p>Hide stuff from screenreaders and browsers.</p>
 
-    <h3><code>.visuallyhidden</code></h3>
+  <h3><code>.visuallyhidden</code></h3>
 
-    <p>Hide stuff from browsers only.</p>
+  <p>Hide stuff from browsers only.</p>
 
-    <h3><code>.invisible</code></h3>
+  <h3><code>.invisible</code></h3>
 
-    <p>Hide but maintain layout</p>
+  <p>Hide but maintain layout</p>
 
-    <h3><code>.pull-right</code></h3>
+  <h3><code>.pull-right</code></h3>
 
-    <p>Float object to the right.</p>
+  <p>Float object to the right.</p>
 
-    <h3><code>.pull-left</code></h3>
+  <h3><code>.pull-left</code></h3>
 
-    <p>Float object to the left.</p>
+  <p>Float object to the left.</p>
 
-    <h3><code>.text--right</code></h3>
+  <h3><code>.text--right</code></h3>
 
-    <p>Right-aligned text.</p>
+  <p>Right-aligned text.</p>
 
-    <h3><code>.text--left</code></h3>
+  <h3><code>.text--left</code></h3>
 
-    <p>Left-aligned text.</p>
+  <p>Left-aligned text.</p>
 
-    <h3><code>.text--center</code></h3>
+  <h3><code>.text--center</code></h3>
 
-    <p>Centered text.</p>
+  <p>Centered text.</p>
 
-    <p>Use the SCSS <code>@extend</code> method on these, like:</p>
+  <p>Use the SCSS <code>@extend</code> method on these, like:</p>
 
-    <h3><code>@extend %group;</code></h3>
+  <h3><code>@extend %group;</code></h3>
 
-    <p>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. (adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</p>
+  <p>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. (adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</p>
 
-    <h3><code>@extend %vertical-align;</code></h3>
+  <h3><code>@extend %vertical-align;</code></h3>
 
-    <p>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</p>
+  <p>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</p>
 
-    <p class="more"><a href="#header">To top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 <section class="row" id="js">
     <h2>Javascript</h2>
@@ -272,28 +299,34 @@
 
     <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="compatibility">
-    <h2>Compatibility</h2>
-    <hr>
-    <p>We support all modern browsers including Internet Explorer 9 and up. If you do need to support IE8 or lower, most incompatilibilites can be solved by switching to jQuery 1.x and including the following polyfills:</p>
 
-    <ul>
-      <li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
-      <li><a href="http://responsejs.com/">Respond.js</a></li>
-      <li><a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a></li>
-      <li><a href="http://selectivizr.com/">Selectivizr</a></li>
-    </ul>
+  <h2>Compatibility</h2>
+  <hr>
+  <p>We support all modern browsers including Internet Explorer 9 and up. If you do need to support IE8 or lower, most incompatilibilites can be solved by switching to jQuery 1.x and including the following polyfills:</p>
 
-    <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json or Gruntfile.js for other browsers.</p>
+  <ul>
+    <li><a href="https://code.google.com/p/html5shiv/">html5shiv</a></li>
+    <li><a href="http://responsejs.com/">Respond.js</a></li>
+    <li><a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a></li>
+    <li><a href="http://selectivizr.com/">Selectivizr</a></li>
+  </ul>
 
-    <p class="more"><a href="#header">To top</a></p>
+  <p>We also use Auto-prefixer to write any necessary vendor prefixes for us. You'll want to adjust the settings in mixture.json or Gruntfile.js for other browsers.</p>
+
+  <p class="more"><a href="#header">To top</a></p>
 
 </section>
+
 <section class="row" id="support">
-   <h2>Support</h2>
-   <hr>
-   <p>Submit your bug reports, pull requests, and questions to <a href="https://github.com/louderthanten/livewires/issues">GitHub</a>.</p>
-   <p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info.</p>
-   <p class="more"><a href="#header">To top</a></p>
+  <h2>Support</h2>
+  <hr>
+
+  <p>Submit your bug reports, pull requests, and questions to <a href="https://github.com/louderthanten/livewires/issues">GitHub</a>.</p>
+  <p>Other questions? Visit <a href="http://livewires.io">Live Wires</a> for more info.</p>
+
+  <p class="more"><a href="#header">To top</a></p>
 </section>
+
 {% endblock %}
