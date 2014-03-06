@@ -134,16 +134,31 @@
 <section class="row" id="markup">
   <h2 id="markup">Markup</h2>
   <hr>
-  <p>We use standard HTML5 for markup, but recommend the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues.</p>
+  <p>We use standard HTML5 for markup. We try not to impose any markup styles or conventions, but do recommend <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> to name your classes. This gives us an easy standard for others to quickly adopt and keeps the library tight, modular, and free of specificity issues.</p>
+
   <p>Here&rsquo;s the basic syntax:</p>
 
-  <pre class="language-scss"><code>.block {} /* A component or module */
+  <div class="code">
+    <pre class="language-scss"><code>.block {} /* A component or module */
 .block__element {} /* A descendent of that module */
 .block--modifier {} /* A modified or alternate version of the module */</code></pre>
+  </div>
 
   <p>Read more about <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">BEM syntax</a>.</p>
 
-  <p>We also include a few <a href="#helpers">helper classes</a> to assist with positioning and debugging.</p>
+  <h3>Blanking out text</h3>
+  <p>One of our favourite Live Wires features is the ability to blank out text so we can design with real content, but hide it when we want to present the layout and flow of a project to clients and teammates. To blank out paragraphs and list items, simply add a <code>.content</code> class to its parent element.</p>
+
+  <p>Note: <code>/source/scss/settings/_livewires.scss</code> must be included in the <code>/source/scss/app.scss</code> file for this to work.</p>
+
+  <div class="code">
+    <h4>Markup example</h4>
+    <pre class="language-markup line-numbers"><code>    &lt;div class="content"&gt;
+      &lt;p&gt;This text would be blanked out.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+
+    <p>We also include a few <a href="#helpers">helper classes</a> to assist with positioning and debugging.</p>
+  </div>
 
   <aside class="callout callout--clear">
     <div class="subtle content">
@@ -234,70 +249,65 @@
   <hr>
   <p>We have some handy little helpers to make your life a little easer. Check out <code>/source/scss/settings/_helpers.scss</code> for more.</p>
 
-  <h3><code>.hidden</code></h3>
+  <dl>
+    <dt><code>.hidden</code></dt>
+    <dd>Hide stuff from screenreaders and browsers.</dd>
 
-  <p>Hide stuff from screenreaders and browsers.</p>
+    <dt><code>.visuallyhidden</code></dt>
+    <dd>Hide stuff from browsers only.</dd>
 
-  <h3><code>.visuallyhidden</code></h3>
+    <dt><code>.invisible</code></dt>
+    <dd>Hide but maintain layout</dd>
 
-  <p>Hide stuff from browsers only.</p>
+    <dt><code>.pull-right</code></dt>
+    <dd>Float object to the right.</dd>
 
-  <h3><code>.invisible</code></h3>
+    <dt><code>.pull-left</code></dt>
+    <dd>Float object to the left.</dd>
 
-  <p>Hide but maintain layout</p>
+    <dt><code>.text--right</code></dt>
+    <dd>Right-aligned text.</dd>
 
-  <h3><code>.pull-right</code></h3>
+    <dt><code>.text--left</code></dt>
+    <dd>Left-aligned text.</dd>
 
-  <p>Float object to the right.</p>
-
-  <h3><code>.pull-left</code></h3>
-
-  <p>Float object to the left.</p>
-
-  <h3><code>.text--right</code></h3>
-
-  <p>Right-aligned text.</p>
-
-  <h3><code>.text--left</code></h3>
-
-  <p>Left-aligned text.</p>
-
-  <h3><code>.text--center</code></h3>
-
-  <p>Centered text.</p>
+    <dt><code>.text--center</code></dt>
+    <dd>Centered text.</dd>
+  </dl>
 
   <p>Use the SCSS <code>@extend</code> method on these, like:</p>
 
-  <h3><code>@extend %group;</code></h3>
+  <dl>
+    <dt><code>@extend %group;</code></dt>
+    <dd>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. <small>(adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</small></dd>
 
-  <p>Add the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix hack</a> to containing element. (adding a class of <code>clearfix</code> or <code>group</code> to your HTML element also works but isn&rsquo;t as cool).</p>
-
-  <h3><code>@extend %vertical-align;</code></h3>
-
-  <p>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</p>
+    <dt><code>@extend %vertical-align;</code></dt>
+    <dd>Magically <a href="http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/">verically align</a> objects inside of other objects.</dd>
+  </dl>
 
   <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="js">
-    <h2>Javascript</h2>
-    <hr>
-    <p>We use <a href="http://coffeescript.org/">Coffescript</a> to write our scripts. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone (in our opinion).</p>
+  <h2>Javascript</h2>
+  <hr>
+  <p>We use <a href="http://coffeescript.org/">Coffescript</a> to write our scripts. Its a powerful and easy-to-learn javascript pre-processor to help make scripting more efficient and less error-prone (in our opinion).</p>
 
-    <p>If you prefer vanilla javascript, you can remove the <code>/source/coffee</code> folder and simply edit the compiled .js files in <code>/httpdocs/js/</code>.</p>
+  <p>If you prefer vanilla javascript, you can remove the <code>/source/coffee</code> folder and simply edit the compiled .js files in <code>/httpdocs/js/</code>.</p>
 
-    <p>Like our CSS and HTML, we try to keep our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code> and will compile automatically.</p>
+  <p>Like our CSS and HTML, we try to keep our javascript modular so you can use only what you need. All the coffeescript components are in <code>/source/coffee/components</code> and will compile automatically.</p>
 
-    <h3>Third-party scripts</h3>
-    <p>We organize all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder.</p>
+  <h3>Third-party scripts</h3>
+  <p>We organize all third-party scripts like jQuery plugins in the <code>/source/vendor/</code> folder.</p>
 
-    <aside class="callout callout--clear">
-      <div class="content subtle">
-        <h3>Mixture specific</h3>
-        <p>You can include and exclude the scripts you want in your project by editing <code>/source/coffee/app.mix.js</code> and <code>/source/vendor/vendor.mix.js</code> following the syntax in those files.</p>
-      </div>
-    </aside>
+  <aside class="callout callout--clear">
+    <div class="content subtle">
+      <h3>Mixture specific</h3>
+      <p>You can include and exclude the scripts you want in your project by editing <code>/source/coffee/app.mix.js</code> and <code>/source/vendor/vendor.mix.js</code> following the syntax in those files.</p>
+    </div>
+  </aside>
 
-    <p class="more"><a href="#header">To top</a></p>
+  <p class="more"><a href="#header">To top</a></p>
 </section>
 
 <section class="row" id="compatibility">
