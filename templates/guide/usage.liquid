@@ -7,7 +7,8 @@
   {% include "guide/header" %}
   <nav class="horizontal-nav horizontal-nav--guide row">
     <ul class="collapse">
-      <li><a href="#howto">Hot to use</a></li>
+      <li><a href="#howto">How to use</a></li>
+      <li><a href="#setup">Setup</a></li>
       <li><a href="#structure">Project structure</a></li>
       <li><a href="#markup">Markup</a></li>
       <li><a href="#css">CSS</a></li>
@@ -34,6 +35,61 @@
   <p>The guide breaks down the setup, configuration, and application of Live Wires. Use it as a reference for building and scaling upon your site or app's design blueprint.</p>
 
   <p><a href="/example/index" class="button">See a Live Wires template example</a></p>
+  <p class="more"><a href="#header">To top</a></p>
+</section>
+<section class="row" id="setup">
+  <h2>Setup</h2>
+  <hr>
+  <dl>
+    <dt>Step 1</dt>
+    <dd>Create a folder for your project.</dd>
+    <dt>Step 2</dt>
+    <dd>Download or clone Live Wires from the <a href="https://github.com/louderthanten/livewires">git repository</a> (or use the boilerplate included in <a href="http://mixture.io">Mixture</a>).</dd>
+    <dt>Step 3</dt>
+    <dd>Point your preferred SASS &amp; Coffeescript preprocessors the to the project (follow the directions below if you're a <a href="http://gruntjs.com/">Grunt</a> or <a href="http://mixture.io">Mixture user</a>).</dd>
+    <dt>Step 4</dt>
+    <dd>Refer to the included guide and examples to start building your templates.</dd>
+  </dl>
+  <h3></h3>
+  <div class="split-content callout callout--clear">
+    <div class="content subtle">
+      <h4>Grunt setup</h4>
+      <p>If you are using the standard version of Live Wires, we've included a Gruntfile configured with the following tasks:</p>
+
+      <ul>
+        <li><a href="http://sass-lang.com/">SASS</a> compilation</li>
+        <li><a href="http://coffeescript.org">Coffeescript</a> compilation</li>
+        <li><a href="https://github.com/mishoo/UglifyJS">Uglify</a> (compresses javascsript)</li>
+        <li><a href="https://github.com/ai/autoprefixer">Autoprefixer</a> (automatically adds vendor prefixes to your CSS)</li>
+        <li><a href="http://livereload.com/">Live Reload</a> (Auto reloads your browser on each save. You'll also need an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">browser extension</a>.</li>
+      </ul>
+
+      <p>To get started, you'll need to:</p>
+      <dl>
+        <dt>Step 1</dt>
+        <dd>Install <a href="http://nodejs.org/">Node</a>.</dd>
+        <dt>Step 2</dt>
+        <dd>Adjust the settings in <code>package.json</code> &amp; <code>Gruntfile.js</code> for your project.</dd>
+        <dt>Step 3</dt>
+        <dd>Navigate to your project folder in Terminal and run <code>npm install</code>.</dd>
+        <dt>Step 4</dt>
+        <dd>Start the project by running <code>grunt watch</code> in the Terminal.</dd>
+      </dl>
+      <p>You'll need to run <code>grunt watch</code> each time you work on the project.</p>
+      <p>You can learn more about Grunt and find more plugins and documentation on the <a href="http://gruntjs.com">Grunt site</a>.</p>
+    </div>
+  </div>
+  <div class="split-content callout callout--clear">
+    <div class="content subtle">
+      <h4>Mixture setup</h4>
+      <p><a href="http://mixture.io">Mixture</a> is our preferred front-end development tool, and we recommend using it for your own projects. It's a no brainer to setup and includes a full set of tools that rivals anything Grunt can do for our design-oriented purposes. It allows us to dive in and start designing without having to setup servers, dance around the command line, and configure a bunch of complicated scripts. Read more about it on the <a href="http://mixture.io">Mixture site</a>.</p>
+
+      <p>There's nothing you <em>need</em> to do to get setup beyond choosing the Live Wires boilerplate in Mixture and pointing it at your project folder, but there are a few setting you may want to adjust:</p>
+
+
+
+    </div>
+  </div>
   <p class="more"><a href="#header">To top</a></p>
 </section>
 <section class="row" id="structure">
