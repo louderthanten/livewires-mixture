@@ -470,6 +470,10 @@ h6, .h6 {
 hgroup > *, .hgroup > * {
   margin: 0; }
 
+.small, code, pre, kbd, .smallprint, .milli {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
 
 
 time + h1, time + h2, time + h3, time + h4 {
@@ -2102,3 +2106,4 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
   visibility: hidden; }
 
 /*# sourceMappingURL=livewires.css.map */
+
