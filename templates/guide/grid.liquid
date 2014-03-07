@@ -62,12 +62,36 @@ $c16: 100% / 16;</code></pre>
   <p>To specify a width of four columns of a six column grid ($c6 == 1 column of a 6-column grid), use the following:</p>
 
   <div class="code">
-    <pre class="language-scss line-numbers"><code>    /* Create a 4-column object centered in a 6-column grid */
-    .object{
-      width:$c6*4; /* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */
-      margin-left:$c6*1; /* Moves object 1 column to the right. */
-    }</code></pre>
+    <pre class="language-scss"><code>/* Create a 4-column object centered in a 6-column grid */
+.object{
+  width:$c6*4; /* $c6 = 1 column of a 6-column grid. Mulitply by 4 to specify 4 columns wide. */
+  margin-left:$c6*1; /* Moves object 1 column to the right. */
+}</code></pre>
   </div>
+
+  <p>We've setup some starter layout classes in <code>/source/scss/modules/_layout.scss</code> to get you started with some basic layouts:</p>
+
+  <div class="code">
+    <pre class="language-scss"><code>@media only screen and (min-width: $screenSmall) {
+  .primary-content {
+    width:$c5*3; // Creates an object that's 3/5 the width of its parent
+    float:left;  // Float this block to the left
+  }
+  .secondary-content {
+    width:$c5*2; // Creats an object that's 2/5 the width of its parent
+    float:left;
+  }
+  .split-content {
+    width:$c4*2; // Creates objects that are 1/2 the width of its parent
+    float:left;
+  }
+  .three-up {
+    width:$c3; // Creates objects that are 1/3 the width of its parent
+    float:left;
+  }
+}</code></pre>
+  </div>
+
 </section>
 <section class="row">
   <h2>Rows</h2>
@@ -111,13 +135,13 @@ $c16: 100% / 16;</code></pre>
   <p>This is fine at small window sizes, but what if that's too loose at wider sizes? Instead of adding a max-width, we just increase the <code>$margin</code> variable on our <code>.row</code> classes:</p>
 
   <div class="code">
-    <pre class="language-scss line-numbers"><code>    /* Increase margins after a certain width */
-    @media only screen and (min-width: $screenMedium) {
-      .row {
-        padding-left: $margin * 2; /* Double the $margin size to squeeze the main content. */
-        padding-right: $margin * 2;
-      }
-    }</code></pre>
+    <pre class="language-scss"><code>/* Increase margins after a certain width */
+@media only screen and (min-width: $screenMedium) {
+  .row {
+    padding-left: $margin * 2; /* Double the $margin size to squeeze the main content. */
+    padding-right: $margin * 2;
+  }
+}</code></pre>
   </div>
 
 </section>
@@ -160,31 +184,31 @@ $c16: 100% / 16;</code></pre>
 
   <div class="code">
     <h3>Example</h3>
-    <pre class="language-scss line-numbers"><code>    // Our default font-size is 100%
-    html {
-      font-size: 100%;
-    }
+    <pre class="language-scss"><code>// Our default font-size is 100%
+html {
+  font-size: 100%;
+}
 
-    // We can proportionally increase the size of the enire site
-    // by simply increasing or decreasing the root font-size.
-    @media only screen and (min-width: $screenSmall) {
-      html {
-        font-size: 105%; // Increases everything defined by rems by 5%.
-      }
-    }</code></pre>
+// We can proportionally increase the size of the enire site
+// by simply increasing or decreasing the root font-size.
+@media only screen and (min-width: $screenSmall) {
+  html {
+    font-size: 105%; // Increases everything defined by rems by 5%.
+  }
+}</code></pre>
 
     <p>To make it easy to work with rems, we've included a handy <code>rem()</code> function inspired by <a href="http://foundation.zurb.com">Foundation&rsquo;s</a> <code>rem-calc()</code>.</p>
 
     <div class="code">
       <h3>Examples</h3>
-      <pre class="language-scss line-numbers"><code>    .object {
-       // Here's a few ways you can use the rem() function
-       padding: rem(24px); // Converts a px value to rems
-       padding: rem(24); // You can even leave out the px suffix
-       padding: rem(24 12); // And use with multiple shorthand values
-       padding: rem($line $line/2); // Use the $line variable for consistent spacing & flexibility
-       padding: rem($line) $margin; // Use the rem() function for only part of your CSS declaration
-    }</code></pre>
+      <pre class="language-scss"><code>.object {
+  // Here's a few ways you can use the rem() function
+  padding: rem(24px); // Converts a px value to rems
+  padding: rem(24); // You can even leave out the px suffix
+  padding: rem(24 12); // And use with multiple shorthand values
+  padding: rem($line $line/2); // Use the $line variable for consistent spacing & flexibility
+  padding: rem($line) $margin; // Use the rem() function for only part of your CSS declaration
+}</code></pre>
     </div>
   </div>
 </section>

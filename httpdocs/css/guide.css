@@ -139,7 +139,7 @@
 p {
   max-width: 48em; }
 
-figure p {
+figure p, .colors p {
   max-width: none; }
 
 .callout--clear .content p, .callout--clear .content li, .callout--clear .content dd {

@@ -97,7 +97,8 @@
 p {
   max-width: 48em;
 }
-figure p {
+figure p,
+.colors p {
   max-width: none; //Except for captions
 }
 
