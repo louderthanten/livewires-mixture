@@ -5,8 +5,10 @@
 {% block page-class %}pg-components{% endblock %}
 
 {% block header %}
+
   {% include "modules/offcanvas" %}
   {% include "guide/header" %}
+
   <nav class="horizontal-nav horizontal-nav--guide row">
     <p class="trigger"><a href="#sections" class="js-reveal">Sections</a></p>
     <ul class="collapse" id="sections">
@@ -20,9 +22,11 @@
       <li><a href="#offcanvas">Offcanvas Content</a></li>
     </ul>
   </nav>
+
 {% endblock %}
 
 {% block content %}
+
 <header class="row">
   <h1>Components</h1>
   <p class="lead">Components combine basic HTML elements into small reusable pieces that act as the building blocks to our modules and layouts.</p>
@@ -31,6 +35,7 @@
 <section class="row" id="media">
   <h2>Media</h2>
   <hr>
+
   <p>We can make our images responsive by wrapping them in<code>&lt;figure&gt;</code> elements. Add a <code>video</code> class for responsive videos, or <code>map</code> for maps.</p>
   <p>To make life easier, we&rsquo;ve included a script to automatically add appropriate figure tags to images, videos, and maps inside of elements with a <code>content</code> class. Nice for those pesky CMS-powered content blocks.</p>
 
@@ -46,6 +51,7 @@
       <iframe src="//player.vimeo.com/video/13752801"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </figure>
   </div>
+
   <div class="split-content">
     <h3>Responsive map</h3>
     <figure class="map">
@@ -59,6 +65,7 @@
 <section class="row" id="tables">
   <h2>Tables</h2>
   <hr>
+
   <p>Sometimes we need to show tabular data. Here are some different ways to show it and make them responsive.</p>
 
   <h3>Invisible</h3>
@@ -67,12 +74,12 @@
   <section class="tables">
     <table id="demo1">
       <thead>
-          <tr>
-            <th>Lorem</th>
-            <th>Ipsum</th>
-            <th class="numerical">Dolor</th>
-            <th>Sit</th>
-          </tr>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -110,14 +117,15 @@
 
     <h3>Bordered</h3>
     <p>Add <code>class="table--bordered"</code> to <code>&lt;table&gt;</code> element.</p>
+
     <table class="table--bordered" id="demo2">
       <thead>
-          <tr>
-            <th>Lorem</th>
-            <th>Ipsum</th>
-            <th class="numerical">Dolor</th>
-            <th>Sit</th>
-          </tr>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -155,14 +163,15 @@
 
     <h3>Striped</h3>
     <p>Add <code>class="table--striped"</code> to <code>&lt;table&gt;</code> element.</p>
+
     <table class="table--striped" id="demo3">
       <thead>
-          <tr>
-            <th>Lorem</th>
-            <th>Ipsum</th>
-            <th class="numerical">Dolor</th>
-            <th>Sit</th>
-          </tr>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -200,14 +209,15 @@
 
     <h3>Lined</h3>
     <p>Add <code>class="table--lined"</code> to <code>&lt;table&gt;</code> element.</p>
+
     <table class="table--lined" id="demo4">
       <thead>
-          <tr>
-            <th>Lorem</th>
-            <th>Ipsum</th>
-            <th class="numerical">Dolor</th>
-            <th>Sit</th>
-          </tr>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class="numerical">Dolor</th>
+          <th>Sit</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -242,18 +252,19 @@
         </tr>
       </tbody>
     </table>
+
   </section>
+
   <p class="more"><a href="#header">To top</a></p>
 </section>
 
 <section class="row" id="code">
   <h2>Code</h2>
   <hr>
+
   <p>We use Prism.js to add syntax highlighting and line numbers. Visit <a href="http://prismjs.com/">Prism.js</a> to configure the languages and plugins you require. You can adjust the code colors in <code>/source/scss/theme/_code.scss</code>.</p>
 
   <div class="code">
-
-
    <pre class="line-numbers language-css"><code>    /* Code comment */
     .nav {
       list-style:none;
@@ -266,7 +277,9 @@
         zoom:1;
       }
     }</code></pre>
+
     <h3>Markup example:</h3>
+
     <pre class="line-numbers language-markup"><code>    &lt;pre class="language-css line-numbers"&gt;&lt;code&gt;/* Code comment */
     .nav {
       list-style:none;
@@ -283,9 +296,11 @@
 
     <p class="more"><a href="#header">To top</a></p>
 </section>
+
 <section class="row" id="nav">
   <h2>Navigation</h2>
   <hr>
+
   <div class="split-content">
     <h3>Breadcrumbs</h3>
     <nav class="breadcrumbs">
@@ -314,6 +329,7 @@
       <p><a href="" class="prev">&laquo;&nbsp;Prev</a>&nbsp;<a href="" class="next">Next&nbsp;&raquo;</a></p>
     </nav>
   </div>
+
   <div class="split-content">
     <h3>Vertical navigation</h3>
     <nav class="vertical-nav">
@@ -333,6 +349,7 @@
       &lt;/ul&gt;
     &lt;/nav&gt;</code></pre>
   </div>
+
   <div class="split-content">
     <h3>Horizontal navigation</h3>
     <nav class="horizontal-nav">
@@ -359,11 +376,10 @@
 <section class="row" id="callouts">
   <h2>Callouts</h2>
   <hr>
+
   <p>These patterns are great for making wells and callouts inside of sidebars and primary content areas. Add images, videos, and forms to make them even more powerful.</p>
 
   <div class="code">
-
-
     <h3>Markup example</h3>
     <pre class="line-numbers language-markup"><code>    &lt;!-- Basic callout structure --&gt;
     &lt;aside class="callout"&gt;
