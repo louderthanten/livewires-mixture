@@ -284,6 +284,11 @@ figure p {
   .paragraphs {
     width:$c4*3;
   }
+  .type-sample {
+    p {
+      @include font-size(16, 24);
+    }
+  }
   .iconset {
     @include gutter;
     width:$c8*4;
@@ -357,11 +362,6 @@ figure p {
   }
   .primary-content {
     margin-left: 0;
-  }
-  .type-sample {
-    p {
-      @include font-size(16, 24);
-    }
   }
 }
 @media only screen and (min-width: $screenLarge) {
