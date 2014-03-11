@@ -22,14 +22,14 @@
   }
   .secondary-content {
     width:$c5*2; // Creats an object that's 2/5 the width of its parent
-    float:left;
+    float:right;
   }
   .split-content {
     width:$c4*2; // Creates objects that are 1/2 the width of its parent
     float:left;
   }
   .three-up {
-    width:$c3; // Creates objects that are 1/3 the width of its parent
+    width:$c3*1; // Creates objects that are 1/3 the width of its parent
     float:left;
   }
 }
@@ -39,7 +39,7 @@
     width:$c7*4; // Change grid as you move up: Four units of a 7-column grid
   }
   .secondary-content {
-    width: $c4; // Uses a 1/4 unit-grid for a more complex compound grid https://gridsetapp.com/specs/gerstner/
+    width: $c3*1; // Uses a 1/3 unit-grid for a more complex compound grid https://gridsetapp.com/specs/gerstner/
   }
 }
 
