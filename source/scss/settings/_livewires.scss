@@ -1,4 +1,9 @@
-// Live Wires visual styles
+// LIVE WIRES
+//
+// By default, these styles simply block out any text inside of a content l* element.
+// Add any of your own wireframe-specific styles here.
+
+// Block out all p,li,dd text inside of .content elements
 .content{
   p,
   li,

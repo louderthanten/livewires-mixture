@@ -1,12 +1,9 @@
 // LAYOUT
-// Setup your layout blocks here. We've included a few examples, but encourage
-// you to create your own.
-
-@media only screen and (min-width: $screenSmall) {
-
-// Add some layout modules here. Here are some examples:
 //
-// Markup example:
+// Setup your main layout blocks here. We've included a few examples, but
+// encourage you to create your own.
+//
+// Example:
 // <section class="row">
 //    <section class="primary-content">
 //        … Main page stuff …
@@ -16,6 +13,8 @@
 //     </aside>
 // </section>
 
+
+@media only screen and (min-width: $screenSmall) {
   .primary-content {
     width:$c5*3; // Creates an object that's 3/5 the width of its parent
     float:left;  // Float this block to the left

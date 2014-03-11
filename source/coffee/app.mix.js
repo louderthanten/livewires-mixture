@@ -1,9 +1,7 @@
-// Import your compiled js files here
-@import '../../assets/js/typography.js';
-@import '../../assets/js/media.js';
-@import '../../assets/js/drawers.js';
-@import '../../assets/js/forms.js';
-@import '../../assets/js/placeholders.js';
-@import '../../assets/js/scroll.js';
-@import '../../assets/js/tabs.js';
-@import '../../assets/js/offcanvas.js';
+@import '../../httpdocs/js/typography.js';
+@import '../../httpdocs/js/media.js';
+@import '../../httpdocs/js/drawers.js';
+@import '../../httpdocs/js/forms.js';
+@import '../../httpdocs/js/scroll.js';
+@import '../../httpdocs/js/tabs.js';
+@import '../../httpdocs/js/offcanvas.js';
