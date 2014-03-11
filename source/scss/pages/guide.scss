@@ -105,22 +105,6 @@ figure p,
 .colors p {
   max-width: none; //Except for captions and color blocks.
 }
-
-
-.callout--clear {
-  .content {
-    p,
-    li,
-    dd {
-      line-height: 1.5;
-      letter-spacing:0;
-      word-spacing: 0;
-      font-family: inherit;
-      color: inherit;
-    }
-  }
-}
-
 .more {
   clear:both;
 }
@@ -259,9 +243,6 @@ figure p,
 .key {
   font-weight: $bold;
 }
-
-
-
 
 @media only screen and (min-width: $screenSmall) {
   .logo {

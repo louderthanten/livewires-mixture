@@ -76,7 +76,7 @@
   text-align: center; }
 
 .primary * {
-  font-family: serif; }
+  font-family: Georgia, serif; }
 
 .secondary * {
   font-family: sans-serif; }
@@ -140,13 +140,6 @@ p {
 
 figure p, .colors p {
   max-width: none; }
-
-.callout--clear .content p, .callout--clear .content li, .callout--clear .content dd {
-  line-height: 1.5;
-  letter-spacing: 0;
-  word-spacing: 0;
-  font-family: inherit;
-  color: inherit; }
 
 .more {
   clear: both; }
