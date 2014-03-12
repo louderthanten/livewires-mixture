@@ -7,14 +7,14 @@
     ]
   },
   "debug": false,
-  "domain": null,
+  "domain": "guide.livewires.io",
   "lintScripts": false,
   "modelSource": null,
   "preprocessorLocations": "source,httpdocs",
   "preprocessorScriptOutput": "httpdocs/js",
   "preprocessorStyleOutput": "httpdocs/css",
-  "projectDescription": "A simple in-browser wireframing toolkit.",
-  "projectName": "Live Wires",
+  "projectDescription": "A light-weight design framework for prototyping with html & scss.",
+  "projectName": "Live Wires 2.0",
   "publishedId": "11556",
   "sass": {
     "lineNumbers": true,
