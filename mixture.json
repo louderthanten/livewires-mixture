@@ -7,7 +7,7 @@
     ]
   },
   "debug": false,
-  "domain": "guide.livewires.io",
+  "domain": null,
   "lintScripts": false,
   "modelSource": null,
   "preprocessorLocations": "source,httpdocs",
@@ -15,7 +15,7 @@
   "preprocessorStyleOutput": "httpdocs/css",
   "projectDescription": "A light-weight design framework for prototyping with html & scss.",
   "projectName": "Live Wires 2.0",
-  "publishedId": "11556",
+  "publishedId": null,
   "sass": {
     "lineNumbers": true,
     "sourceMap": true,
