@@ -66,8 +66,6 @@
   .group:after, .clearfix:after, .button-group:after, .pill-buttons:after, .field:after, .field--check label:after, .switch:after, .horizontal-nav ul:after, .vertical-nav:after, .pagination:after, .callout:after, .callout .content:after, .drawer:after, fieldset:after, legend:after, .row:after {
     clear: both; }
 
-
-
 .text-left {
   text-align: left; }
 
@@ -403,7 +401,6 @@ p {
   font-size: 1.125rem;
   line-height: 1.33333; }
 
-
 .content p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -481,10 +478,8 @@ hgroup > *, .hgroup > * {
   font-size: 0.875rem;
   line-height: 1.71429; }
 
-
 time + h1, time + h2, time + h3, time + h4 {
   margin-top: 0; }
-
 
 a.disabled {
   cursor: default; }
@@ -494,7 +489,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 sup a, sub a {
   text-decoration: none; }
-
 
 ul, ol, dl {
   margin: 0 0 1.5rem 0;
@@ -538,8 +532,6 @@ blockquote {
   blockquote q:after {
     content: "’"; }
 
-
-
 .vcard .type {
   display: block; }
 
@@ -561,26 +553,24 @@ button, input[type="submit"], .button, .option-buttons label, .pill-buttons labe
 a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.button--disabled:focus, .button--disabled, .button--disabled:hover, .button--disabled:active, .button--disabled:focus {
   cursor: default; }
 
-
-
-.button-group .button, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .option-buttons label, .option-buttons .button-group label, .button-group .pill-buttons label, .pill-buttons .button-group label, .button-group .tabs a, .tabs .button-group a, .button-group a.button, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .tabs a, .tabs .button-group a, .button-group button, .button-group .pill-buttons, .button-group .pill-buttons {
+.button-group .button, .button-group .pill-buttons, .button-group .option-buttons label, .option-buttons .button-group label, .button-group .pill-buttons label, .pill-buttons .button-group label, .button-group .tabs a, .tabs .button-group a, .button-group a.button, .button-group .pill-buttons, .button-group .tabs a, .tabs .button-group a, .button-group button, .button-group .pill-buttons {
   display: block;
   margin: 0;
   border-radius: 0; }
-.button-group .button:first-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .option-buttons label:first-child, .option-buttons .button-group label:first-child, .button-group .pill-buttons label:first-child, .pill-buttons .button-group label:first-child, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group a.button:first-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group button:first-child, .button-group .pill-buttons, .button-group .pill-buttons {
+.button-group .button:first-child, .button-group .pill-buttons, .button-group .option-buttons label:first-child, .option-buttons .button-group label:first-child, .button-group .pill-buttons label:first-child, .pill-buttons .button-group label:first-child, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group a.button:first-child, .button-group .pill-buttons, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group button:first-child, .button-group .pill-buttons {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px; }
-.button-group .button:last-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .option-buttons label:last-child, .option-buttons .button-group label:last-child, .button-group .pill-buttons label:last-child, .pill-buttons .button-group label:last-child, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group a.button:last-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group button:last-child, .button-group .pill-buttons, .button-group .pill-buttons {
+.button-group .button:last-child, .button-group .pill-buttons, .button-group .option-buttons label:last-child, .option-buttons .button-group label:last-child, .button-group .pill-buttons label:last-child, .pill-buttons .button-group label:last-child, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group a.button:last-child, .button-group .pill-buttons, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group button:last-child, .button-group .pill-buttons {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px; }
 @media only screen and (min-width: 48em) {
-  .button-group .button, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .option-buttons label, .option-buttons .button-group label, .button-group .pill-buttons label, .pill-buttons .button-group label, .button-group .tabs a, .tabs .button-group a, .button-group a.button, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .tabs a, .tabs .button-group a, .button-group button, .button-group .pill-buttons, .button-group .pill-buttons {
+  .button-group .button, .button-group .pill-buttons, .button-group .option-buttons label, .option-buttons .button-group label, .button-group .pill-buttons label, .pill-buttons .button-group label, .button-group .tabs a, .tabs .button-group a, .button-group a.button, .button-group .pill-buttons, .button-group .tabs a, .tabs .button-group a, .button-group button, .button-group .pill-buttons {
     float: left; }
-  .button-group .button:first-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .option-buttons label:first-child, .option-buttons .button-group label:first-child, .button-group .pill-buttons label:first-child, .pill-buttons .button-group label:first-child, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group a.button:first-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group button:first-child, .button-group .pill-buttons, .button-group .pill-buttons {
+  .button-group .button:first-child, .button-group .pill-buttons, .button-group .option-buttons label:first-child, .option-buttons .button-group label:first-child, .button-group .pill-buttons label:first-child, .pill-buttons .button-group label:first-child, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group a.button:first-child, .button-group .pill-buttons, .button-group .tabs a:first-child, .tabs .button-group a:first-child, .button-group button:first-child, .button-group .pill-buttons {
     border-top-right-radius: 0;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px; }
-  .button-group .button:last-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .option-buttons label:last-child, .option-buttons .button-group label:last-child, .button-group .pill-buttons label:last-child, .pill-buttons .button-group label:last-child, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group a.button:last-child, .button-group .pill-buttons, .button-group .pill-buttons, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group button:last-child, .button-group .pill-buttons, .button-group .pill-buttons {
+  .button-group .button:last-child, .button-group .pill-buttons, .button-group .option-buttons label:last-child, .option-buttons .button-group label:last-child, .button-group .pill-buttons label:last-child, .pill-buttons .button-group label:last-child, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group a.button:last-child, .button-group .pill-buttons, .button-group .tabs a:last-child, .tabs .button-group a:last-child, .button-group button:last-child, .button-group .pill-buttons {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 0;
     border-top-right-radius: 3px; } }
@@ -588,8 +578,6 @@ a.button--disabled, a.button--disabled:hover, a.button--disabled:active, a.butto
 .field {
   position: relative;
   padding-bottom: 1.5rem; }
-
-
 
 .label--error {
   position: absolute;
@@ -614,8 +602,6 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-
-
 .check-label, .field--check label, .field--check .label {
   display: inline-block; }
 
@@ -626,8 +612,6 @@ textarea {
 
 input[type=checkbox], input[type=radio] {
   margin-right: 0.5em; }
-
-
 
 @media only screen and (min-width: 48em) {
   .field--half, .field--third, .field--two-third {
@@ -963,7 +947,6 @@ figcaption .source {
   .map {
     max-height: auto; } }
 
-
 code, pre, kbd {
   font-family: monospace;
   direction: ltr;
@@ -1053,14 +1036,12 @@ pre.line-numbers > code {
   .drawer.opened {
     max-height: 1000px; }
 
-
 fieldset {
   padding: 0;
   margin-left: 0 !important;
   margin-right: 0 !important;
   border: none;
   display: block; }
-
 
 .form--inline label {
   display: inline-block;
@@ -1277,6 +1258,8 @@ body {
   color: #333333; }
 
 .reverse {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: #333333;
   color: #FFFFFF; }
 
