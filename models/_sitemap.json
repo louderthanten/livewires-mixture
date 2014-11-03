@@ -6,12 +6,6 @@
     "url": "/index"
   },
   {
-    "directory": false,
-    "key": "404",
-    "name": "404",
-    "url": "/404"
-  },
-  {
     "children": [
       {
         "directory": false,
