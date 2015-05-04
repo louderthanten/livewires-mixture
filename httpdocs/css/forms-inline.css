@@ -1,0 +1,4 @@
+/* line 15, /Users/trav/Sites/projects/livewires-mixture/source/scss/objects/forms-inline.scss */
+.form--inline label {
+  display: inline-block;
+  font: inherit; }

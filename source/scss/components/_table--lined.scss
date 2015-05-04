@@ -1,0 +1,10 @@
+// Lined tables
+
+.table--lined {
+  thead tr {
+    border-bottom: $rule;
+  }
+  tbody tr {
+    border-bottom: $hairline;
+  }
+}

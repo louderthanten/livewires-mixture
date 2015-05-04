@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "../../source/scss/generic/normalize-opentype.css",
+	"sources": [
+		"../../source/scss/generic/normalize-opentype.scss"
+	],
+	"sourcesContent": [],
+	"mappings": ";;;;;;;;;AAUA;EACE,AAAO;;EACP,AAAa;;EACb,AAAkB;;;;AAGpB,AAAM,AAAM;EAGV,AAAuB;;;;;;;;;AAUzB,AAAI,AAAI;EAGN,AAAuB;;;;;;;;;;AAWzB;EACE,AAAgB;;EAChB,AAAuB;;;;;;;AAOzB;EACE,AAAuB;;;;;;;AAQzB,AAAK,AAAK,AAAM;EAId,AAAuB;;;;;;;AAgBzB;EACE,AAAuB;;;;;;;AAOzB;EACE,AAAuB;;;;;;;;;;;;;;;;;;;;;;;;;;AAyDzB,AAAK,AAAgB,AAAK,AAAe,AAAK,AAAmB,AAAK,AAAyB,AAAK,AAAiB,AAAK,AAAgB,AAAK,AAAc,AAAK;EAQhK,AAAuB;;;;;;;;;;;AAoEzB,AAAO;EAEL,AAAuB",
+	"names": []
+}

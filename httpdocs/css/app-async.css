@@ -1,0 +1,8 @@
+body:before { 
+                            white-space: pre; 
+                            font-family: monospace; 
+                            content: 'Sass \\Users\\trav\\Sites\\projects\\livewires-mixture\\source\\scss\\app-async.scss:2: file to import not found or unreadable: settings\\include--base \A Current dir: \\Users\\trav\\Sites\\projects\\livewires-mixture\\source\\scss\\ \A '; } 
+                            
+                            body * { 
+                            display: none; 
+                            } 

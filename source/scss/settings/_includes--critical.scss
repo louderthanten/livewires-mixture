@@ -1,0 +1,29 @@
+// Critical includes
+// Put the minimal amount of styles here for the initial load.
+// We want the tops of our pages to load as quickly as possible.
+// Everything else gets loaded asyncronously.
+//
+// Include the components you need. Hide the ones you don't.
+
+// Generic resets and vendor styles
+@import "../generic/normalize";
+@import "../generic/normalize-opentype";
+
+// Base elements. Only native elements. No classes.
+@import "../base/page";
+@import "../base/text";
+@import "../base/links";
+@import "../base/headings";
+@import "../base/lists";
+@import "../base/navigation";
+
+// Objects. Design patterns. No cosmetics.
+@import "../objects/page";
+@import "../objects/text";
+@import "../objects/headline";
+@import "../objects/images";
+@import "../objects/links";
+@import "../objects/disabled";
+
+// Components. Designed pieces of UI.
+@import "../components/content";

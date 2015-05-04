@@ -1,0 +1,32 @@
+// Secondary includes
+// Try and load as many styles as possible here.
+// We'll load these immediately after the initial page load.
+//
+// Include the components you need. Hide the ones you don't.
+
+// Base elements. Only native elements. No classes.
+@import "../base/labels";
+@import "../base/quotes";
+@import "../base/time";
+@import "../base/rules";
+@import "../base/tables";
+@import "../base/address";
+@import "../base/forms";
+@import "../base/fields";
+@import "../base/buttons";
+@import "../base/code";
+
+// Objects. Design patterns. No cosmetics.
+
+@import "../objects/buttons";
+@import "../objects/more-links";
+@import "../objects/forms-inline";
+@import "../objects/fields";
+@import "../objects/code";
+
+// Components. Designed pieces of UI.
+@import "../components/animation";
+@import "../components/buttons";
+@import "../components/borders";
+@import "../components/tables";
+@import "../components/labels";

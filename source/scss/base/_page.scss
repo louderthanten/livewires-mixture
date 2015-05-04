@@ -1,0 +1,20 @@
+html {
+  font-size: 100%;
+  min-height: 100%;
+}
+
+html,
+body {
+  position: relative;
+}
+
+body {
+  @include font-size;
+  font-family: $serif;
+}
+
+@media only screen and (min-width: $screenMedium) {
+  html {
+    font-size: 107.5%; // You can proportionally resize your entire layout with this line if you stick to rem units everywhere.
+  }
+}
