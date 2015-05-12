@@ -4,8 +4,7 @@
 // http://modularscale.com  |  https://vimeo.com/17079380
 
 p {
-  margin:rem(0 0 $line/2 0);
-  hyphens: auto;
+  margin-bottom:rem($line/2);
 }
 
 b,

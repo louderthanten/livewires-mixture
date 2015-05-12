@@ -16,7 +16,7 @@
 // If you require to comma separate your list
 // rem((16px, 32px, 48), 8px);
 
-@function convert-to-rem($value, $base-value: $base)  {
+@function convert-to-rem($value, $base-value: 16)  {
   $value: strip-unit($value) / strip-unit($base-value) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
@@ -32,4 +32,16 @@
     $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
   }
   @return $remValues;
+}
+
+
+// Color palette
+// Usage:
+//
+// background: c(blue, 80); // #1D3649
+// background: c(blue);     // #4178BE
+
+
+@function c($palette, $tone: 'core') {
+  @return map-get(map-get($palettes, $palette), $tone);
 }

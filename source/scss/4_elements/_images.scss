@@ -18,12 +18,11 @@ img {
 picture,
 figure {
   position:relative;
-  margin-bottom: rem($line);
 
+  > svg,
   > img,
   > iframe {
     display: block;
-    margin:0;
   }
 }
 figcaption {

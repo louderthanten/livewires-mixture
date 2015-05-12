@@ -3,12 +3,10 @@
 ul,
 ol,
 dl {
-  margin:rem(0 0 $line 0);
-  padding:0;
+  margin-bottom:rem($line/2);
 
   ul,
   ol {
-    margin-bottom: 0;
     padding-left: rem($line);
   }
 }
@@ -17,6 +15,5 @@ dt {
   font-weight: $bold;
 }
 dd {
-  margin-left:0;
-  margin-bottom: rem($line);
+  margin-bottom:rem($line/2);
 }

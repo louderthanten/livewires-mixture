@@ -1,4 +1,3 @@
-
 // Default code block styling
 code,
 pre,
@@ -27,6 +26,6 @@ pre {
 //Inline code
 :not(pre) > code,
 kbd {
-  padding:rem(3 4 1 4);
+  padding:rem(3px 4px 1px 4px);
   font-size: 1em;
 }
